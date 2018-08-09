@@ -1,0 +1,39 @@
+
+form.formReport{
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+form.formReport .fieldReports div{
+    margin: 10px;
+}
+form.formReport .fieldReports div label{
+    margin: 5px;
+}
+form.formReport .fieldReports div input{
+    margin: 5px;
+}
+
+table.tableReports{
+    margin: 60px auto;
+    text-align: center;
+}
+table.tableReports caption{
+    font-size: 22px;
+}
+table.tableReports,
+table.tableReports td{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 5px 30px;
+}
+table.tableReports tr:nth-child(2n){
+    background-color: #b1e3ff;
+}
+table.tableReports tr{
+
+}
+div.errorReports{
+    font-size: 22px;
+    font-weight: bold;
+}

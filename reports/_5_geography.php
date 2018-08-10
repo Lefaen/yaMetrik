@@ -1,6 +1,6 @@
 <?
 //-----------------------------------
-//РАЗРЕШЕНИЕ-------------------------
+//ГЕОГРАФИЯ--------------------------
 //-----------------------------------
 
 $params = null;
@@ -8,10 +8,10 @@ $params = [
     'ids' => $ids,//$_POST['ids'],                          //счетчик
     'oauth_token' => 'AQAAAAANfujIAAUHWDSXYI7X30Wpshlh3sksM7c',    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:percentBounce,ym:s:pageDepth,ym:s:avgVisitDuration',         //метрики
-    'dimensions' => 'ym:s:physicalScreenResolution',                                  //группировка
+    'dimensions' => 'ym:s:regionCity',                                  //группировка
     'date1' => $dateStart,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFin,//$_POST['dateFin'];                 //дата окончания выгрузки
-    'limit' => '10',
+    'limit' => '25',
     //'sort' => 'ym:s:date',                                         //сортировка
 ];
 
@@ -28,7 +28,7 @@ $tmpdata = [];
 
 foreach ($data as $item) {
     $tmpdata[] = [
-        'realResolution' => $item['dimensions'][0]['name'],
+        'city' => $item['dimensions'][0]['name'],
         'visit' => $item['metrics'][0],
         'users' => $item['metrics'][1],
         'refusals' => $item['metrics'][2],
@@ -37,13 +37,13 @@ foreach ($data as $item) {
     ];
 }
 //var_dump($tmpdata);
+$geography = $tmpdata;
 ?>
 
-
 <table class="tableReports">
-    <caption>Разрешение</caption>
+    <caption>География</caption>
     <tr>
-        <th>Ральное разрешение</th>
+        <th>Город</th>
         <th>Визиты</th>
         <th>Посетители</th>
         <th>Отказы</th>
@@ -52,7 +52,7 @@ foreach ($data as $item) {
     </tr>
     <? foreach ($tmpdata as $elm): ?>
         <tr>
-            <td><?= $elm['realResolution']; ?></td>
+            <td><?= $elm['city']; ?></td>
             <td><?= $elm['visit']; ?></td>
             <td><?= $elm['users']; ?></td>
             <td><?= $elm['refusals']; ?></td>

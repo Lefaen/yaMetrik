@@ -33,10 +33,12 @@ if (file_exists($pathTemplateFile)) {
 
     include '_1_writeTitleList.php';
     include '_2_writeCommonForTheMonth.php';
-    include '_3_writeMonthlyAttendance2017.php';
-    include '_4_writeMonthlyAttendance2018.php';
-    //include 5;
-    include '_6_writeGeography.php';
+    include '_3.1_writeMonthlyAttendance2017.php';
+    include '_3.2_writeMonthlyAttendance2018.php';
+    //include 4;
+    include '_5_writeGeography.php';
+    include '_6.1_writeBrowsers.php';
+    include '_6.2_writeResolution.php';
 
 }
 ?>

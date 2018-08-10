@@ -37,6 +37,7 @@ foreach ($data as $item) {
     ];
 }
 //var_dump($tmpdata);
+$browsers = $tmpdata;
 ?>
 
 

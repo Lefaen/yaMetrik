@@ -32,8 +32,6 @@ foreach ($xml->sheetData->row as $item) {
             deleteChildXml('E'.$str, 'v', $elm);
             deleteChildXml('F'.$str, 'v', $elm);
         }
-
-
     }
     if ($str == $startString) {
         if(isset($commonForTheMonth[$i]))
@@ -57,6 +55,5 @@ foreach ($xml->sheetData->row as $item) {
         //var_dump('no');
     }
 }
-
 $xml->saveXML($pathWrite);
 ?>

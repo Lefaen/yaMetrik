@@ -39,6 +39,7 @@ if (file_exists($pathTemplateFile)) {
     include '_5_writeGeography.php';
     include '_6.1_writeBrowsers.php';
     include '_6.2_writeResolution.php';
+    include '_7_writeDevices.php';
 
 }
 ?>

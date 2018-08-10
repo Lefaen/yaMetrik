@@ -36,6 +36,7 @@ foreach ($data as $item) {
     ];
 }
 //var_dump($tmpdata);
+$devices = $tmpdata;
 ?>
 
 

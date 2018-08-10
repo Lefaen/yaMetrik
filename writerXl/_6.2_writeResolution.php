@@ -24,7 +24,7 @@ foreach ($xml->sheetData->row as $item) {
     } else {
         //var_dump('no');
     }
-    var_dump($item->c);
+    //var_dump($item->c);
 }
 
 $xml->saveXML($pathWrite);

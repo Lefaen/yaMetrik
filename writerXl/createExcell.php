@@ -33,7 +33,8 @@ if (file_exists($pathTemplateFile)) {
 
     include '_1_writeTitleList.php';
     include '_2_writeCommonForTheMonth.php';
-    //include '_3_writeMonthlyAttendance2017.php';
+    include '_3_writeMonthlyAttendance2017.php';
+    include '_4_writeMonthlyAttendance2018.php';
 
 }
 ?>

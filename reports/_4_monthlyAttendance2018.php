@@ -36,7 +36,7 @@ foreach ($data as $item) {
         'achivments' => $item['metrics'][6],
     ];
 }
-//var_dump($tmpdata);
+$monthlyAttendance2018 = $tmpdata;
 ?>
 
 

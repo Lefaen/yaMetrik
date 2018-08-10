@@ -6,9 +6,9 @@ function checkChildXml($cell, $text, $elm)
     if ($elm->attributes()->r == $cell) {
         //$elm->addAttribute('t', 's');
         $elm->addChild('v', $text);
-    }//else {
+    }else {
     //echo 'error ';
-    //}
+    }
 }
 
 function deleteChildXml($cell, $tag, $elm)

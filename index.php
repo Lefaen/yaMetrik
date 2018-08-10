@@ -77,8 +77,8 @@ if (!isset($_POST['submit'])) {
 
         include '/reports/_2_commonForTheMonth.php'; //Общие по месяцу
         include '/reports/_3_MonthlyAttendance2017.php'; //Посещаемость по месяцам 2017
-        /*include '/reports/_4_monthlyAttendance2018.php'; //Посещаемость по месяцам 2018
-        include '/reports/_5_sourcesSummary.php'; //Источники сводка
+        include '/reports/_4_monthlyAttendance2018.php'; //Посещаемость по месяцам 2018
+        /*include '/reports/_5_sourcesSummary.php'; //Источники сводка
         include '/reports/_6_geography.php'; //География
         include '/reports/_7_browsers.php'; //Технологии Браузеры
         include '/reports/_8_resolution.php'; //Технологии Разрешение

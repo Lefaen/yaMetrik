@@ -14,7 +14,7 @@ foreach ($xml->sheetData->row as $item) {
     $str = (int)$item->attributes()->r;
 
     if($str == 3) {
-        checkChildXml('E3', $project, $item->c[1]);
+        //checkChildXml('E3', $project, $item->c[1]);
 
     }
 
@@ -50,7 +50,7 @@ foreach ($xml->sheetData->row as $item) {
 
             $i++;
             $startString++;
-            var_dump($item->c);
+            //var_dump($item->c);
         }
 
     } else {

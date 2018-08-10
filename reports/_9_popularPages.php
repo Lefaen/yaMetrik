@@ -32,9 +32,14 @@ foreach ($data as $item) {
         'visit' => $item['metrics'][0],
         'users' => $item['metrics'][1],
         'shows' => $item['metrics'][2],
+        'forNew' => $item['metrics'][3],
+        'refusals' => $item['metrics'][4],
+        'time' => $item['metrics'][5],
+
     ];
 }
 //var_dump($tmpdata);
+$popularPage = $tmpdata;
 ?>
 
 
@@ -45,6 +50,9 @@ foreach ($data as $item) {
         <th>Визиты</th>
         <th>Посетители</th>
         <th>Просмотры</th>
+        <th>Доля новых пользователей</th>
+        <th>Отказы</th>
+        <th>Время на сайте</th>
     </tr>
     <? foreach ($tmpdata as $elm): ?>
         <tr>
@@ -52,6 +60,9 @@ foreach ($data as $item) {
             <td><?= $elm['visit']; ?></td>
             <td><?= $elm['users']; ?></td>
             <td><?= $elm['shows']; ?></td>
+            <td><?= $elm['forNew']; ?></td>
+            <td><?= $elm['refusals']; ?></td>
+            <td><?= $elm['time']; ?></td>
         </tr>
     <? endforeach; ?>
 </table>

@@ -83,8 +83,8 @@ if (!isset($_POST['submit'])) {
         include '/reports/_6.1_browsers.php'; //Технологии Браузеры
         include '/reports/_6.2_resolution.php'; //Технологии Разрешение
         include '/reports/_7_devices.php'; //Устройства
-        //include '/reports/_8_searchPhrases.php'; //Поисковые фразы
-        //include '/reports/_9_popularPages.php'; //Популярные страницы
+        include '/reports/_8_searchPhrases.php'; //Поисковые фразы
+        include '/reports/_9_popularPages.php'; //Популярные страницы
 
         include '/writerXl/createExcell.php';
     } else {

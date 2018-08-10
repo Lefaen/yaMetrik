@@ -12,8 +12,7 @@ foreach ($xml->sheetData->row as $item) {
         if (isset($monthlyAttendance2017[$i])) {
             $time = $monthlyAttendance2017[$i]['time'] / 86400;
 
-            echo $monthlyAttendance2017[$i]['month'];
-            //var_dump($item);
+            //echo $monthlyAttendance2017[$i]['month'];
 
             checkChildXml('A' . $startString, $monthlyAttendance2017[$i]['month'], $item->c[0]);
             checkChildXml('B' . $startString, $monthlyAttendance2017[$i]['visit'], $item->c[1]);

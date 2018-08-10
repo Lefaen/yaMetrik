@@ -35,6 +35,8 @@ if (file_exists($pathTemplateFile)) {
     include '_2_writeCommonForTheMonth.php';
     include '_3_writeMonthlyAttendance2017.php';
     include '_4_writeMonthlyAttendance2018.php';
+    //include 5;
+    include '_6_writeGeography.php';
 
 }
 ?>

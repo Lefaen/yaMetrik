@@ -12,7 +12,8 @@ foreach ($xml->sheetData->row as $item) {
         if (isset($monthlyAttendance2018[$i])) {
             $time = $monthlyAttendance2018[$i]['time'] / 86400;
 
-            echo $monthlyAttendance2018[$i]['month'];
+            //echo $monthlyAttendance2018[$i]['month'];
+
 
 
             checkChildXml('A' . $startString, $monthlyAttendance2018[$i]['month'], $item->c[0]);
@@ -30,7 +31,6 @@ foreach ($xml->sheetData->row as $item) {
     } else {
         //var_dump('no');
     }
-    var_dump($item->c);
 }
 
 $xml->saveXML($pathWrite);

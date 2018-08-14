@@ -5,18 +5,7 @@
 </head>
 <body>
 <?
-$token = "AQAAAAANfujIAAUHWDSXYI7X30Wpshlh3sksM7c";
-$projects = array(
-    'best-construction' => '45416376',
-    'mgm-mebel' => '48244460',
-    'prof-medi' => '38873205',
-    'spravka-neva' => '45522780',
-    'taritrevel' => '40592900',
-    'twinmed' => '29603110',
-    'vremen' => '38725850',
-    'DulsetStone' => '18036490',
-    'tes-cars' => '36312565'
-)
+include 'counters.php';//счетчики токен
 
 ?>
 <form class="formReport" method="post" action="/">
@@ -88,7 +77,6 @@ if (!isset($_POST['submit'])) {
         include '/reports/_8_searchPhrases.php'; //Поисковые фразы
         include '/reports/_9_popularPages.php'; //Популярные страницы
         include 'reports/_10.1_searchSystemSummary.php';//Поисковой трафик сумарный
-        //$searchSystemSummary;
         include 'reports/_10.2_searchSystemDetaly.php';//Поисковой трафик детальный
 
         include '/writerXl/createExcell.php';

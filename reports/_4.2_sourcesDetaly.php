@@ -4,42 +4,42 @@
 //-----------------------------------
 
 
-$dateFinSearch = explode('-', $dateFin);
-$dateStartSearch = null;
-$dateStartSearch[0] = '';
-$dateStartSearch[1] = $dateFinSearch[1] - $period;
-$dateStartSearch[2] = '01';
+$dateFinSource = explode('-', $dateFin);
+$dateStartSource = null;
+$dateStartSource[0] = '';
+$dateStartSource[1] = $dateFinSource[1] - $period;
+$dateStartSource[2] = '01';
 $period = 6;
 $year = 13;
 
-$dateStartSearch[1] = $dateFinSearch[1] - $period;
-if ($dateStartSearch[1] > 0) {
-    $dateStartSearch[0] = $dateFinSearch[0];
-    $dateStartSearch[1] = $dateStartSearch[1] + 1;
-} elseif ($dateStartSearch[1] < 0) {
-    //echo $dateFinSearch[1];
-    $dateStartSearch[0] = $dateFinSearch[0] - 1;
-    $dateStartSearch[1] = $year + $dateStartSearch[1];
-} elseif ($dateStartSearch[1] == 0) {
-    $dateStartSearch[0] = $dateFinSearch[0];
-    $dateStartSearch[1] = 1;
+$dateStartSource[1] = $dateFinSource[1] - $period;
+if ($dateStartSource[1] > 0) {
+    $dateStartSource[0] = $dateFinSource[0];
+    $dateStartSource[1] = $dateStartSource[1] + 1;
+} elseif ($dateStartSource[1] < 0) {
+    //echo $dateFinSource[1];
+    $dateStartSource[0] = $dateFinSource[0] - 1;
+    $dateStartSource[1] = $year + $dateStartSource[1];
+} elseif ($dateStartSource[1] == 0) {
+    $dateStartSource[0] = $dateFinSource[0];
+    $dateStartSource[1] = 1;
 }
-$dateFinSearch = $dateFinSearch[0] . '-' . $dateFinSearch[1] . '-' . $dateFinSearch[2];
-$dateStartSearch = $dateStartSearch[0] . '-' . $dateStartSearch[1] . '-' . $dateStartSearch[2];
-echo $dateStartSearch . '<br>';
-echo $dateFinSearch;
+$dateFinSource = $dateFinSource[0] . '-' . $dateFinSource[1] . '-' . $dateFinSource[2];
+$dateStartSource = $dateStartSource[0] . '-' . $dateStartSource[1] . '-' . $dateStartSource[2];
+echo $dateStartSource . '<br>';
+echo $dateFinSource;
 
 
 $params = [
     'ids' => $ids,                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits',         //метрики
-    'dimensions' => 'ym:s:date,ym:s:<attribution>SearchEngineRoot',                                  //группировка
-    'date1' => $dateStartSearch,//$_POST['dateStart'];              //дата начала выгрузки
-    'date2' => $dateFinSearch,//$_POST['dateFin'];                 //дата окончания выгрузки
+    'dimensions' => 'ym:s:date,ym:s:<attribution>TrafficSource',                                  //группировка
+    'date1' => $dateStartSource,//$_POST['dateStart'];              //дата начала выгрузки
+    'date2' => $dateFinSource,//$_POST['dateFin'];                 //дата окончания выгрузки
     'sort' => 'ym:s:date',                                         //сортировка
     //'group' => 'week',
-    'limit' => 5000
+    'limit' => 15000
 ];
 
 $contentJson = file_get_contents($url . '?' . http_build_query($params));
@@ -49,17 +49,17 @@ $tmpdata = [];
 foreach ($data as $item) {
     $tmpdata[] = [
         'date' => $item['dimensions'][0]['name'],
-        'searchSystem' => $item['dimensions'][1]['name'],
+        'source' => $item['dimensions'][1]['name'],
         'visit' => $item['metrics'][0]
     ];
 }
 
-$searchSystemDetaly = $tmpdata;
+$sourceDetaly = $tmpdata;
 
-$searchSystemDetalyWeek[] = array();
+$sourceDetalyWeek[] = array();
 
 
-foreach ($searchSystemSummary as $system) {
+foreach ($sourcesSummary as $source) {
     $i = 1;
     ?>
 
@@ -76,7 +76,7 @@ foreach ($searchSystemSummary as $system) {
 
 
 
-    $date = explode('-', $dateStartSearch);
+    $date = explode('-', $dateStartSource);
     for ($n = 1; $n <= $period; $n++) {
 
 
@@ -94,23 +94,25 @@ foreach ($searchSystemSummary as $system) {
                 $dateElm = explode('-', $elm['date']);
                 if ($dateElm[2] == $j && $dateElm[1] == $date[1]) {
 
-                    if ($elm['searchSystem'] == $system['searchSystem']) {
+                    //var_dump($elm);
+
+                    if ($elm['source'] == $source['sources']) {
 
 
-                        //$searchSystemDetalyWeek[]['date'] = $elm['date'];
-                        //$searchSystemDetalyWeek[]['searchSystem'] = $elm['searchSystem'];
-                        //$searchSystemDetalyWeek[]['visit'] = $elm['visit'];
+                        //$sourceDetalyWeek[]['date'] = $elm['date'];
+                        //$sourceDetalyWeek[]['searchSystem'] = $elm['source'];
+                        //$sourceDetalyWeek[]['visit'] = $elm['visit'];
                         $visit = $elm['visit'] + $visit;
                         if($day == $week){
                             echo '<tr>';
                             echo '<td>'.$elm['date'].'</td>';
-                            echo '<td>' . $elm['searchSystem'] . '</td>';
+                            echo '<td>' . $elm['source'] . '</td>';
                             echo '<td>' . $visit . '</td>';
                             echo '</tr>';
 
-                            $searchSystemDetalyWeek[$system['searchSystem']]['date'][] = $elm['date'];
-                            $searchSystemDetalyWeek[$system['searchSystem']]['searchSystem'][] = $elm['searchSystem'];
-                            $searchSystemDetalyWeek[$system['searchSystem']]['visit'][] = $visit;
+                            $sourceDetalyWeek[$source['sources']]['date'][] = $elm['date'];
+                            $sourceDetalyWeek[$source['sources']]['source'][] = $elm['source'];
+                            $sourceDetalyWeek[$source['sources']]['visit'][] = $visit;
                             $visit = 0;
                         }
 
@@ -127,13 +129,13 @@ foreach ($searchSystemSummary as $system) {
                 if($day == $week){
                     echo '<tr>';
                     echo '<td>' . $date[0].'-'.$date[1].'-' .$j . '</td>';
-                    echo '<td>' . $system['searchSystem'] . '</td>';
+                    echo '<td>' . $source['sources'] . '</td>';
                     echo '<td>' . $visit . '</td>';
                     echo '</tr>';
 
-                    $searchSystemDetalyWeek[$system['searchSystem']]['date'][] = $date[0] . '-' . $date[1] . '-' . $j;
-                    $searchSystemDetalyWeek[$system['searchSystem']]['searchSystem'][] = $system['searchSystem'];
-                    $searchSystemDetalyWeek[$system['searchSystem']]['visit'][] = $visit;
+                        $sourceDetalyWeek[$source['sources']]['date'][] = $date[0] . '-' . $date[1] . '-' . $j;
+                    $sourceDetalyWeek[$source['sources']]['source'][] = $source['sources'];
+                    $sourceDetalyWeek[$source['sources']]['visit'][] = $visit;
                     $visit = 0;
                 }
 
@@ -156,4 +158,4 @@ foreach ($searchSystemSummary as $system) {
     }
     echo '</table>';
 }
-//var_dump($searchSystemDetalyWeek['Яндекс']);
+//var_dump($sourceDetalyWeek['Яндекс']);

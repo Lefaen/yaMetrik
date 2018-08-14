@@ -5,13 +5,13 @@
 
 $params = [
     'ids' => $ids,                          //счетчик
-    'oauth_token' => 'AQAAAAANfujIAAUHWDSXYI7X30Wpshlh3sksM7c',    //токен
+    'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:users,ym:s:bounceRate,ym:s:pageDepth,ym:s:avgVisitDuration',         //метрики
     'dimensions' => 'ym:s:<attribution>SearchEngineRoot',                                  //группировка
     'date1' => $dateStart,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFin,//$_POST['dateFin'];                 //дата окончания выгрузки
-//'sort' => 'ym:s:date',                                         //сортировка
-    'group' => 'day',
+    //'sort' => 'ym:s:date',                                         //сортировка
+    //'group' => 'day',
     'limit' => 5
 ];
 
@@ -33,6 +33,7 @@ foreach ($data as $item) {
 }
 
 $searchSystemSummary = $tmpdata;
+//var_dump($searchSystemSummary);
 ?>
 
 <table class="tableReports">

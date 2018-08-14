@@ -9,7 +9,7 @@ $dateStartSources = null;
 $dateStartSources[0] = '';
 $dateStartSources[1] = $dateFinSources[1] - $period;
 $dateStartSources[2] = '01';
-$period = 5;
+$period = 6;
 $year = 13;
 
 $dateStartSources[1] = $dateFinSources[1] - $period;
@@ -33,7 +33,7 @@ echo $dateFinSources;
 $params = null;
 $params = [
     'ids' => $ids,//$_POST['ids'],                          //счетчик
-    'oauth_token' => 'AQAAAAANfujIAAUHWDSXYI7X30Wpshlh3sksM7c',    //токен
+    'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:percentBounce,ym:s:pageDepth,ym:s:avgVisitDuration,ym:s:sumGoalReachesAny',         //метрики
     'dimensions' => 'ym:s:<attribution>TrafficSource',                                  //группировка
     'date1' => $dateStartSources,//$_POST['dateStart'];              //дата начала выгрузки
@@ -64,6 +64,7 @@ foreach ($data as $item) {
     ];
 }
 //var_dump($tmpdata);
+$sourcesSummary = $tmpdata;
 ?>
 
 

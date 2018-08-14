@@ -6,7 +6,7 @@
 $params = null;
 $params = [
     'ids' => $ids,//$_POST['ids'],                          //счетчик
-    'oauth_token' => 'AQAAAAANfujIAAUHWDSXYI7X30Wpshlh3sksM7c',    //токен
+    'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:percentBounce,ym:s:pageDepth,ym:s:avgVisitDuration',         //метрики
     'dimensions' => 'ym:s:regionCity',                                  //группировка
     'date1' => $dateStart,//$_POST['dateStart'];              //дата начала выгрузки

@@ -39,6 +39,10 @@ include 'counters.php';//счетчики токен
             <label>Ведущий специалист проекта:</label>
             <input name="specialist" value="Лотц О.А" type="text" />
         </div>
+        <div>
+            <label>Обращение к клиенту</label>
+            <input name="client" value="Уважаемый Олег" type="text" />
+        </div>
 
 
     </div>
@@ -58,6 +62,7 @@ $dateFin = $_POST['dateFin'];
 $headProject = $_POST['headProject'];
 $headDepartment = $_POST['headDepartment'];
 $specialist = $_POST['specialist'];
+$client = $_POST['client'];
 //var_dump($_POST);
 
 if (!isset($_POST['submit'])) {
@@ -65,19 +70,19 @@ if (!isset($_POST['submit'])) {
 } else {
     if ($_POST['ids'] != null && $_POST['dateStart'] != null && $_POST['dateFin'] != null) {
 
-        include '/reports/_2_commonForTheMonth.php'; //Общие по месяцу
-        include '/reports/_3.1_MonthlyAttendance2017.php'; //Посещаемость по месяцам 2017
-        include '/reports/_3.2_monthlyAttendance2018.php'; //Посещаемость по месяцам 2018
-        include '/reports/_4.1_sourcesSummary.php'; //Источники сводка
-        include '/reports/_4.2_sourcesDetaly.php'; //Источники сводка
-        include '/reports/_5_geography.php'; //География
-        include '/reports/_6.1_browsers.php'; //Технологии Браузеры
-        include '/reports/_6.2_resolution.php'; //Технологии Разрешение
-        include '/reports/_7_devices.php'; //Устройства
-        include '/reports/_8_searchPhrases.php'; //Поисковые фразы
-        include '/reports/_9_popularPages.php'; //Популярные страницы
-        include 'reports/_10.1_searchSystemSummary.php';//Поисковой трафик сумарный
-        include 'reports/_10.2_searchSystemDetaly.php';//Поисковой трафик детальный
+        include '/reports/_3_commonForTheMonth.php'; //Общие по месяцу
+        include '/reports/_4.1_MonthlyAttendance2017.php'; //Посещаемость по месяцам 2017
+        include '/reports/_4.2_monthlyAttendance2018.php'; //Посещаемость по месяцам 2018
+        include '/reports/_5.1_sourcesSummary.php'; //Источники сводка
+        include '/reports/_5.2_sourcesDetaly.php'; //Источники сводка
+        include '/reports/_6_geography.php'; //География
+        include '/reports/_7.1_browsers.php'; //Технологии Браузеры
+        include '/reports/_7.2_resolution.php'; //Технологии Разрешение
+        include '/reports/_8_devices.php'; //Устройства
+        include '/reports/_9_searchPhrases.php'; //Поисковые фразы
+        include '/reports/_10_popularPages.php'; //Популярные страницы
+        include 'reports/_11.1_searchSystemSummary.php';//Поисковой трафик сумарный
+        include 'reports/_11.2_searchSystemDetaly.php';//Поисковой трафик детальный
 
         include '/writerXl/createExcell.php';
     } else {

@@ -8,6 +8,11 @@ foreach ($xml->sheetData->row as $item) {
 
     $str = (int)$item->attributes()->r;
 
+    if($str == 3) {
+        checkChildXml('E3', $project, $item->c[0]);
+
+    }
+
     if ($str == $startString && $str <= 50) {
         if (isset($geography[$i])) {
             $time = $geography[$i]['time'] / 86400;

@@ -8,6 +8,12 @@ foreach ($xml->sheetData->row as $item) {
 
     $str = (int)$item->attributes()->r;
 
+    if($str == 3) {
+        checkChildXml('E3', $project, $item->c[0]);
+
+    }
+
+
     if ($str == $startString && $str <= 30) {
         if (isset($browsers[$i])) {
             $time = $browsers[$i]['time'] / 86400;

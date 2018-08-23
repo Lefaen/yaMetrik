@@ -31,19 +31,20 @@ if (file_exists($pathTemplateFile)) {
 
     include 'check.php';
     include '_1_writeTitleList.php';
-    include '_2_writeCommonForTheMonth.php';
-    include '_3.1_writeMonthlyAttendance2017.php';
-    include '_3.2_writeMonthlyAttendance2018.php';
-    include '_4.1_writeSourcesSummary.php';
-    include '_4.2_writeSourcesDetaly.php';
-    include '_5_writeGeography.php';
-    include '_6.1_writeBrowsers.php';
-    include '_6.2_writeResolution.php';
-    include '_7_writeDevices.php';
-    include '_8_writeSearchPhrases.php';
-    include '_9_writePopularPages.php';
-    include '_10.1_writeSearchSystemSummary.php';
-    include '_10.2_writeSearchSystemDetaly.php';
+    include '_2_writeContent.php';
+    include '_3_writeCommonForTheMonth.php';
+    include '_4.1_writeMonthlyAttendance2017.php';
+    include '_4.2_writeMonthlyAttendance2018.php';
+    include '_5.1_writeSourcesSummary.php';
+    include '_5.2_writeSourcesDetaly.php';
+    include '_6_writeGeography.php';
+    include '_7.1_writeBrowsers.php';
+    include '_7.2_writeResolution.php';
+    include '_8_writeDevices.php';
+    include '_9_writeSearchPhrases.php';
+    include '_10_writePopularPages.php';
+    include '_11.1_writeSearchSystemSummary.php';
+    include '_11.2_writeSearchSystemDetaly.php';
 
 
     function Zip($source, $destination)

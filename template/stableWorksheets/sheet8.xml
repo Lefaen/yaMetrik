@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+           xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="x14ac"
+           xmlns:x14ac="http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac">
+    <sheetPr codeName="Лист11">
+        <tabColor rgb="FF00B050"/>
+    </sheetPr>
+    <dimension ref="A2:F37"/>
+    <sheetViews>
+        <sheetView view="pageBreakPreview" zoomScaleNormal="100" zoomScaleSheetLayoutView="100" workbookViewId="0">
+            <selection activeCell="E3" sqref="E3"/>
+        </sheetView>
+    </sheetViews>
+    <sheetFormatPr defaultRowHeight="15" x14ac:dyDescent="0.25"/>
+    <cols>
+        <col min="1" max="1" width="17" customWidth="1"/>
+        <col min="2" max="2" width="10" customWidth="1"/>
+        <col min="3" max="3" width="14" customWidth="1"/>
+        <col min="4" max="4" width="10" style="11" customWidth="1"/>
+        <col min="5" max="5" width="21.42578125" style="13" customWidth="1"/>
+        <col min="6" max="6" width="17.42578125" customWidth="1"/>
+    </cols>
+    <sheetData>
+        <row r="2" spans="1:6" x14ac:dyDescent="0.25">
+            <c r="E2" t="s">
+                <v>0</v>
+            </c>
+        </row>
+        <row r="3" spans="1:6" x14ac:dyDescent="0.25">
+            <c r="E3">
+
+            </c>
+        </row>
+        <row r="4" spans="1:6" x14ac:dyDescent="0.25">
+            <c r="A4" s="15"/>
+            <c r="B4" s="15"/>
+            <c r="C4" s="15"/>
+            <c r="D4" s="14"/>
+            <c r="E4" s="17"/>
+            <c r="F4" s="15"/>
+        </row>
+        <row r="6" spans="1:6" ht="26.25" x14ac:dyDescent="0.4">
+            <c r="A6" s="92" t="s">
+                <v>35</v>
+            </c>
+            <c r="B6" s="92"/>
+            <c r="C6" s="92"/>
+            <c r="D6" s="92"/>
+            <c r="E6" s="92"/>
+            <c r="F6" s="92"/>
+        </row>
+        <row r="8" spans="1:6" ht="113.45" customHeight="1" x14ac:dyDescent="0.25">
+            <c r="A8" s="100" t="s">
+                <v>36</v>
+            </c>
+            <c r="B8" s="100"/>
+            <c r="C8" s="100"/>
+            <c r="D8" s="100"/>
+            <c r="E8" s="100"/>
+            <c r="F8" s="100"/>
+        </row>
+        <row r="9" spans="1:6" x14ac:dyDescent="0.25">
+            <c r="A9" s="43"/>
+            <c r="B9" s="43"/>
+            <c r="C9" s="43"/>
+            <c r="D9" s="43"/>
+            <c r="E9" s="43"/>
+            <c r="F9" s="43"/>
+        </row>
+        <row r="26" spans="1:6" x14ac:dyDescent="0.25">
+            <c r="A26" s="59" t="s">
+                <v>37</v>
+            </c>
+            <c r="B26" s="59" t="s">
+                <v>12</v>
+            </c>
+            <c r="C26" s="59" t="s">
+                <v>13</v>
+            </c>
+            <c r="D26" s="11" t="s">
+                <v>15</v>
+            </c>
+            <c r="E26" s="13" t="s">
+                <v>26</v>
+            </c>
+            <c r="F26" s="59" t="s">
+                <v>16</v>
+            </c>
+        </row>
+        <row r="27" spans="1:6" x14ac:dyDescent="0.25">
+            <c r="A27" s="59"/>
+            <c r="B27" s="48"/>
+            <c r="C27" s="48"/>
+            <c r="D27" s="53"/>
+            <c r="E27" s="52"/>
+            <c r="F27" s="57"/>
+        </row>
+        <row r="28" spans="1:6" x14ac:dyDescent="0.25">
+            <c r="A28" s="59"/>
+            <c r="B28" s="48"/>
+            <c r="C28" s="48"/>
+            <c r="D28" s="53"/>
+            <c r="E28" s="52"/>
+            <c r="F28" s="57"/>
+        </row>
+        <row r="29" spans="1:6" x14ac:dyDescent="0.25">
+            <c r="A29" s="59"/>
+            <c r="B29" s="48"/>
+            <c r="C29" s="48"/>
+            <c r="D29" s="53"/>
+            <c r="E29" s="52"/>
+            <c r="F29" s="57"/>
+        </row>
+        <row r="37" spans="3:3" x14ac:dyDescent="0.25">
+            <c r="C37" s="62"/>
+        </row>
+    </sheetData>
+    <mergeCells count="2">
+        <mergeCell ref="A6:F6"/>
+        <mergeCell ref="A8:F8"/>
+    </mergeCells>
+    <pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/>
+    <pageSetup paperSize="9" scale="97" orientation="portrait" r:id="rId1"/>
+    <drawing r:id="rId2"/>
+    <tableParts count="1">
+        <tablePart r:id="rId3"/>
+    </tableParts>
+</worksheet>

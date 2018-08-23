@@ -8,7 +8,7 @@ function checkChildXml($cell, $text, $elm)
         $elm->addChild('v', $text);
         //echo '<br>SUCCESS '.$cell.': '. $text;
     }else {
-    //echo '<br>ERROR '.$cell;
+        echo '<br>ERROR '.$cell;
     }
 }
 

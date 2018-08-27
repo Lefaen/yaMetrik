@@ -35,8 +35,13 @@ $abc = array(
 $numAbc = 0;
 $j = 0;
 $i = 0;
+
+
 foreach ($searchSystemDetalyWeek as $element) {
 
+    //var_dump($lastElm);
+    //var_dump($dateFin);
+    //var_dump($element['date']);
     if ($element != null) {
 
         foreach ($xml->sheetData->row as $item) {

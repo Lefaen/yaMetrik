@@ -70,19 +70,23 @@ if (!isset($_POST['submit'])) {
 } else {
     if ($_POST['ids'] != null && $_POST['dateStart'] != null && $_POST['dateFin'] != null) {
 
+        echo $project;
+
         include '/reports/_3_commonForTheMonth.php'; //Общие по месяцу
         include '/reports/_4.1_MonthlyAttendance2017.php'; //Посещаемость по месяцам 2017
         include '/reports/_4.2_monthlyAttendance2018.php'; //Посещаемость по месяцам 2018
         include '/reports/_5.1_sourcesSummary.php'; //Источники сводка
         include '/reports/_5.2_sourcesDetaly.php'; //Источники сводка
-        include '/reports/_6_geography.php'; //География
-        include '/reports/_7.1_browsers.php'; //Технологии Браузеры
-        include '/reports/_7.2_resolution.php'; //Технологии Разрешение
-        include '/reports/_8_devices.php'; //Устройства
-        include '/reports/_9_searchPhrases.php'; //Поисковые фразы
-        include '/reports/_10_popularPages.php'; //Популярные страницы
-        include 'reports/_11.1_searchSystemSummary.php';//Поисковой трафик сумарный
-        include 'reports/_11.2_searchSystemDetaly.php';//Поисковой трафик детальный
+        include '/reports/_6.1_searchSystemSummary.php';//Поисковой трафик сумарный
+        include '/reports/_6.2_searchSystemDetaly.php';//Поисковой трафик детальный
+        include '/reports/_7_geography.php'; //География
+        include '/reports/_8.1_browsers.php'; //Технологии Браузеры
+        include '/reports/_8.2_resolution.php'; //Технологии Разрешение
+        include '/reports/_9_devices.php'; //Устройства
+        include '/reports/_10_searchPhrases.php'; //Поисковые фразы
+        include '/reports/_11_phrasesInContext.php';//Фразы по контексту
+        include '/reports/_12_popularPages.php'; //Популярные страницы
+
 
         include '/writerXl/createExcell.php';
     } else {

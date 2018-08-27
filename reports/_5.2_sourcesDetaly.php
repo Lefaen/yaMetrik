@@ -133,7 +133,7 @@ foreach ($sourcesSummary as $source) {
                     echo '<td>' . $visit . '</td>';
                     echo '</tr>';
 
-                        $sourceDetalyWeek[$source['sources']]['date'][] = $date[0] . '-' . $date[1] . '-' . $j;
+                    $sourceDetalyWeek[$source['sources']]['date'][] = $date[0] . '-' . $date[1] . '-' . $j;
                     $sourceDetalyWeek[$source['sources']]['source'][] = $source['sources'];
                     $sourceDetalyWeek[$source['sources']]['visit'][] = $visit;
                     $visit = 0;

@@ -39,7 +39,12 @@ foreach ($data as $item) {
     ];
 }
 //var_dump($tmpdata);
-$prasesInContext = $tmpdata;
+//if($tmpdata != null){
+    $prasesInContext = $tmpdata;
+//}else{
+    //echo 'Контекст не ведется';
+//}
+
 ?>
 
 
@@ -54,7 +59,7 @@ $prasesInContext = $tmpdata;
         <th>Кампания Яндекс.Директ</th>
         <th>Условие показа объявления</th>
     </tr>
-    <? foreach ($tmpdata as $elm): ?>
+    <? foreach ($prasesInContext as $elm): ?>
         <tr>
             <td><?= $elm['visit']; ?></td>
             <td><?= $elm['users']; ?></td>

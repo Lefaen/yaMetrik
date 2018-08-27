@@ -143,6 +143,7 @@ foreach ($searchSystemSummary as $system) {
             {
                 $day = 0;
             }
+
         }
 
         $date[1] = (int)$date[1] + 1;

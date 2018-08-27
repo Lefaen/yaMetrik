@@ -37,14 +37,16 @@ if (file_exists($pathTemplateFile)) {
     include '_4.2_writeMonthlyAttendance2018.php';
     include '_5.1_writeSourcesSummary.php';
     include '_5.2_writeSourcesDetaly.php';
-    include '_6_writeGeography.php';
-    include '_7.1_writeBrowsers.php';
-    include '_7.2_writeResolution.php';
-    include '_8_writeDevices.php';
-    include '_9_writeSearchPhrases.php';
-    include '_10_writePopularPages.php';
-    include '_11.1_writeSearchSystemSummary.php';
-    include '_11.2_writeSearchSystemDetaly.php';
+    include '_6.1_writeSearchSystemSummary.php';
+    include '_6.2_writeSearchSystemDetaly.php';
+    include '_7_writeGeography.php';
+    include '_8.1_writeBrowsers.php';
+    include '_8.2_writeResolution.php';
+    include '_9_writeDevices.php';
+    include '_10_writeSearchPhrases.php';
+    include '_11_writePhrasesInContext.php';
+    include '_12_writePopularPages.php';
+
 
 
     function Zip($source, $destination)

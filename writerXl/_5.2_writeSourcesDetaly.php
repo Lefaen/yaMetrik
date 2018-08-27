@@ -1,5 +1,5 @@
 <?php
-$pathWrite = 'C:\OpenServer\domains\yaMetrik\template/xl/worksheets/sheet13.xml';
+$pathWrite = 'C:\OpenServer\domains\yaMetrik\template/xl/worksheets/sheet14.xml';
 $xml = simplexml_load_file($pathWrite);
 $startString = 2;
 $i = 0;
@@ -53,19 +53,16 @@ foreach ($sourceDetalyWeek as $element) {
                     checkChildXml($abc[$j][1] . $startString, $element['source'][$i], $item->c[$numAbc + 1]);
                     checkChildXml($abc[$j][2] . $startString, $element['visit'][$i], $item->c[$numAbc + 2]);
 
-                    echo '<pre>';
-                    //var_dump($element['searchSystem']);
-                    echo '</pre>';
                     $startString++;
                     $i++;
                 }
             }
         }
-        //echo '<pre>test '.$abc[$j][0];
-        //var_dump($element);
-        //echo '</pre>';
+
         $i = 0;
         $numAbc = $numAbc + 3;
+        if($numAbc > 12)
+        {break;}
         $j++;
         $startString = 2;
     }

@@ -4,7 +4,7 @@
 //-----------------------------------
 
 $params = null;
-$params = [
+$params = array(
     'ids' => $ids,//$_POST['ids'],                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:percentBounce,ym:s:pageDepth,ym:s:avgVisitDuration',         //метрики
@@ -13,7 +13,7 @@ $params = [
     'date2' => $dateFin,//$_POST['dateFin'];                 //дата окончания выгрузки
     'limit' => '25',
     //'sort' => 'ym:s:date',                                         //сортировка
-];
+);
 
 //var_dump($_POST);
 $contentJson = file_get_contents($url . '?' . http_build_query($params));
@@ -21,20 +21,20 @@ $contentJson = file_get_contents($url . '?' . http_build_query($params));
 
 //var_dump($contentJson);
 $data = null;
-$data = json_decode($contentJson, true)['data'];
+$data = json_decode($contentJson, true);
 $tmpdata = null;
-$tmpdata = [];
+$tmpdata = array();
 //var_dump($data);
 
-foreach ($data as $item) {
-    $tmpdata[] = [
+foreach ($data['data'] as $item) {
+    $tmpdata[] = array(
         'city' => $item['dimensions'][0]['name'],
         'visit' => $item['metrics'][0],
         'users' => $item['metrics'][1],
         'refusals' => $item['metrics'][2],
         'viewingDepth' => $item['metrics'][3],
         'time' => $item['metrics'][4],
-    ];
+    );
 }
 //var_dump($tmpdata);
 $geography = $tmpdata;

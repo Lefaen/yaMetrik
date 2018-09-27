@@ -3,7 +3,7 @@
 //ПОИСКОВОЙ ТРАФИК-------------------
 //-----------------------------------
 
-$params = [
+$params = array(
     'ids' => $ids,                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:users,ym:s:bounceRate,ym:s:pageDepth,ym:s:avgVisitDuration',         //метрики
@@ -13,15 +13,15 @@ $params = [
     //'sort' => 'ym:s:date',                                         //сортировка
     //'group' => 'day',
     'limit' => 5
-];
+);
 
 $contentJson = file_get_contents($url . '?' . http_build_query($params));
 
-$data = json_decode($contentJson, true)['data'];
-$tmpdata = [];
+$data = json_decode($contentJson, true);
+$tmpdata = array();
 
-foreach ($data as $item) {
-    $tmpdata[] = [
+foreach ($data['data'] as $item) {
+    $tmpdata[] = array(
         //'date' => $item['dimensions'][0]['name'],
         'searchSystem' => $item['dimensions'][0]['name'],
         'visit' => $item['metrics'][0],
@@ -29,7 +29,7 @@ foreach ($data as $item) {
         'refusals' => $item['metrics'][2],
         'viewingDepth' => $item['metrics'][3],
         'time' => $item['metrics'][4],
-    ];
+    );
 }
 
 $searchSystemSummary = $tmpdata;

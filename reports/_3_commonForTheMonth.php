@@ -4,7 +4,7 @@
 //-----------------------------------
 
 $params = array(
-    'ids' => $ids,              //счетчик
+    'ids' => $ids,                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:users,ym:s:pageviews,ym:s:percentNewVisitors,ym:s:bounceRate,ym:s:avgVisitDurationSeconds',         //метрики
     'dimensions' => 'ym:s:date',                                  //группировка
@@ -13,7 +13,6 @@ $params = array(
     'sort' => 'ym:s:date'                                         //сортировка
 );
 
-
 //var_dump($_POST);
 
 
@@ -21,23 +20,24 @@ $contentJson = file_get_contents($url . '?' . http_build_query($params));
 
 
 //var_dump($contentJson);
-$data = json_decode($contentJson, true)['data'];
-$tmpdata = [];
+$data = json_decode($contentJson, true);
+$tmpdata = array();
 
-foreach ($data as $item) {
-    $tmpdata[] = [
+foreach ($data['data'] as $item) {
+    $tmpdata[] = array(
         'date' => $item['dimensions'][0]['name'],
         'visit' => $item['metrics'][0],
         'users' => $item['metrics'][1],
         'shows' => $item['metrics'][2],
         'forNew' => $item['metrics'][3],
         'refusals' => $item['metrics'][4],
-        'time' => $item['metrics'][5],
-    ];
+        'time' => $item['metrics'][5]
+    );
 }
 
 //var_dump($tmpdata);
 $commonForTheMonth = $tmpdata;
+
 ?>
 <?/*
 <table class="tableReports">

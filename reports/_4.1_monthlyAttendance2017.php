@@ -4,7 +4,7 @@
 //-----------------------------------
 
 $params = null;
-$params = [
+$params = array(
     'ids' => $ids,//$_POST['ids'],                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:sumPageViews,ym:s:percentNewVisitors,ym:s:percentBounce,ym:s:avgVisitDuration,ym:s:sumGoalReachesAny',         //метрики
@@ -12,7 +12,7 @@ $params = [
     'date1' => '2017-01-01',//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => '2018-01-01',//$_POST['dateFin'];                 //дата окончания выгрузки
     'sort' => 'ym:s:visitMonth',                                         //сортировка
-];
+);
 
 //var_dump($_POST);
 $contentJson = file_get_contents($url . '?' . http_build_query($params));
@@ -20,13 +20,13 @@ $contentJson = file_get_contents($url . '?' . http_build_query($params));
 
 //var_dump($contentJson);
 $data = null;
-$data = json_decode($contentJson, true)['data'];
+$data = json_decode($contentJson, true);
 $tmpdata = null;
-$tmpdata = [];
+$tmpdata = array();
 //var_dump($data);
 
-foreach ($data as $item) {
-    $tmpdata[] = [
+foreach ($data['data'] as $item) {
+    $tmpdata[] = array(
         'month' => $item['dimensions'][0]['name'],
         'visit' => $item['metrics'][0],
         'users' => $item['metrics'][1],
@@ -35,7 +35,7 @@ foreach ($data as $item) {
         'refusals' => $item['metrics'][4],
         'time' => $item['metrics'][5],
         'achivments' => $item['metrics'][6],
-    ];
+    );
 }
 //var_dump($tmpdata);
 $monthlyAttendance2017 = $tmpdata;

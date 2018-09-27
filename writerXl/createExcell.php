@@ -88,5 +88,8 @@ if (file_exists($pathTemplateFile)) {
         return $zip->close();
     }
     Zip('template/', 'project/'.$project.'/'.$project.'_'.$dateStart.'_'.$dateFin.'.xlsx');
+    echo '<a href="'.'project/'.$project.'/'.$project.'_'.$dateStart.'_'.$dateFin.'.xlsx'.'">Скачать отчет</a>';
 }
+
+
 ?>

@@ -30,7 +30,7 @@ $dateStartSearch = $dateStartSearch[0] . '-' . $dateStartSearch[1] . '-' . $date
 //echo $dateFinSearch;
 
 
-$params = [
+$params = array(
     'ids' => $ids,                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits',         //метрики
@@ -40,18 +40,18 @@ $params = [
     'sort' => 'ym:s:date',                                         //сортировка
     //'group' => 'week',
     'limit' => 5000
-];
+);
 
 $contentJson = file_get_contents($url . '?' . http_build_query($params));
 
-$data = json_decode($contentJson, true)['data'];
-$tmpdata = [];
-foreach ($data as $item) {
-    $tmpdata[] = [
+$data = json_decode($contentJson, true);
+$tmpdata = array();
+foreach ($data['data'] as $item) {
+    $tmpdata[] = array(
         'date' => $item['dimensions'][0]['name'],
         'searchSystem' => $item['dimensions'][1]['name'],
         'visit' => $item['metrics'][0]
-    ];
+    );
 }
 
 $searchSystemDetaly = $tmpdata;

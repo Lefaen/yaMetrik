@@ -31,7 +31,7 @@ $dateStartSources = $dateStartSources[0] . '-' . $dateStartSources[1] . '-' . $d
 
 
 $params = null;
-$params = [
+$params = array(
     'ids' => $ids,//$_POST['ids'],                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:percentBounce,ym:s:pageDepth,ym:s:avgVisitDuration,ym:s:sumGoalReachesAny',         //метрики
@@ -39,7 +39,7 @@ $params = [
     'date1' => $dateStartSources,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFinSources,//$_POST['dateFin'];                 //дата окончания выгрузки
     //'sort' => 'ym:s:date',                                         //сортировка
-];
+);
 
 //var_dump($_POST);
 $contentJson = file_get_contents($url . '?' . http_build_query($params));
@@ -47,13 +47,13 @@ $contentJson = file_get_contents($url . '?' . http_build_query($params));
 
 //var_dump($contentJson);
 $data = null;
-$data = json_decode($contentJson, true)['data'];
+$data = json_decode($contentJson, true);
 $tmpdata = null;
-$tmpdata = [];
+$tmpdata = array();
 //var_dump($data);
 
-foreach ($data as $item) {
-    $tmpdata[] = [
+foreach ($data['data'] as $item) {
+    $tmpdata[] = array(
         'sources' => $item['dimensions'][0]['name'],
         'visit' => $item['metrics'][0],
         'users' => $item['metrics'][1],
@@ -61,7 +61,7 @@ foreach ($data as $item) {
         'viewingDepth' => $item['metrics'][3],
         'time' => $item['metrics'][4],
         'targetVisits' => $item['metrics'][5],
-    ];
+    );
 }
 //var_dump($tmpdata);
 $sourcesSummary = $tmpdata;

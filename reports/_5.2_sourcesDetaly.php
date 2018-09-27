@@ -30,7 +30,7 @@ $dateStartSource = $dateStartSource[0] . '-' . $dateStartSource[1] . '-' . $date
 //echo $dateFinSource;
 
 
-$params = [
+$params = array(
     'ids' => $ids,                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits',         //метрики
@@ -40,18 +40,18 @@ $params = [
     'sort' => 'ym:s:date',                                         //сортировка
     //'group' => 'week',
     'limit' => 15000
-];
+);
 
 $contentJson = file_get_contents($url . '?' . http_build_query($params));
 
-$data = json_decode($contentJson, true)['data'];
-$tmpdata = [];
-foreach ($data as $item) {
-    $tmpdata[] = [
+$data = json_decode($contentJson, true);
+$tmpdata = array();
+foreach ($data['data'] as $item) {
+    $tmpdata[] = array(
         'date' => $item['dimensions'][0]['name'],
         'source' => $item['dimensions'][1]['name'],
         'visit' => $item['metrics'][0]
-    ];
+    );
 }
 
 $sourceDetaly = $tmpdata;

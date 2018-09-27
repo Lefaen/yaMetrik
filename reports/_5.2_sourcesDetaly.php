@@ -26,8 +26,8 @@ if ($dateStartSource[1] > 0) {
 }
 $dateFinSource = $dateFinSource[0] . '-' . $dateFinSource[1] . '-' . $dateFinSource[2];
 $dateStartSource = $dateStartSource[0] . '-' . $dateStartSource[1] . '-' . $dateStartSource[2];
-echo $dateStartSource . '<br>';
-echo $dateFinSource;
+//echo $dateStartSource . '<br>';
+//echo $dateFinSource;
 
 
 $params = [
@@ -62,7 +62,7 @@ $sourceDetalyWeek[] = array();
 foreach ($sourcesSummary as $source) {
     $i = 1;
     ?>
-
+<?/*
     <table class="tableReports">
         <caption>Поисковой трафик</caption>
         <tr>
@@ -70,6 +70,7 @@ foreach ($sourcesSummary as $source) {
             <th>Визиты</th>
             <th>Посетители</th>
         </tr>
+*/?>
     <?
 
     //var_dump($searchSystemDetaly);
@@ -104,11 +105,11 @@ foreach ($sourcesSummary as $source) {
                         //$sourceDetalyWeek[]['visit'] = $elm['visit'];
                         $visit = $elm['visit'] + $visit;
                         if($day == $week){
-                            echo '<tr>';
-                            echo '<td>'.$elm['date'].'</td>';
-                            echo '<td>' . $elm['source'] . '</td>';
-                            echo '<td>' . $visit . '</td>';
-                            echo '</tr>';
+                            //echo '<tr>';
+                            //echo '<td>'.$elm['date'].'</td>';
+                            //echo '<td>' . $elm['source'] . '</td>';
+                            //echo '<td>' . $visit . '</td>';
+                            //echo '</tr>';
 
                             $sourceDetalyWeek[$source['sources']]['date'][] = $elm['date'];
                             $sourceDetalyWeek[$source['sources']]['source'][] = $elm['source'];
@@ -127,11 +128,11 @@ foreach ($sourcesSummary as $source) {
             }
             if ($dateElm == null) {
                 if($day == $week){
-                    echo '<tr>';
-                    echo '<td>' . $date[0].'-'.$date[1].'-' .$j . '</td>';
-                    echo '<td>' . $source['sources'] . '</td>';
-                    echo '<td>' . $visit . '</td>';
-                    echo '</tr>';
+                    //echo '<tr>';
+                    //echo '<td>' . $date[0].'-'.$date[1].'-' .$j . '</td>';
+                    //echo '<td>' . $source['sources'] . '</td>';
+                    //echo '<td>' . $visit . '</td>';
+                    //echo '</tr>';
 
                     $sourceDetalyWeek[$source['sources']]['date'][] = $date[0] . '-' . $date[1] . '-' . $j;
                     $sourceDetalyWeek[$source['sources']]['source'][] = $source['sources'];
@@ -156,6 +157,6 @@ foreach ($sourcesSummary as $source) {
 
 
     }
-    echo '</table>';
+    //echo '</table>';
 }
 //var_dump($sourceDetalyWeek['Яндекс']);

@@ -40,7 +40,7 @@ foreach ($data as $item) {
 $searchPrases = $tmpdata;
 ?>
 
-
+<?/*
 <table class="tableReports">
     <caption>Поисковые фразы</caption>
     <tr>
@@ -62,3 +62,4 @@ $searchPrases = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

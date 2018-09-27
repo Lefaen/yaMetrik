@@ -42,7 +42,7 @@ foreach ($data as $item) {
 $popularPage = $tmpdata;
 ?>
 
-
+<?/*
 <table class="tableReports">
     <caption>Популярные страницы</caption>
     <tr>
@@ -66,3 +66,4 @@ $popularPage = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

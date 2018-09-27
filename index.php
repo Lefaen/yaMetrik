@@ -50,6 +50,7 @@ include 'counters.php';//счетчики токен
 </form>
 <?php
 
+//Данные выгрузки
 $url = 'https://api-metrika.yandex.ru/stat/v1/data';
 
 $idsProject = explode('_', $_POST['ids']);
@@ -63,14 +64,15 @@ $headProject = $_POST['headProject'];
 $headDepartment = $_POST['headDepartment'];
 $specialist = $_POST['specialist'];
 $client = $_POST['client'];
+
+$path = "C:/OSpanel/domains/yaMetrik/template/xl/worksheets/";
+$status = null;
 //var_dump($_POST);
 
 if (!isset($_POST['submit'])) {
     echo '<div>Введите данные</div>';
 } else {
     if ($_POST['ids'] != null && $_POST['dateStart'] != null && $_POST['dateFin'] != null) {
-
-        echo $project;
 
         include '/reports/_3_commonForTheMonth.php'; //Общие по месяцу
         include '/reports/_4.1_MonthlyAttendance2017.php'; //Посещаемость по месяцам 2017

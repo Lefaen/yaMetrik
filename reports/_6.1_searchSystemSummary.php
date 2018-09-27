@@ -35,7 +35,7 @@ foreach ($data as $item) {
 $searchSystemSummary = $tmpdata;
 //var_dump($searchSystemSummary);
 ?>
-
+<?/*
 <table class="tableReports">
     <caption>Поисковой трафик</caption>
     <tr>
@@ -57,4 +57,4 @@ $searchSystemSummary = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
-
+*/?>

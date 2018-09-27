@@ -13,6 +13,7 @@ if (file_exists($pathTemplateFile)) {
     //echo $project;
     $pathDirectoryProject = $pathDirectory . '/' . $project;
 
+
     if (!file_exists($pathDirectoryProject)) {
         mkdir($pathDirectoryProject, 0777);
         //echo 'create';

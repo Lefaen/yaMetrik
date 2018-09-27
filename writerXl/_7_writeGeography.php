@@ -1,6 +1,8 @@
 <?php
-$pathWrite = 'C:\OpenServer\domains\yaMetrik\template/xl/worksheets/sheet7.xml';
-$xml = simplexml_load_file($pathWrite);
+$nameList = 'Лист география';
+$pathListExcel = $path . 'sheet7.xml';
+
+$xml = simplexml_load_file($pathListExcel);
 $startString = 26;
 $i = 0;
 //var_dump($xml);
@@ -36,5 +38,10 @@ foreach ($xml->sheetData->row as $item) {
     //var_dump($item);
 }
 
-$xml->saveXML($pathWrite);
+if ($xml->saveXML($pathListExcel)) {
+    $status = true;
+} else {
+    $status = false;
+}
+include './templateStatusSave.php';
 ?>

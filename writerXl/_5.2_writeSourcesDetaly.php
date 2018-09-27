@@ -1,6 +1,7 @@
 <?php
-$pathWrite = 'C:\OpenServer\domains\yaMetrik\template/xl/worksheets/sheet14.xml';
-$xml = simplexml_load_file($pathWrite);
+$nameList = 'Лист источники в динамике (по неделям)';
+$pathListExcel = $path . 'sheet14.xml';
+$xml = simplexml_load_file($pathListExcel);
 $startString = 2;
 $i = 0;
 //var_dump($xml);
@@ -70,5 +71,10 @@ foreach ($sourceDetalyWeek as $element) {
 }
 
 
-$xml->saveXML($pathWrite);
+if ($xml->saveXML($pathListExcel)) {
+    $status = true;
+} else {
+    $status = false;
+}
+include './templateStatusSave.php';
 ?>

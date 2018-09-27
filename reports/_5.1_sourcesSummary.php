@@ -26,8 +26,8 @@ if ($dateStartSources[1] > 0) {
 }
 $dateFinSources = $dateFinSources[0] . '-' . $dateFinSources[1] . '-' . $dateFinSources[2];
 $dateStartSources = $dateStartSources[0] . '-' . $dateStartSources[1] . '-' . $dateStartSources[2];
-echo $dateStartSources . '<br>';
-echo $dateFinSources;
+//echo $dateStartSources . '<br>';
+//echo $dateFinSources;
 
 
 $params = null;
@@ -67,7 +67,7 @@ foreach ($data as $item) {
 $sourcesSummary = $tmpdata;
 ?>
 
-
+<?/*
 <table class="tableReports">
     <caption>Источники сводка</caption>
     <tr>
@@ -91,3 +91,4 @@ $sourcesSummary = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

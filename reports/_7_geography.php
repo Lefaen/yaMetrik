@@ -39,7 +39,7 @@ foreach ($data as $item) {
 //var_dump($tmpdata);
 $geography = $tmpdata;
 ?>
-
+<?/*
 <table class="tableReports">
     <caption>География</caption>
     <tr>
@@ -61,3 +61,4 @@ $geography = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

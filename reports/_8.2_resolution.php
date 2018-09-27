@@ -40,7 +40,7 @@ foreach ($data as $item) {
 $resolution = $tmpdata;
 ?>
 
-
+<?/*
 <table class="tableReports">
     <caption>Разрешение</caption>
     <tr>
@@ -62,3 +62,4 @@ $resolution = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

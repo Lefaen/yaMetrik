@@ -8,9 +8,9 @@ function checkChildXml($cell, $text, $elm)
         //$elm->addAttribute('t', 's');
         $elm->addChild('v', $text);
         //echo '<br>SUCCESS '.$cell.': '. $text;
-    } //else {
-        //echo '<br>ERROR ' . $cell;
-    //}
+    } else {
+        //echo '<br>ERROR ' . $cell .':'.$text.':'.$elm->attributes()->r;
+    }
 }
 
 function deleteChildXml($cell, $tag, $elm)

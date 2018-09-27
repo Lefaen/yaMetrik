@@ -39,7 +39,7 @@ foreach ($data as $item) {
 $devices = $tmpdata;
 ?>
 
-
+<?/*
 <table class="tableReports">
     <caption>Устройства</caption>
     <tr>
@@ -61,3 +61,4 @@ $devices = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

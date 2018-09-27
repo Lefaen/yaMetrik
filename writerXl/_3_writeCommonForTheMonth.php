@@ -1,6 +1,8 @@
 <?php
-$pathWrite = 'C:\OpenServer\domains\yaMetrik\template/xl/worksheets/sheet3.xml';
-$xml = simplexml_load_file($pathWrite);
+$nameList = 'Лист трафик по дням';
+$pathListExcel = $path . 'sheet3.xml';
+
+$xml = simplexml_load_file($pathListExcel);
 //$commonForTheMonth;
 $startString = 38;
 //$dateFinWrite = explode('-', $dateFin);
@@ -55,5 +57,11 @@ foreach ($xml->sheetData->row as $item) {
         //var_dump('no');
     }
 }
-$xml->saveXML($pathWrite);
+if($xml->saveXML($pathListExcel))
+{
+    $status = true;
+}else{
+    $status = false;
+}
+include './templateStatusSave.php';
 ?>

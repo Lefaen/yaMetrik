@@ -41,7 +41,7 @@ foreach ($data as $item) {
 $monthlyAttendance2017 = $tmpdata;
 ?>
 
-
+<?/*
 <table class="tableReports">
     <caption>Посещаемость по месяцам 2017</caption>
     <tr>
@@ -67,3 +67,4 @@ $monthlyAttendance2017 = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

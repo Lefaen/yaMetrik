@@ -1,10 +1,9 @@
 <?php
 
+$nameList = 'Титульный лист';
+$pathListExcel = $path . 'sheet1.xml';
 
-$pathWrite = 'C:\OpenServer\domains\yaMetrik\template/xl/worksheets/sheet1.xml';
-$xml = simplexml_load_file($pathWrite);
-
-
+$xml = simplexml_load_file($pathListExcel);
 foreach ($xml->sheetData->row as $item) {
     //var_dump($item);
     foreach ($item->c as $elm) {
@@ -16,4 +15,10 @@ foreach ($xml->sheetData->row as $item) {
         checkChildXml('I41', $specialist, $elm);
     }
 }
-$xml->saveXML($pathWrite);
+if ($xml->saveXML($pathListExcel)) {
+    $status = true;
+} else {
+    $status = false;
+}
+include './templateStatusSave.php';
+?>

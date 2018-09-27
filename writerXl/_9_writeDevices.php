@@ -1,6 +1,8 @@
 <?php
-$pathWrite = 'C:\OpenServer\domains\yaMetrik\template/xl/worksheets/sheet9.xml';
-$xml = simplexml_load_file($pathWrite);
+$nameList = 'Лист устройства';
+$pathListExcel = $path . 'sheet9.xml';
+
+$xml = simplexml_load_file($pathListExcel);
 $startString = 27;
 $i = 0;
 //var_dump($xml);
@@ -32,5 +34,10 @@ foreach ($xml->sheetData->row as $item) {
     //var_dump($item->c);
 }
 
-$xml->saveXML($pathWrite);
+if ($xml->saveXML($pathListExcel)) {
+    $status = true;
+} else {
+    $status = false;
+}
+include './templateStatusSave.php';
 ?>

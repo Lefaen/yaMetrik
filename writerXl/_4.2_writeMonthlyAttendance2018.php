@@ -1,6 +1,7 @@
 <?php
-$pathWrite = 'C:\OpenServer\domains\yaMetrik\template/xl/worksheets/sheet4.xml';
-$xml = simplexml_load_file($pathWrite);
+$nameList = 'Лист трафик по месяцам 2018';
+$pathListExcel = $path . 'sheet4.xml';
+$xml = simplexml_load_file($pathListExcel);
 $startString = 41;
 $i = 0;
 $arrayMonth = array(
@@ -42,5 +43,10 @@ foreach ($xml->sheetData->row as $item) {
     }
 }
 
-$xml->saveXML($pathWrite);
+if ($xml->saveXML($pathListExcel)) {
+    $status = true;
+} else {
+    $status = false;
+}
+include './templateStatusSave.php';
 ?>

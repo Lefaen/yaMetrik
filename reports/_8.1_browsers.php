@@ -40,7 +40,7 @@ foreach ($data as $item) {
 $browsers = $tmpdata;
 ?>
 
-
+<?/*
 <table class="tableReports">
     <caption>Браузеры</caption>
     <tr>
@@ -62,3 +62,4 @@ $browsers = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

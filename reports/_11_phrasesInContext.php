@@ -47,7 +47,7 @@ foreach ($data as $item) {
 
 ?>
 
-
+<?/*
 <table class="tableReports">
     <caption>Фразы по контексту</caption>
     <tr>
@@ -71,3 +71,4 @@ foreach ($data as $item) {
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

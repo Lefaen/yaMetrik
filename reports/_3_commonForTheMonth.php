@@ -3,15 +3,16 @@
 //ОБЩИЕ ПО МЕСЯЦУ--------------------
 //-----------------------------------
 
-$params = [
-    'ids' => $ids,                          //счетчик
+$params = array(
+    'ids' => $ids,              //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits,ym:s:users,ym:s:pageviews,ym:s:percentNewVisitors,ym:s:bounceRate,ym:s:avgVisitDurationSeconds',         //метрики
     'dimensions' => 'ym:s:date',                                  //группировка
     'date1' => $dateStart,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFin,//$_POST['dateFin'];                 //дата окончания выгрузки
     'sort' => 'ym:s:date'                                         //сортировка
-];
+);
+
 
 //var_dump($_POST);
 
@@ -38,7 +39,7 @@ foreach ($data as $item) {
 //var_dump($tmpdata);
 $commonForTheMonth = $tmpdata;
 ?>
-
+<?/*
 <table class="tableReports">
     <caption>Общие по месяцу</caption>
     <tr>
@@ -62,3 +63,4 @@ $commonForTheMonth = $tmpdata;
         </tr>
     <? endforeach; ?>
 </table>
+*/?>

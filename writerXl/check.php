@@ -13,6 +13,11 @@ function checkChildXml($cell, $text, $elm)
     }
 }
 
+function replaceChart($elm, $str)
+{
+
+}
+
 function deleteChildXml($cell, $tag, $elm)
 {
     if ($elm->attributes()->r == $cell) {

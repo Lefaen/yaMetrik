@@ -49,7 +49,6 @@ if (file_exists($pathTemplateFile)) {
     include '_12_writePopularPages.php';
 
 
-
     function Zip($source, $destination)
     {
         if (!extension_loaded('zip') || !file_exists($source)) {

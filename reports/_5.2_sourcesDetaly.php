@@ -83,13 +83,13 @@ foreach ($sourcesSummary as $source) {
 
         $numberDays = cal_days_in_month(CAL_GREGORIAN, (int)$date[1], (int)$date [0]);
         $numberDays;
-        $day = 0;
+        $day = 1;
         $week = 7;
         $visit = 0;
         for ($j = 1; $j <= $numberDays; $j++) {
             $dateElm = null;
 
-            $day = $day +1;
+
             foreach ($tmpdata as $elm) {
 
                 $dateElm = explode('-', $elm['date']);
@@ -115,6 +115,7 @@ foreach ($sourcesSummary as $source) {
                             $sourceDetalyWeek[$source['sources']]['source'][] = $elm['source'];
                             $sourceDetalyWeek[$source['sources']]['visit'][] = $visit;
                             $visit = 0;
+                            $day = 1;
                         }
 
                         break;
@@ -144,8 +145,17 @@ foreach ($sourcesSummary as $source) {
             }
             if($day == $week)
             {
-                $day = 0;
+                $day = 1;
             }
+            if(($j == $numberDays) && ($day != $week) && ($n == $period))
+            {
+                //array_pop($sourceDetalyWeek[$source['sources']]['date']);
+                //array_pop($sourceDetalyWeek[$source['sources']]['source']);
+                //array_pop($sourceDetalyWeek[$source['sources']]['visit']);
+
+
+            }
+            $day = $day +1;
         }
 
         $date[1] = (int)$date[1] + 1;

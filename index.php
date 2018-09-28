@@ -67,6 +67,7 @@ $client = $_POST['client'];
 
 //$path = "C:/OSpanel/domains/yaMetrik/template/xl/worksheets/";
 $path = "template/xl/worksheets/";
+$pathToDiagram = 'template/xl/charts/';
 $status = null;
 //var_dump($_POST);
 

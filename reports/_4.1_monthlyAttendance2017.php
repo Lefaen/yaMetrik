@@ -10,7 +10,7 @@ $params = array(
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:sumPageViews,ym:s:percentNewVisitors,ym:s:percentBounce,ym:s:avgVisitDuration,ym:s:sumGoalReachesAny',         //метрики
     'dimensions' => 'ym:s:visitMonth',                                  //группировка
     'date1' => '2017-01-01',//$_POST['dateStart'];              //дата начала выгрузки
-    'date2' => '2018-01-01',//$_POST['dateFin'];                 //дата окончания выгрузки
+    'date2' => '2017-12-31',//$_POST['dateFin'];                 //дата окончания выгрузки
     'sort' => 'ym:s:visitMonth',                                         //сортировка
 );
 

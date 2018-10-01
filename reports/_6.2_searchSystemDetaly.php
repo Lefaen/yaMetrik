@@ -144,6 +144,14 @@ foreach ($searchSystemSummary as $system) {
             {
                 $day = 0;
             }
+            if(($j == $numberDays) && ($day != $week) && ($n == $period))
+            {
+                //array_pop($sourceDetalyWeek[$source['sources']]['date']);
+                //array_pop($sourceDetalyWeek[$source['sources']]['source']);
+                //array_pop($sourceDetalyWeek[$source['sources']]['visit']);
+
+
+            }
 
         }
 

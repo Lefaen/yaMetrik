@@ -52,7 +52,7 @@ foreach ($searchSystemDetalyWeek as $element) {
             if($str == 1){
                 checkChildXml($abc[$j][2] . 1, $element['searchSystem'][$i], $item->c[$numAbc+2]);
             }
-            if ($str == $startString && $str <= 25) {
+            if ($str == $startString && $str <= 28) {
                 checkChildXml($abc[$j][0] . $startString, $element['date'][$i], $item->c[$numAbc + 0]);
                 checkChildXml($abc[$j][1] . $startString, $element['searchSystem'][$i], $item->c[$numAbc + 1]);
                 checkChildXml($abc[$j][2] . $startString, $element['visit'][$i], $item->c[$numAbc + 2]);

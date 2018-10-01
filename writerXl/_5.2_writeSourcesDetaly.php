@@ -46,7 +46,7 @@ foreach ($sourceDetalyWeek as $element) {
             if($str == 1){
                 checkChildXml($abc[$j][2] . 1, $element['source'][$i], $item->c[$numAbc+2]);
             }
-            if ($str == $startString && $str <= 25) {
+            if ($str == $startString && $str <= 28) {
                 if($element != null) {
 
 

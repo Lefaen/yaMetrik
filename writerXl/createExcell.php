@@ -31,22 +31,22 @@ if (file_exists($pathTemplateFile)) {
 
 
     include 'check.php';
-    include '_1_writeTitleList.php';
-    include '_2_writeContent.php';
-    include '_3_writeCommonForTheMonth.php';
-    include '_4.1_writeMonthlyAttendance2017.php';
-    include '_4.2_writeMonthlyAttendance2018.php';
-    include '_5.1_writeSourcesSummary.php';
-    include '_5.2_writeSourcesDetaly.php';
-    include '_6.1_writeSearchSystemSummary.php';
-    include '_6.2_writeSearchSystemDetaly.php';
-    include '_7_writeGeography.php';
-    include '_8.1_writeBrowsers.php';
-    include '_8.2_writeResolution.php';
-    include '_9_writeDevices.php';
-    include '_10_writeSearchPhrases.php';
-    include '_11_writePhrasesInContext.php';
-    include '_12_writePopularPages.php';
+    //include '_1_writeTitleList.php';
+    //include '_2_writeContent.php';
+    //include '_3_writeCommonForTheMonth.php';
+    //include '_4.1_writeMonthlyAttendance2017.php';
+    //include '_4.2_writeMonthlyAttendance2018.php';
+    //include '_5.1_writeSourcesSummary.php';
+    //include '_5.2_writeSourcesDetaly.php';
+    //include '_6.1_writeSearchSystemSummary.php';
+    //include '_6.2_writeSearchSystemDetaly.php';
+    //include '_7_writeGeography.php';
+    //include '_8.1_writeBrowsers.php';
+    //include '_8.2_writeResolution.php';
+    //include '_9_writeDevices.php';
+    //include '_10_writeSearchPhrases.php';
+    //include '_11_writePhrasesInContext.php';
+    //include '_12_writePopularPages.php';
 
 
     function Zip($source, $destination)

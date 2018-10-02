@@ -87,7 +87,6 @@ if (!isset($_POST['submit'])) {
         //include 'reports/_5.2_sourcesDetaly.php'; //Источники сводка
         //include 'reports/_6.1_searchSystemSummary.php';//Поисковой трафик сумарный
         //include 'reports/_6.2_searchSystemDetaly.php';//Поисковой трафик детальный
-        include 'reports/_7.1_targetSummaryMonth.php';//Цели в динамике суммарный за месяц
         //include 'reports/_7_geography.php'; //География
         //include 'reports/_8.1_browsers.php'; //Технологии Браузеры
         //include 'reports/_8.2_resolution.php'; //Технологии Разрешение
@@ -95,6 +94,7 @@ if (!isset($_POST['submit'])) {
         //include 'reports/_10_searchPhrases.php'; //Поисковые фразы
         //include 'reports/_11_phrasesInContext.php';//Фразы по контексту
         //include 'reports/_12_popularPages.php'; //Популярные страницы
+        include 'reports/_7.1_targetSummaryMonth.php';//Цели в динамике суммарный за месяц
 
 //include 'reports/_5.2_sourcesDetaly_V2.0.php'; //Источники сводка
         include 'writerXl/createExcell.php';

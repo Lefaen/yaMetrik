@@ -47,7 +47,8 @@ if (file_exists($pathTemplateFile)) {
     //include '_10_writeSearchPhrases.php';
     //include '_11_writePhrasesInContext.php';
     //include '_12_writePopularPages.php';
-
+    include '_7.1_wrightTargetSummaryMonth.php';
+    include '_7.2_wrightTargetDetalyYear.php';
 
     function Zip($source, $destination)
     {

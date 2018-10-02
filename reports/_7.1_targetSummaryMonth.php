@@ -39,13 +39,16 @@ foreach ($listTarget['goals'] as $item)
 
     foreach ($data['data'] as $elm) {
         $tmpdata[] = array(
+            'name' => $item['name'],
             'conversionRate' => $elm['metrics'][0],
             'reaches' => $elm['metrics'][1],
             'visits' => $elm['metrics'][2]
         );
 
     }
-    $dataTargets = $tmpdata[0];
+
+
+    $dataTargets[] = $tmpdata[0];
     //var_dump($tmpdata);
     //echo $item['name'].':'.$dataTargets['conversionRate'].':'.$dataTargets['reaches'].':'.$dataTargets['visits'].'<br>';//Пишем в общий массив, отправляем на запись
 
@@ -53,9 +56,18 @@ foreach ($listTarget['goals'] as $item)
 
     include '_7.2_targetDetalyYear.php';
 }
+$targetsYearSummary = array();
+//var_dump($targetsYear);
+for($i = 0; $i < count($targetsYear); $i++){
+    foreach ($targetsYear[$i] as $key => $val){
+        $targetsYearSummary[$key]['date'] = $val['date'];
+        $targetsYearSummary[$key]['reaches'] += $val['reaches'];
+    }
+}
 
 
-//var_dump($tmpdata);
+
+//var_dump($targetsYearSummary);
 //$commonForTheMonth = $tmpdata;
 
 ?>

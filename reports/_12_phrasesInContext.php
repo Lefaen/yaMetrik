@@ -7,8 +7,8 @@ $params = null;
 $params = array(
     'ids' => $ids,//$_POST['ids'],                          //счетчик
     'oauth_token' => $token,    //токен
-    'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:percentBounce,ym:s:pageDepth,ym:s:avgVisitDuration',         //метрики
-    'dimensions' => 'ym:s:directClickOrder,ym:s:directPhraseOrCond,ym:s:directBanner,ym:s:directSearchPhrase',                                  //группировка
+    'metrics' => 'ym:s:visits,ym:s:users,ym:s:bounceRate,ym:s:pageDepth,ym:s:avgVisitDurationSeconds',         //метрики
+    'dimensions' => 'ym:s:<attribution>DirectClickOrder,ym:s:<attribution>DirectClickBanner,ym:s:<attribution>DirectSearchPhrase,ym:s:<attribution>DirectSearchPhrase',                                  //группировка
     'date1' => $dateStart,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFin,//$_POST['dateFin'];                 //дата окончания выгрузки
     'limit' => 40,
@@ -41,6 +41,7 @@ foreach ($data['data'] as $item) {
 //var_dump($tmpdata);
 //if($tmpdata != null){
     $prasesInContext = $tmpdata;
+//var_dump($prasesInContext);
 //}else{
     //echo 'Контекст не ведется';
 //}
@@ -66,8 +67,8 @@ foreach ($data['data'] as $item) {
             <td><?= $elm['refusals']; ?></td>
             <td><?= $elm['viewingDepth']; ?></td>
             <td><?= $elm['time']; ?></td>
-            <td><?= $elm['companyYaDirect'] .' '. $elm['directBanner']; ?></td>
-            <td><?= $elm['directSearchPhrase']; ?></td>
+            <td><?= $elm['companyYaDirect']; ?></td>
+            <td><?= $elm['directBanner']; ?></td>
         </tr>
     <? endforeach; ?>
 </table>

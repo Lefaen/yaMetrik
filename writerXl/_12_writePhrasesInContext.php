@@ -20,11 +20,11 @@ foreach ($xml->sheetData->row as $item) {
             $time = $prasesInContext[$i]['time'] / 86400;
             checkChildXml('A' . $startString, $prasesInContext[$i]['visit'], $item->c[0]);
             checkChildXml('B' . $startString, $prasesInContext[$i]['users'], $item->c[1]);
-            checkChildXml('C' . $startString, $prasesInContext[$i]['refusals'], $item->c[2]);
+            checkChildXml('C' . $startString, $prasesInContext[$i]['refusals'] / 100, $item->c[2]);
             checkChildXml('D' . $startString, $prasesInContext[$i]['viewingDepth'], $item->c[3]);
             checkChildXml('E' . $startString, $time, $item->c[4]);
             checkChildXml('F' . $startString, $prasesInContext[$i]['companyYaDirect'], $item->c[5]);
-            checkChildXml('G' . $startString, $prasesInContext[$i]['directSearchPhrase'], $item->c[6]);
+            checkChildXml('G' . $startString, $prasesInContext[$i]['directBanner'], $item->c[6]);
 
             //var_dump($prasesInContext[$i]['visit']);
 

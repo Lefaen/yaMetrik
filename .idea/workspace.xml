@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43783311-7d29-49b0-87bb-fae8a962f951" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/template.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/template/template.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/writerXl/_7.2_wrightTargetDetalyYear.php" beforeDir="false" afterPath="$PROJECT_DIR$/writerXl/_7.2_wrightTargetDetalyYear.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,28 +93,28 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="1_achivmentOfTargets" value="1" />
-          <entry key="php" value="261" />
+          <entry key="php" value="265" />
           <entry key="rels" value="1" />
           <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="262" />
+          <entry key="PHP" value="266" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="6100" />
+          <entry key="php" value="6104" />
           <entry key="rels" value="3" />
           <entry key="xml" value="90" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="6100" />
+          <entry key="PHP" value="6104" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="90" />
         </counts>
@@ -122,11 +123,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+            <state relative-caret-position="493">
+              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -134,7 +144,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
+            <state relative-caret-position="34">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/writerXl/_7.2_wrightTargetDetalyYear.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
               <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
             </state>
           </provider>
@@ -268,7 +287,6 @@
         <option value="$PROJECT_DIR$/writerXl/_12_writePopularPages.php" />
         <option value="$USER_HOME$/Desktop/sheet16.xml" />
         <option value="$PROJECT_DIR$/writerXl/check.php" />
-        <option value="$PROJECT_DIR$/writerXl/_7.2_wrightTargetDetalyYear.php" />
         <option value="$PROJECT_DIR$/reports/_7.2_targetDetalyYear.php" />
         <option value="$PROJECT_DIR$/writerXl/createExcell.php" />
         <option value="$PROJECT_DIR$/writerXl/_8_writeGeography.php" />
@@ -279,14 +297,15 @@
         <option value="$PROJECT_DIR$/writerXl/_12_writePhrasesInContext.php" />
         <option value="$PROJECT_DIR$/reports/_7.1_targetSummaryMonth.php" />
         <option value="$USER_HOME$/Desktop/sheet13.xml" />
-        <option value="$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php" />
         <option value="$PROJECT_DIR$/writerXl/_5.1_writeSourcesSummary.php" />
-        <option value="$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php" />
         <option value="$PROJECT_DIR$/writerXl/_13_writePopularPages.php" />
         <option value="$PROJECT_DIR$/reports/_12_phrasesInContext.php" />
         <option value="$USER_HOME$/Desktop/sheet7.xml" />
         <option value="$PROJECT_DIR$/writerXl/_7.1_wrightTargetSummaryMonth.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php" />
+        <option value="$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php" />
+        <option value="$PROJECT_DIR$/writerXl/_7.2_wrightTargetDetalyYear.php" />
       </list>
     </option>
   </component>
@@ -404,12 +423,12 @@
       <workItem from="1538375609100" duration="726000" />
       <workItem from="1538376802284" duration="21012000" />
       <workItem from="1538460628398" duration="23736000" />
-      <workItem from="1538547372703" duration="3539000" />
+      <workItem from="1538547372703" duration="4584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="407638000" />
+    <option name="totallyTimeSpent" value="408683000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -549,15 +568,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/counters.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/index 2.php" />
-    <entry file="file://$PROJECT_DIR$/counters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reports/_4.1_monthlyAttendance2017.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -679,13 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/writerXl/_7.2_wrightTargetDetalyYear.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/writerXl/_13_writePopularPages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -697,13 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -749,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/writerXl/_12_writePhrasesInContext.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -777,10 +767,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/counters.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/counters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        <state relative-caret-position="493">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writerXl/_7.2_wrightTargetDetalyYear.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
     </entry>

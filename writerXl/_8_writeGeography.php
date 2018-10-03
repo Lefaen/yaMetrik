@@ -1,6 +1,6 @@
 <?php
 $nameList = 'Лист география';
-$pathListExcel = $path . 'sheet7.xml';
+$pathListExcel = $path . 'sheet8.xml';
 
 $xml = simplexml_load_file($pathListExcel);
 $startString = 26;

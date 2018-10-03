@@ -1,6 +1,6 @@
 <?php
 $nameList = 'Лист популярные страницы';
-$pathListExcel = $path . 'sheet12.xml';
+$pathListExcel = $path . 'sheet13.xml';
 
 $xml = simplexml_load_file($pathListExcel);
 $startString = 11;

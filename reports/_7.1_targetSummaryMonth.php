@@ -60,8 +60,15 @@ $targetsYearSummary = array();
 //var_dump($targetsYear);
 for($i = 0; $i < count($targetsYear); $i++){
     foreach ($targetsYear[$i] as $key => $val){
-        $targetsYearSummary[$key]['date'] = $val['date'];
+
+        if(($targetsYear[$i]['date'] == $val['date']) || ($targetsYearSummary[$key]['date'] == null))
+        {
+            $targetsYearSummary[$key]['date'] = $val['date'];
+        }
         $targetsYearSummary[$key]['reaches'] += $val['reaches'];
+
+        //echo $targetsYearSummary[$key]['date'].'<br>';
+        //var_dump($targetsYearSummary[$key]['date']);
     }
 }
 

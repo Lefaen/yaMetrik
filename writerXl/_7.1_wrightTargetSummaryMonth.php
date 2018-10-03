@@ -1,6 +1,6 @@
 <?php
-$nameList = 'Лист цели в динамике';
-$pathListExcel = $path . 'sheet13.xml';
+$nameList = 'Лист конверсия';
+$pathListExcel = $path . 'sheet7.xml';
 $xml = simplexml_load_file($pathListExcel);
 $startString = 30;
 $i = 0;
@@ -12,8 +12,9 @@ foreach ($dataTargets as $goal) {
 
         $str = (int)$item->attributes()->r;
 
-        if ($str == 3) {
-            //checkChildXml('C3', 'test', $item->c[0]);
+        if (($str == 3) && ($i == 0)) {
+            checkChildXml('C3', $project, $item->c[0]);
+            //var_dump($item->c[0]);
 
         }
 
@@ -36,7 +37,7 @@ foreach ($dataTargets as $goal) {
         //var_dump($item);
     }
     $startString++;
-
+    $i++;
 }
 
 if ($xml->saveXML($pathListExcel)) {

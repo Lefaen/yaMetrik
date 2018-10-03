@@ -1,6 +1,6 @@
 <?php
 $nameList = 'Лист устройства';
-$pathListExcel = $path . 'sheet9.xml';
+$pathListExcel = $path . 'sheet10.xml';
 
 $xml = simplexml_load_file($pathListExcel);
 $startString = 27;

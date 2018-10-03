@@ -1,6 +1,6 @@
 <?php
 $nameList = 'Лист поисковые фразы';
-$pathListExcel = $path . 'sheet10.xml';
+$pathListExcel = $path . 'sheet11.xml';
 
 $xml = simplexml_load_file($pathListExcel);
 $startString = 11;

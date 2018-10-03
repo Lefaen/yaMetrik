@@ -1,6 +1,6 @@
 <?php
 $nameList = 'Лист технологии браузеры';
-$pathListExcel = $path . 'sheet8.xml';
+$pathListExcel = $path . 'sheet9.xml';
 
 $xml = simplexml_load_file($pathListExcel);
 $startString = 26;

@@ -33,19 +33,19 @@ if($_GET['id'] == 1)
         </div>
         <div>
             <label>Руководитель проекта:</label>
-            <input name="headProject" value="Горячев А.А." type="text" />
+            <input name="headProject" value="" type="text" />
         </div>
         <div>
             <label>Руководитель отдела:</label>
-            <input name="headDepartment" value="Семенова Н.В." type="text" />
+            <input name="headDepartment" value="" type="text" />
         </div>
         <div>
             <label>Ведущий специалист проекта:</label>
-            <input name="specialist" value="Лотц О.А" type="text" />
+            <input name="specialist" value="" type="text" />
         </div>
         <div>
             <label>Обращение к клиенту</label>
-            <input name="client" value="Уважаемый Олег" type="text" />
+            <input name="client" value="" type="text" />
         </div>
 
 

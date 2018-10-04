@@ -94,7 +94,7 @@ function sortMonth ($array, $month)
     //var_dump($array);
     return $array;
 }
-$dateStartTarget = explode('-', $dateStart);[1];
+$dateStartTarget = explode('-', $dateStart);
 $yearArrayMonth = sortMonth($yearArrayMonth, $dateStartTarget[1]);
 
 

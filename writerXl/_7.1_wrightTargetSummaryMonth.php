@@ -2,9 +2,9 @@
 $nameList = 'Лист конверсия';
 $pathListExcel = $path . 'sheet7.xml';
 $xml = simplexml_load_file($pathListExcel);
-$startString = 30;
-$i = 0;
 
+$i = 0;
+$startString = 30;
 //var_dump($dataTargets);
 foreach ($dataTargets as $goal) {
 
@@ -19,6 +19,7 @@ foreach ($dataTargets as $goal) {
         }
 
         if ($str == $startString && $str <= count($dataTargets)+$startString) {
+
             if ($goal != null) {
 
                 //echo $dataTargets[$i]['month'];
@@ -28,15 +29,18 @@ foreach ($dataTargets as $goal) {
                 checkChildXml('B' . $startString, $goal['visits'], $item->c[1]);
                 checkChildXml('C' . $startString, $goal['reaches'], $item->c[2]);
                 checkChildXml('D' . $startString, $goal['conversionRate'] / 100, $item->c[3]);
-
+                //var_dump($goal);
+                $startString++;
+                break;
             }
 
         } else {
             //var_dump('no');
         }
         //var_dump($item);
+
     }
-    $startString++;
+
     $i++;
 }
 

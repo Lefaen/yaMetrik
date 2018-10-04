@@ -49,32 +49,81 @@ foreach ($listTarget['goals'] as $item)
 
 
     $dataTargets[] = $tmpdata[0];
-    //var_dump($tmpdata);
+    //var_dump($dataTargets);
     //echo $item['name'].':'.$dataTargets['conversionRate'].':'.$dataTargets['reaches'].':'.$dataTargets['visits'].'<br>';//Пишем в общий массив, отправляем на запись
 
     //Выборка Достижения целей по каждой цели за год
 
     include '_7.2_targetDetalyYear.php';
+
 }
+$yearArrayMonth = array(
+    '01' => '',
+    '02' => '',
+    '03' => '',
+    '04' => '',
+    '05' => '',
+    '06' => '',
+    '07' => '',
+    '08' => '',
+    '09' => '',
+    '10' => '',
+    '11' => '',
+    '12' => ''
+);
+function sortMonth ($array, $month)
+{
+    $tmpArray = array();
+    $newArray = array();
+    foreach ($array as $k => $v)
+    {
+        if(($k != $month) && (int)$k < (int)$month)
+        {
+            $tmpArray[$k] = $v;
+        }
+        elseif((int)$k >= (int)$month)
+        {
+            $newArray[$k] = $v;
+        }
+        //var_dump($key);
+    }
+
+    $array = null;
+    $array = $newArray;
+    $array = $array + $tmpArray;
+    //var_dump($array);
+    return $array;
+}
+$dateStartTarget = explode('-', $dateStart);[1];
+$yearArrayMonth = sortMonth($yearArrayMonth, $dateStartTarget[1]);
+
+
 $targetsYearSummary = array();
 //var_dump($targetsYear);
 for($i = 0; $i < count($targetsYear); $i++){
     foreach ($targetsYear[$i] as $key => $val){
-
-        if(($targetsYear[$i]['date'] == $val['date']) || ($targetsYearSummary[$key]['date'] == null))
+        foreach ($yearArrayMonth as $month => $itemMonth)
         {
-            $targetsYearSummary[$key]['date'] = $val['date'];
+            $date = explode('-', $val['date']);
+            if((int)$month == (int)$date[1])
+            {
+                //var_dump($val);
+                $targetsYearSummary[$val['date']] += $val['reaches'];
+                //var_dump($targetsYearSummary[$key]);
+            }
+
+            //echo($date[1]);
         }
-        $targetsYearSummary[$key]['reaches'] += $val['reaches'];
+
 
         //echo $targetsYearSummary[$key]['date'].'<br>';
-        //var_dump($targetsYearSummary[$key]['date']);
+        //var_dump($targetsYearSummary);
     }
 }
 
 
 
-//var_dump($targetsYearSummary);
+    //var_dump($targetsYearSummary);
 //$commonForTheMonth = $tmpdata;
 
 ?>

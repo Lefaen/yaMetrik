@@ -2,10 +2,11 @@
 $nameList = 'Лист поисковые фразы ЯД';
 $pathListExcel = $path . 'sheet12.xml';
 
-$xml = simplexml_load_file($pathListExcel);
+$xml = @simplexml_load_file($pathListExcel);
 $startString = 11;
 $i = 0;
 //var_dump($xml);
+
 foreach ($xml->sheetData->row as $item) {
 
     $str = (int)$item->attributes()->r;
@@ -14,9 +15,9 @@ foreach ($xml->sheetData->row as $item) {
         checkChildXml('E3', $project, $item->c[0]);
 
     }
-
+    //var_dump($prasesInContext[$i]);
     if ($str == $startString && $str <= 40) {
-        if (isset($prasesInContext[$i])) {
+        if ($prasesInContext[$i] != null) {
             $time = $prasesInContext[$i]['time'] / 86400;
             checkChildXml('A' . $startString, $prasesInContext[$i]['visit'], $item->c[0]);
             checkChildXml('B' . $startString, $prasesInContext[$i]['users'], $item->c[1]);

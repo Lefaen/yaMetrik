@@ -11,12 +11,12 @@ foreach ($xml->sheetData->row as $item) {
     $str = (int)$item->attributes()->r;
 
     if($str == 3) {
-        checkChildXml('E3', $project, $item->c[0]);
+        //checkChildXml('E3', $project, $item->c[0]);
 
     }
 
     if ($str == $startString && $str <= 35) {
-        if (isset($popularPage[$i])) {
+        if ($popularPage[$i] != null) {
             $time = $popularPage[$i]['time'] / 86400;
             checkChildXml('A' . $startString, $popularPage[$i]['signInPage'], $item->c[0]);
             checkChildXml('B' . $startString, $popularPage[$i]['visit'], $item->c[1]);

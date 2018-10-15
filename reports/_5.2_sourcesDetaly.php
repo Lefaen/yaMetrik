@@ -59,7 +59,6 @@ foreach ($data['data'] as $item) {
 }
 
 $sourceDetaly = $tmpdata;
-
 //$sourceDetalyWeek[] = array();
 
 //var_dump($sourceDetaly);

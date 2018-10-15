@@ -34,6 +34,7 @@ $abc = array(
 $numAbc = 0;
 $j = 0;
 $firstItaration = true;
+$firstElement = true;
 $arrayOfWeek = null;
 $arrayOfWeek = array(
     'name' => $searchSystemSummary[0]['searchSystem'],
@@ -57,7 +58,11 @@ foreach ($searchSystemSummary as $key => $system) {
                 foreach ($xml->sheetData->row as $item) {
                     $str = (int)$item->attributes()->r;
 
-                    if ($str == $startString && $str <= 28) {
+                    if ($str == 1 && empty($item->c[$numAbc + 2]->v)) {
+                        checkChildXml($abc[$j][2] . 1, $element['searchSystem'], $item->c[$numAbc + 2]);
+                        //var_dump($item->c[$numAbc + 2]);
+                    }
+                    if ($str == $startString && $str <= 27 && $firstElement != true) {
 
                         checkChildXml($abc[$j][0] . $startString, $element['date'], $item->c[$numAbc + 0]);
                         checkChildXml($abc[$j][1] . $startString, $element['searchSystem'], $item->c[$numAbc + 1]);
@@ -67,6 +72,7 @@ foreach ($searchSystemSummary as $key => $system) {
 
                     }
                 }
+                $firstElement = false;
             }
             //$count = $startString;
             if ($firstItaration != true) {
@@ -75,8 +81,15 @@ foreach ($searchSystemSummary as $key => $system) {
 
                     $str = (int)$item2->attributes()->r;
 
-
-                    if ($str == $startString && $str <= 28) {
+                    if ($str == 1 && empty($item2->c[$numAbc + 2]->v)) {
+                        checkChildXml($abc[$j][2] . 1, $element['searchSystem'], $item2->c[$numAbc + 2]);
+                        //var_dump($item->c[$numAbc + 2]);
+                    }
+                    if ($startString == 2 && $count == 0) {
+                        $count++;
+                        break;
+                    }
+                    if ($str == $startString && $str <= 27) {
                         //var_dump($arrayOfWeek['week'][$count]);
                         if ($arrayOfWeek['week'][$count] == $element['date']) {
                             checkChildXml($abc[$j][0] . $startString, $element['date'], $item2->c[$numAbc + 0]);
@@ -103,7 +116,7 @@ foreach ($searchSystemSummary as $key => $system) {
         //$startString++;
         //$count++;
     }
-
+    $firstElement = true;
     $firstItaration = false;
     $numAbc = $numAbc + 3;
     $j++;

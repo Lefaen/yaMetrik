@@ -4,10 +4,10 @@
 //-----------------------------------
 
 $dateFinTarget = explode('-', $dateFin);
-$dateFinTarget[1] = $dateFinTarget[1]-1;
+$dateFinTarget[1] = $dateFinTarget[1];
 $dateStartTarget = explode('-', $dateStart);
 $dateStartTarget[0] = $dateStartTarget[0]-1;
-$dateStartTarget[1] = $dateStartTarget[1];
+$dateStartTarget[1] = $dateStartTarget[1]+1;
 $dateStartTarget[2] = $dateStartTarget[2];
 
 $dateFinTarget = $dateFinTarget[0] . '-' . $dateFinTarget[1] . '-' . $dateFinTarget[2];

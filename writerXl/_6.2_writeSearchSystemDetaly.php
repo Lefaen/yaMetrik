@@ -1,11 +1,8 @@
 <?php
-$nameList = 'Лист поисковой трафик(детально)';
+$nameList = 'Лист поисковой трафик (детально)';
 $pathListExcel = $path . 'sheet17.xml';
-
 $xml = simplexml_load_file($pathListExcel);
 $startString = 2;
-$i = 0;
-//var_dump($xml);
 $abc = array(
     0 => array(
         0 => 'A',
@@ -36,45 +33,85 @@ $abc = array(
 );
 $numAbc = 0;
 $j = 0;
-$i = 0;
+$firstItaration = true;
+$arrayOfWeek = null;
+$arrayOfWeek = array(
+    'name' => $searchSystemSummary[0]['searchSystem'],
+    'count' => null,
+    'week' => array()
+);
+foreach ($searchSystemSummary as $key => $system) {
+//echo $key;
+    $count = 0;
+    $startString = 2;
+    //var_dump($system);
+    foreach ($searchSystemDetaly as $element) {
+        //var_dump($element);
+        if ($system['searchSystem'] == $element['searchSystem']) {
+            //var_dump($element);
+            if ($firstItaration == true) {
+                if ($arrayOfWeek['name'] == $element['searchSystem'] && $firstItaration == true) {
+                    $arrayOfWeek['week'][] = $element['date'];
+                }
 
+                foreach ($xml->sheetData->row as $item) {
+                    $str = (int)$item->attributes()->r;
 
-foreach ($searchSystemDetalyWeek as $element) {
+                    if ($str == $startString && $str <= 28) {
 
-    //var_dump($lastElm);
-    //var_dump($dateFin);
-    //var_dump($element['date']);
-    if ($element != null) {
+                        checkChildXml($abc[$j][0] . $startString, $element['date'], $item->c[$numAbc + 0]);
+                        checkChildXml($abc[$j][1] . $startString, $element['searchSystem'], $item->c[$numAbc + 1]);
+                        checkChildXml($abc[$j][2] . $startString, $element['visit'], $item->c[$numAbc + 2]);
+                        $startString++;
+                        break;
 
-        foreach ($xml->sheetData->row as $item) {
-            $str = (int)$item->attributes()->r;
-
-            if($str == 1){
-                checkChildXml($abc[$j][2] . 1, $element['searchSystem'][$i], $item->c[$numAbc+2]);
+                    }
+                }
             }
-            if ($str == $startString && $str <= 28) {
-                checkChildXml($abc[$j][0] . $startString, $element['date'][$i], $item->c[$numAbc + 0]);
-                checkChildXml($abc[$j][1] . $startString, $element['searchSystem'][$i], $item->c[$numAbc + 1]);
-                checkChildXml($abc[$j][2] . $startString, $element['visit'][$i], $item->c[$numAbc + 2]);
+            //$count = $startString;
+            if ($firstItaration != true) {
 
-                echo '<pre>';
-                //var_dump($element['searchSystem']);
-                echo '</pre>';
-                $startString++;
-                $i++;
+                foreach ($xml->sheetData->row as $item2) {
+
+                    $str = (int)$item2->attributes()->r;
+
+
+                    if ($str == $startString && $str <= 28) {
+                        //var_dump($arrayOfWeek['week'][$count]);
+                        if ($arrayOfWeek['week'][$count] == $element['date']) {
+                            checkChildXml($abc[$j][0] . $startString, $element['date'], $item2->c[$numAbc + 0]);
+                            checkChildXml($abc[$j][1] . $startString, $element['searchSystem'], $item2->c[$numAbc + 1]);
+                            checkChildXml($abc[$j][2] . $startString, $element['visit'], $item2->c[$numAbc + 2]);
+
+                            $startString++;
+                            $count++;
+                            break;
+                        } else {
+                            //var_dump($element['date']);
+                            checkChildXml($abc[$j][0] . $startString, $arrayOfWeek['week'][$count], $item2->c[$numAbc + 0]);
+                            checkChildXml($abc[$j][1] . $startString, $element['searchSystem'], $item2->c[$numAbc + 1]);
+                            checkChildXml($abc[$j][2] . $startString, '0', $item2->c[$numAbc + 2]);
+                            $startString++;
+                            $count++;
+                            continue;
+                        }
+                    }
+                    //}
+                }
             }
         }
-        //echo '<pre>test '.$abc[$j][0];
-        //var_dump($element);
-        //echo '</pre>';
-        $i = 0;
-        $numAbc = $numAbc + 3;
-        $j++;
-        $startString = 2;
+        //$startString++;
+        //$count++;
     }
 
-}
+    $firstItaration = false;
+    $numAbc = $numAbc + 3;
+    $j++;
+    $startString = 2;
 
+}
+//var_dump($arrayOfWeek);
+//var_dump($xml);
 
 if ($xml->saveXML($pathListExcel)) {
     $status = true;

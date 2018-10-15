@@ -34,10 +34,10 @@ $params = array(
     'ids' => $ids,                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => 'ym:s:visits',         //метрики
-    'dimensions' => 'ym:s:date,ym:s:<attribution>SearchEngineRoot',                                  //группировка
+    'dimensions' => 'ym:s:startOfWeek,ym:s:<attribution>SearchEngineRoot',                                  //группировка
     'date1' => $dateStartSearch,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFinSearch,//$_POST['dateFin'];                 //дата окончания выгрузки
-    'sort' => 'ym:s:date',                                         //сортировка
+    'sort' => 'ym:s:<attribution>SearchEngineRoot,ym:s:startOfWeek',                                         //сортировка
     //'group' => 'week',
     'limit' => 5000
 );
@@ -56,114 +56,4 @@ foreach ($data['data'] as $item) {
 
 $searchSystemDetaly = $tmpdata;
 
-$searchSystemDetalyWeek[] = array();
-
-
-foreach ($searchSystemSummary as $system) {
-    $i = 1;
-    ?>
-<?/*
-    <table class="tableReports">
-        <caption>Поисковой трафик</caption>
-        <tr>
-            <th>Поисковая система</th>
-            <th>Визиты</th>
-            <th>Посетители</th>
-        </tr>
-*/?>
-<?
-
-    //var_dump($searchSystemDetaly);
-
-
-
-    $date = explode('-', $dateStartSearch);
-    for ($n = 1; $n <= $period; $n++) {
-
-
-        $numberDays = cal_days_in_month(CAL_GREGORIAN, (int)$date[1], (int)$date [0]);
-        $numberDays;
-        $day = 0;
-        $week = 7;
-        $visit = 0;
-        for ($j = 1; $j <= $numberDays; $j++) {
-            $dateElm = null;
-
-            $day = $day +1;
-            foreach ($tmpdata as $elm) {
-
-                $dateElm = explode('-', $elm['date']);
-                if ($dateElm[2] == $j && $dateElm[1] == $date[1]) {
-
-                    if ($elm['searchSystem'] == $system['searchSystem']) {
-
-
-                        //$searchSystemDetalyWeek[]['date'] = $elm['date'];
-                        //$searchSystemDetalyWeek[]['searchSystem'] = $elm['searchSystem'];
-                        //$searchSystemDetalyWeek[]['visit'] = $elm['visit'];
-                        $visit = $elm['visit'] + $visit;
-                        if($day == $week){
-                            //echo '<tr>';
-                            //echo '<td>'.$elm['date'].'</td>';
-                            //echo '<td>' . $elm['searchSystem'] . '</td>';
-                            //echo '<td>' . $visit . '</td>';
-                            //echo '</tr>';
-
-                            $searchSystemDetalyWeek[$system['searchSystem']]['date'][] = $elm['date'];
-                            $searchSystemDetalyWeek[$system['searchSystem']]['searchSystem'][] = $elm['searchSystem'];
-                            $searchSystemDetalyWeek[$system['searchSystem']]['visit'][] = $visit;
-                            $visit = 0;
-                        }
-
-                        break;
-                    } else
-                        $dateElm = null;
-
-                } else {
-                    $dateElm = null;
-                    continue;
-                }
-            }
-            if ($dateElm == null) {
-                if($day == $week){
-                    //echo '<tr>';
-                    //echo '<td>' . $date[0].'-'.$date[1].'-' .$j . '</td>';
-                    //echo '<td>' . $system['searchSystem'] . '</td>';
-                    //echo '<td>' . $visit . '</td>';
-                    //echo '</tr>';
-
-                    $searchSystemDetalyWeek[$system['searchSystem']]['date'][] = $date[0] . '-' . $date[1] . '-' . $j;
-                    $searchSystemDetalyWeek[$system['searchSystem']]['searchSystem'][] = $system['searchSystem'];
-                    $searchSystemDetalyWeek[$system['searchSystem']]['visit'][] = $visit;
-                    $visit = 0;
-                }
-
-
-            }
-            if($day == $week)
-            {
-                $day = 0;
-            }
-            if(($j == $numberDays) && ($day != $week) && ($n == $period))
-            {
-                //array_pop($sourceDetalyWeek[$source['sources']]['date']);
-                //array_pop($sourceDetalyWeek[$source['sources']]['source']);
-                //array_pop($sourceDetalyWeek[$source['sources']]['visit']);
-
-
-            }
-
-        }
-
-        $date[1] = (int)$date[1] + 1;
-        //echo $date[1];
-
-
-
-
-
-
-    }
-    //echo '</table>';
-}
-//var_dump($searchSystemDetalyWeek['Яндекс']);
+//var_dump($searchSystemDetaly);

@@ -44,6 +44,7 @@ foreach ($sourcesSummary as $key => $source) {
 //echo $key;
     $count = 0;
     $startString = 2;
+
     foreach ($sourceDetaly as $element) {
         if ($source['sources'] == $element['source']) {
             if ($firstItaration == true) {
@@ -54,6 +55,11 @@ foreach ($sourcesSummary as $key => $source) {
                 foreach ($xml->sheetData->row as $item) {
                     $str = (int)$item->attributes()->r;
 
+                    if( $str == 1 && empty($item->c[$numAbc + 2]->v) )
+                    {
+                        checkChildXml($abc[$j][2] . 1, $element['source'], $item->c[$numAbc + 2]);
+                        //var_dump($item->c[$numAbc + 2]);
+                    }
                     if ($str == $startString && $str <= 28) {
 
                         checkChildXml($abc[$j][0] . $startString, $element['date'], $item->c[$numAbc + 0]);
@@ -72,7 +78,11 @@ foreach ($sourcesSummary as $key => $source) {
 
                     $str = (int)$item2->attributes()->r;
 
-
+                    if( $str == 1 && empty($item->c[$numAbc + 2]->v) )
+                    {
+                        checkChildXml($abc[$j][2] . 1, $element['source'], $item->c[$numAbc + 2]);
+                        //var_dump($item->c[$numAbc + 2]);
+                    }
                     if ($str == $startString && $str <= 28) {
                         if ($arrayOfWeek['week'][$count] == $element['date']) {
                             checkChildXml($abc[$j][0] . $startString, $element['date'], $item2->c[$numAbc + 0]);

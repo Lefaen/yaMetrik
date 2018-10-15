@@ -38,7 +38,8 @@ $params = array(
     'dimensions' => 'ym:s:<attribution>TrafficSource',                                  //группировка
     'date1' => $dateStartSources,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFinSources,//$_POST['dateFin'];                 //дата окончания выгрузки
-    //'sort' => 'ym:s:date',                                         //сортировка
+    //'sort' => 'ym:s:visits',                                         //сортировка
+    'limit'=>1000
 );
 
 //var_dump($_POST);

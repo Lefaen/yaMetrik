@@ -10,6 +10,7 @@ function checkChildXml($cell, $text, $elm)
         //echo '<br>SUCCESS '.$cell.': '. $text;
         return true;
     } else {
+        //echo '<br>ERROR ' . $cell .':'.$text.':'.$elm->attributes()->r;
         return false;
         //echo '<br>ERROR ' . $cell .':'.$text.':'.$elm->attributes()->r;
     }

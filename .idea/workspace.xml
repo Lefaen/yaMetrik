@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="43783311-7d29-49b0-87bb-fae8a962f951" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/_5.2_sourcesDetaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/reports/_5.2_sourcesDetaly.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/_7.2_targetDetalyYear.php" beforeDir="false" afterPath="$PROJECT_DIR$/reports/_7.2_targetDetalyYear.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/template.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/template/template.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/writerXl/_6.2_writeSearchSystemDetaly.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/writerXl/_3_writeCommonForTheMonth.php" beforeDir="false" afterPath="$PROJECT_DIR$/writerXl/_3_writeCommonForTheMonth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/writerXl/createExcell.php" beforeDir="false" afterPath="$PROJECT_DIR$/writerXl/createExcell.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,29 +81,29 @@
     <session id="-1956326601">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="6" />
+          <entry key="project.open.time.11" value="7" />
           <entry key="project.open.time.12" value="5" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="1_achivmentOfTargets" value="1" />
           <entry key="htaccess" value="1" />
-          <entry key="php" value="337" />
+          <entry key="php" value="339" />
           <entry key="rels" value="1" />
           <entry key="xml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="338" />
+          <entry key="PHP" value="340" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="27" />
           <entry key="htaccess" value="1" />
@@ -116,14 +112,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="htaccess" value="1" />
-          <entry key="php" value="13020" />
+          <entry key="php" value="13090" />
           <entry key="rels" value="3" />
           <entry key="xml" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="13020" />
+          <entry key="PHP" value="13090" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="116" />
           <entry key="htaccess" value="1" />
@@ -133,34 +129,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/writerXl/createExcell.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+            <state relative-caret-position="722">
+              <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1046">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/writerXl/_3_writeCommonForTheMonth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-              <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
-              <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-              <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
-              <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-              <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
-              <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
+            <state relative-caret-position="578">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -234,7 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/template/xl/charts/chart1.xml" />
         <option value="$PROJECT_DIR$/template/xl/drawings/drawing2.xml" />
         <option value="$PROJECT_DIR$/template/xl/worksheets/sheet4.xml" />
         <option value="$PROJECT_DIR$/template/xl/charts/chart2.xml" />
@@ -284,6 +274,7 @@
         <option value="$PROJECT_DIR$/writerXl/_5.2_writeSourcesDetaly.php" />
         <option value="$PROJECT_DIR$/reports/_7.2_targetDetalyYear.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/writerXl/_3_writeCommonForTheMonth.php" />
         <option value="$PROJECT_DIR$/writerXl/createExcell.php" />
       </list>
     </option>
@@ -411,12 +402,13 @@
       <workItem from="1539238302139" duration="19072000" />
       <workItem from="1539324946111" duration="10501000" />
       <workItem from="1539583924418" duration="390000" />
-      <workItem from="1539584371487" duration="20505000" />
+      <workItem from="1539584371487" duration="21106000" />
+      <workItem from="1539670273679" duration="3052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="522726000" />
+    <option name="totallyTimeSpent" value="526379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,7 +423,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10074627" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10181237" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -543,20 +535,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reports/_11_searchPhrases.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/writerXl/_3_writeCommonForTheMonth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/writerXl/_4.1_writeMonthlyAttendance2017.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/counters.php" />
     <entry file="file://$PROJECT_DIR$/writerXl/_11_writeSearchPhrases.php">
@@ -731,6 +709,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/writerXl/_4.1_writeMonthlyAttendance2017.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/reports/_7.2_targetDetalyYear.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -738,31 +723,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/writerXl/_3_writeCommonForTheMonth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
-          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
-          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
-          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
+        <state relative-caret-position="578">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/writerXl/createExcell.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        <state relative-caret-position="722">
+          <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1046">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -32,7 +32,7 @@ foreach ($xml->sheetData->row as $item) {
             deleteChildXml('C'.$str, 'v', $elm);
             deleteChildXml('D'.$str, 'v', $elm);
             deleteChildXml('E'.$str, 'v', $elm);
-            deleteChildXml('F'.$str, 'v', $elm);
+            deleteChildXml('G'.$str, 'v', $elm);
         }
     }
     if ($str == $startString) {

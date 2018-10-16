@@ -87,8 +87,10 @@ if (file_exists($pathTemplateFile)) {
         }
         return $zip->close();
     }
-    Zip('template/', 'project/'.$project.'/'.$project.'_'.$dateStart.'_'.$dateFin.'.xlsx');
-    echo '<a href="'.'project/'.$project.'/'.$project.'_'.$dateStart.'_'.$dateFin.'.xlsx'.'">Скачать отчет</a>';
+    $path = 'project/'.$project.'/'.$dateFin.'_'.$project.'_Статистический отчет по продвижению_v1'.'.xlsx';
+    $path = iconv('utf-8','cp1251',$path);
+    Zip('template/', $path);
+    echo '<a href="'.$path.'">Скачать отчет</a>';
 }
 
 

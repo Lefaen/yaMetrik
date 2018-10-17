@@ -75,6 +75,26 @@ $pathToDiagram = 'template/xl/charts/';
 $status = null;
 //var_dump($_POST);
 
+function sortMonth($array, $month)
+{
+    $tmpArray = array();
+    $newArray = array();
+    foreach ($array as $k => $v) {
+        if (($k != $month) && (int)$k < (int)$month) {
+            $tmpArray[$k] = $v;
+        } elseif ((int)$k >= (int)$month) {
+            $newArray[$k] = $v;
+        }
+        //var_dump($key);
+    }
+
+    $array = null;
+    $array = $newArray;
+    $array = $array + $tmpArray;
+    //var_dump($array);
+    return $array;
+}
+
 if (!isset($_POST['submit'])) {
     echo '<div>Введите данные</div>';
 } else {
@@ -86,7 +106,8 @@ if (!isset($_POST['submit'])) {
         include 'reports/_5.1_sourcesSummary.php'; //Источники сводка
         include 'reports/_5.2_sourcesDetaly.php'; //Источники сводка
         include 'reports/_6.1_searchSystemSummary.php';//Поисковой трафик сумарный
-        include 'reports/_6.2_searchSystemDetaly.php';//Поисковой трафик детальный
+        include 'reports/_6.2_searchSystemDetalyWeek.php';//Поисковой трафик детально по неделям
+        include 'reports/_6.3_searchSystemDetalyMonth.php';//Поисковой трафик детально по месяцам
         include 'reports/_7.1_targetSummaryMonth.php';//Цели в динамике суммарный за месяц
         include 'reports/_8_geography.php'; //География
         include 'reports/_9.1_browsers.php'; //Технологии Браузеры

@@ -39,7 +39,8 @@ if (file_exists($pathTemplateFile)) {
     include '_5.1_writeSourcesSummary.php';
     include '_5.2_writeSourcesDetaly.php';
     include '_6.1_writeSearchSystemSummary.php';
-    include '_6.2_writeSearchSystemDetaly.php';
+    include '_6.2_writeSearchSystemDetalyWeek.php';
+    include '_6.3_WrightSearchSystemDetalyMonth.php';
     include '_7.1_wrightTargetSummaryMonth.php';
     include '_7.2_wrightTargetDetalyYear.php';
     include '_8_writeGeography.php';
@@ -88,7 +89,7 @@ if (file_exists($pathTemplateFile)) {
         return $zip->close();
     }
     $path = 'project/'.$project.'/'.$dateFin.'_'.$project.'_Статистический отчет по продвижению_v1'.'.xlsx';
-    $path = iconv('utf-8','cp1251',$path);
+    //$path2 = iconv('utf-8','windows-1251',$path);
     Zip('template/', $path);
     echo '<a href="'.$path.'">Скачать отчет</a>';
 }

@@ -13,7 +13,7 @@ $params = array(
     'ids' => $ids,                          //счетчик
     'oauth_token' => $token,    //токен
     'metrics' => '',         //метрики
-    //'dimensions' => 'ym:s:date',                                  //группировка
+    //'dimensions' => 'ym:s:date',                             //группировка
     'date1' => $dateStart,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFin,//$_POST['dateFin'];                 //дата окончания выгрузки
     //'sort' => 'ym:s:date',
@@ -57,6 +57,7 @@ foreach ($listTarget['goals'] as $item)
     include '_7.2_targetDetalyYear.php';
 
 }
+$yearArrayMonth = null;
 $yearArrayMonth = array(
     '01' => '',
     '02' => '',
@@ -71,32 +72,12 @@ $yearArrayMonth = array(
     '11' => '',
     '12' => ''
 );
-function sortMonth ($array, $month)
-{
-    $tmpArray = array();
-    $newArray = array();
-    foreach ($array as $k => $v)
-    {
-        if(($k != $month) && (int)$k < (int)$month)
-        {
-            $tmpArray[$k] = $v;
-        }
-        elseif((int)$k >= (int)$month)
-        {
-            $newArray[$k] = $v;
-        }
-        //var_dump($key);
-    }
 
-    $array = null;
-    $array = $newArray;
-    $array = $array + $tmpArray;
-    //var_dump($array);
-    return $array;
-}
+
+
 $dateStartTarget = explode('-', $dateStart);
 $yearArrayMonth = sortMonth($yearArrayMonth, $dateStartTarget[1]);
-
+//var_dump($yearArrayMonth);
 
 $targetsYearSummary = array();
 //var_dump($targetsYear);
@@ -114,8 +95,6 @@ for($i = 0; $i < count($targetsYear); $i++){
 
             //echo($date[1]);
         }
-
-
         //echo $targetsYearSummary[$key]['date'].'<br>';
         //var_dump($targetsYearSummary);
     }
@@ -127,28 +106,3 @@ for($i = 0; $i < count($targetsYear); $i++){
 //$commonForTheMonth = $tmpdata;
 
 ?>
-<?/*
-<table class="tableReports">
-    <caption>Общие по месяцу</caption>
-    <tr>
-        <th>Дата визита</th>
-        <th>Визиты</th>
-        <th>Посетители</th>
-        <th>Просмотры</th>
-        <th>Для новых посетителей</th>
-        <th>Отказы</th>
-        <th>Время на сайте</th>
-    </tr>
-    <? foreach ($tmpdata as $elm): ?>
-        <tr>
-            <td><?= $elm['date']; ?></td>
-            <td><?= $elm['visit']; ?></td>
-            <td><?= $elm['users']; ?></td>
-            <td><?= $elm['shows']; ?></td>
-            <td><?= $elm['forNew']; ?></td>
-            <td><?= $elm['refusals']; ?></td>
-            <td><?= $elm['time']; ?></td>
-        </tr>
-    <? endforeach; ?>
-</table>
-*/?>

@@ -4,7 +4,7 @@ function checkChildXml($cell, $text, $elm)
     //var_dump($elm->attributes()->r);
     //var_dump($cell);
     //echo '<br><br>';
-    if ($elm->attributes()->r == $cell) {
+    if ($elm->attributes()->r == $cell ) {
         //$elm->addAttribute('t', 's');
         $elm->addChild('v', $text);
         //echo '<br>SUCCESS '.$cell.': '. $text;

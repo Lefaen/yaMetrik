@@ -59,6 +59,7 @@ foreach ($sourcesSummary as $key => $source) {
 
                     if ($str == 1 && empty($item->c[$numAbc + 2]->v)) {
                         checkChildXml($abc[$j][2] . 1, $element['source'], $item->c[$numAbc + 2]);
+                        break;
                         //var_dump($item->c[$numAbc + 2]);
                     }
                     if ($str == $startString && $str <= 27 && $firstElement == false) {
@@ -80,15 +81,15 @@ foreach ($sourcesSummary as $key => $source) {
 
                     $str = (int)$item2->attributes()->r;
 
-                    if ($str == 1 && empty($item2->c[$numAbc + 2]->v)) {
-                        checkChildXml($abc[$j][2] . 1, $element['source'], $item2->c[$numAbc + 2]);
-                        //var_dump($item->c[$numAbc + 2]);
+                    if ($str == 1 && empty($item2->c[$numAbc + 2]->v) && $abc[$j][2] != null) {
+                        checkChildXml($abc[$j][2] . '1', $element['source'], $item2->c[$numAbc + 2]);
+                        break;
                     }
                     if ($startString == 2 && $count == 0) {
                         $count++;
                         break;
                     }
-                    if ($str == $startString && $str <= 27 && $count != 0) {
+                    if ($str == $startString && $str <= 27 && $count != 0 && $abc[$j][2] != null) {
 
 
                         if ($arrayOfWeek['week'][$count] == $element['date']) {

@@ -28,7 +28,7 @@ $dateStartSearch = explode('-', $dateStart);
 
 
 
-$yearArrayMonth = sortMonth($yearArrayMonth, $dateStartSearch[1]+1);
+$yearArrayMonth = sortMonth($yearArrayMonth, $dateStartSearch[1]+2);
 //var_dump($yearArrayMonth);
 
 //var_dump($yearArrayMonth);
@@ -52,7 +52,10 @@ foreach ($yearArrayMonth as $key => $month) {
         $str = (int)$item->attributes()->r;
         if ($str == $startString && $str <= 13) {
             //if ($date != null) {
-
+            if($dateElm == '')
+            {
+                continue;
+            }
             if((checkChildXml('A' . $startString, $dateElm, $item->c[0]) == true) && (checkChildXml('B' . $startString, $visitsForMonth, $item->c[1]) == true) )
             {
                 $startString++;

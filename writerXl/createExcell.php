@@ -1,5 +1,5 @@
 <?php
-$pathTemplateFile = 'template/template.xlsx';
+$pathTemplateFile = 'template.php/template.php.xlsx';
 if (file_exists($pathTemplateFile)) {
     $pathDirectory = "project";
 
@@ -24,7 +24,7 @@ if (file_exists($pathTemplateFile)) {
     $zip = new ZipArchive;
     $res = $zip->open($pathTemplateFile);
     if ($res === true) {
-        $zip->extractTo('template');
+        $zip->extractTo('template.php');
         $zip->close();
     }
     $zip = null;
@@ -90,7 +90,7 @@ if (file_exists($pathTemplateFile)) {
     }
     $path = 'project/'.$project.'/'.$dateFin.'_'.$project.'_Статистический отчет по продвижению_v1'.'.xlsx';
     //$path2 = iconv('utf-8','windows-1251',$path);
-    Zip('template/', $path);
+    Zip('template.php/', $path);
     echo '<a href="'.$path.'">Скачать отчет</a>';
 }
 

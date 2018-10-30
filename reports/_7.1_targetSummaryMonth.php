@@ -3,7 +3,7 @@
 //ДОСТИЖЕНИЯ ЦЕЛЕЙ-------------------
 //-----------------------------------
 
-$urlForListTarget = 'https://api-metrika.yandex.ru/management/v1/counter/'.$ids.'/goals?oauth_token='.$token;
+$urlForListTarget = 'https://api-.default.yandex.ru/management/v1/counter/'.$ids.'/goals?oauth_token='.$token;
 //echo $urlForListTarget;
 $contentJson = file_get_contents($urlForListTarget);
 $listTarget = json_decode($contentJson, true);

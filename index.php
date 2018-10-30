@@ -1,4 +1,16 @@
-<head>
+<?
+ini_set('display_errors', 1);
+
+require_once '/classes/mvc/modelBase.php';
+require_once '/classes/mvc/viewBase.php';
+require_once '/classes/mvc/controllerBase.php';
+require_once '/classes/mvc/route.php';
+require_once '/classes/mvc/component.php';
+Route::start();
+?>
+
+
+<?/*<head>
     <link href="style.css" rel="stylesheet"/>
     <meta charset="utf-8">
     <title>Отчет</title>
@@ -69,9 +81,9 @@ $headDepartment = $_POST['headDepartment'];
 $specialist = $_POST['specialist'];
 $client = $_POST['client'];
 
-//$path = "C:/OSpanel/domains/yaMetrik/template/xl/worksheets/";
-$path = "template/xl/worksheets/";
-$pathToDiagram = 'template/xl/charts/';
+//$path = "C:/OSpanel/domains/yaMetrik/template.php/xl/worksheets/";
+$path = "template.php/xl/worksheets/";
+$pathToDiagram = 'template.php/xl/charts/';
 $status = null;
 //var_dump($_POST);
 
@@ -129,3 +141,4 @@ if (!isset($_POST['submit'])) {
 ?>
 
 </body>
+*/?>

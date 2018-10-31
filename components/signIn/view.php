@@ -1,7 +1,7 @@
-<form action="" method="post">
+<form class="signIn" action="" method="post">
     <label>Логин:</label><input name="login" type="text" />
     <label>Пароль:</label><input name="pass" type="password" />
     <input type="submit" />
 </form>
-<a href="">Регистрация</a>
-<?var_dump($data);?>
+<div><a href="/signUp">Регистрация</a></div>
+<div><a href="">Забыли пароль?</a></div>

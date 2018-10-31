@@ -6,7 +6,12 @@ require_once '/classes/mvc/viewBase.php';
 require_once '/classes/mvc/controllerBase.php';
 require_once '/classes/mvc/route.php';
 require_once '/classes/mvc/component.php';
-Route::start();
+require_once '/classes/user.php';
+require_once '/classes/sqlClass.php';
+
+Route::start();//prepare routing
+sqlClass::start();//prepare tables
+
 ?>
 
 

@@ -9,16 +9,16 @@ class component
         $controllerFile = $pathComponent . $nameComponent . 'Controller.php';
         $modelFile = $pathComponent . '/' . $nameComponent . 'Model.php';
 
+
         if (file_exists($modelFile)) {
             include $modelFile;
         }
         //var_dump($controllerFile);
         if (file_exists($controllerFile)) {
             include $controllerFile;
-
-            $controller = new signInController();
+            $component = $nameComponent.'controller';
+            $controller = new $component;
             if (method_exists($controller, 'actionIndex')) {
-
                 $controller->actionIndex($pathComponent . '/');
             } else {
                 echo 'нет метода';

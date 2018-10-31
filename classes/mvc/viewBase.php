@@ -2,7 +2,7 @@
 
 class viewBase
 {
-    public function createView($contentView, $templateView = 'template.php', $data = null)
+    public function createView($contentView, $templateView, $data = null)
     {
         if($templateView != '')
         {

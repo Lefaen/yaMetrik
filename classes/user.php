@@ -8,13 +8,6 @@ class user implements iUser
     private $pass;
     private $email;
 
-    public function __construct($login, $pass, $email)
-    {
-        $this->setLogin($login);
-        $this->setPass($pass);
-        $this->setEmail($email);
-        $this->register();
-    }
 
     public function setLogin($login)
     {
@@ -43,20 +36,52 @@ class user implements iUser
     }
 
 
-    public function register()
+    public function register($login, $pass, $email)
     {
-        if(!empty($this->getLogin()) && !empty($this->getPass()) && !empty($this->getEmail()))
+        if(!empty($login) && !empty($pass) && !empty($email))
         {
             $user = new sqlClass();
-            $user->addUser($this->getLogin(), $this->getPass(), $this->getEmail());
-            $user = null;
+            $status = $user->addUser($login, $pass, $email);
+            return $status;
         }
-
     }
 
-    public  function autorisation($login, $pass)
+    public function signIn($login, $pass)
     {
-        //check field login & pass in db
+        $sign = new sqlClass();
+        $dataUser = $sign->checkUser($login, $pass);
+        if($dataUser['id'] == false)
+        {
+            echo 'неверный логин/пароль';
+        }
+        else
+        {
+            $_SESSION['id'] = $dataUser['id'];
+            $_SESSION['login'] = $dataUser['login'];
+
+
+        }
+    }
+
+    public static function getListProjects($login)
+    {
+        $list = sqlClass::getListProject($login);
+        return $list;
+    }
+
+    public static function addProject($login, $project, $counter)
+    {
+        if(sqlClass::addProject($login, $project, $counter))
+            return true;
+        else
+            return false;
+    }
+    public static function deleteProject($login, $counter)
+    {
+        if(sqlClass::deleteProject($login, $counter))
+            return true;
+        else
+            return false;
     }
 }
 

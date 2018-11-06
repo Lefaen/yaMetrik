@@ -4,4 +4,4 @@
     <input type="submit" />
 </form>
 <div><a href="/signUp">Регистрация</a></div>
-<div><a href="">Забыли пароль?</a></div>
+<div><a href="/forgotPass">Забыли пароль?</a></div>

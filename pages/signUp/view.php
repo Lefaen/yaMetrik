@@ -1,3 +1,5 @@
-<div>
-    <? component::includeComponent('signUp');?>
-</div>
+    <div>
+        <? component::includeComponent('signUp');?>
+    </div>
+
+

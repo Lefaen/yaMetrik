@@ -1,0 +1,28 @@
+<?php
+
+class manageProjectsModel extends modelBase
+{
+    private $data;
+    public function getData()
+    {
+
+        if(isset($_POST['project']) && isset($_POST['counter']))
+        {
+
+            if(!user::addProject($_SESSION['login'], $_POST['project'], $_POST['counter']))
+            {
+                $this->data['statusAddProject'] = 'Проект с таким счетчиком уже есть';
+            }else
+            {
+                $this->data['statusAddProject'] = 'Проект успешно добавлен';
+            }
+        }
+
+        $this->data['listProjects'] = user::getListProjects($_SESSION['login']);
+        return $this->data;
+    }
+
+
+}
+
+?>

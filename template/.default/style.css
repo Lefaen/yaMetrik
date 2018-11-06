@@ -32,3 +32,15 @@ float: left;
     display: block;
     margin: 5px;
 }
+.listProjects {
+    padding: 0;
+    width: 60%;
+}
+
+.listProjects li:nth-child(2n){
+    background-color: #e2e2e2;
+}
+.listProjects div {
+    width: 23%;
+    display: inline-block;
+}

@@ -6,17 +6,16 @@ class signUpController extends controllerBase
     function actionIndex($path)
     {
         $data = $this->model->getData();
-        $this->view->createView($path . '/view.php', '', $data);
+
 
         //Если есть заявка, созадем пользователя
+        $status = false;
         if (isset($data)) {
-            $user = new user($data['login'], $data['pass'], $data['email']);
+            $user = new user();
+            $status = $user->register($data['login'], $data['pass'], $data['email']);
+            $data['statusRegister'] = $status;
         }
-    }
-
-    function createUser()
-    {
-
+            $this->view->createView($path . '/view.php', '', $data);
     }
 
     function __construct()

@@ -10,6 +10,7 @@ class viewBase
         }
         else
         {
+
             include $contentView;
         }
     }

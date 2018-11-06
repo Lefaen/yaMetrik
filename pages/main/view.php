@@ -1,5 +1,5 @@
 <div>
     <?if(isset($_SESSION['id'])):?>
-    <? component::includeComponent('report');?>
+    <? component::includeComponent('reportYaMetrika');?>
     <?endif;?>
 </div>

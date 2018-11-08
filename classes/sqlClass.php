@@ -36,9 +36,12 @@ class sqlClass implements iSql
                 `login` varchar(30) NOT NULL,
                 `pass` varchar(255) NOT NULL,
                 `email` varchar(50) NOT NULL,
+                `group` varchar(1),
                 PRIMARY KEY (`id`)
                 )";
         $res = $pdo->query($query);
+
+
         $pdo = null;
 
 
@@ -120,12 +123,16 @@ class sqlClass implements iSql
                 `id` int(11) NOT NULL AUTO_INCREMENT,
                 `projectName` varchar(30) NOT NULL,
                 `counter` varchar(20) NOT NULL,
+                `headProject` varchar(20) NOT NULL,
+                `headDepartment` varchar(20) NOT NULL,
+                `specialist` varchar(20) NOT NULL,
+                `client` varchar(30) NOT NULL,
                 PRIMARY KEY (`id`)
                 )";
         $pdo->query($query);
         $pdo = null;
     }
-    public static function addProject($login, $project, $counter)
+    public static function addProject($login, $project, $counter, $headProject, $headDepartment, $specialist, $client)
     {
         self::createTableProjects($login);
         $dataProject = self::checkString(array('counter' => (string)$counter), $login);
@@ -134,12 +141,22 @@ class sqlClass implements iSql
             $dataConnections = self::dataConnections();
             $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
             $allowed = array("login", "pass", "email"); // allowed fields
-            $query = "INSERT INTO `$login` SET `projectName`=:projectName, `counter`=:counter";
+            $query = "INSERT INTO `$login` SET 
+                      `projectName`=:projectName,
+                      `counter`=:counter,
+                      `headProject`=:headProject,
+                      `headDepartment`=:headDepartment,
+                      `specialist`=:specialist,
+                      `client`=:client";
             $res = $pdo->prepare($query);
             $res->execute(
                 array(
                     'projectName' => $project,
-                    'counter' => $counter
+                    'counter' => $counter,
+                    'headProject' => $headProject,
+                    'headDepartment' => $headDepartment,
+                    'specialist' => $specialist,
+                    'client' => $client
                 ));
             $pdo = null;
 

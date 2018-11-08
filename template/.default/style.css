@@ -21,26 +21,40 @@ ul {
     margin-right: 5px;
 }
 
-.signUp div:first-child{
+.signUp div:first-child,
+.manageProject div:first-child{
 float: left;
 }
-.signUp label{
+.signUp label,
+.manageProject label{
     display: block;
     margin: 5px;
 }
-.signUp input{
+.signUp input,
+.manageProject input{
     display: block;
     margin: 5px;
 }
 .listProjects {
     padding: 0;
-    width: 60%;
+    width: fit-content;
+}
+
+.listProjects li{
+    margin: 20px;
+}
+.listProjects div{
+    margin: 5px;
+}
+.listProjects span{
+    color: #666688;
+    margin-right: 5px;
+    font-size: 1em;
+}
+.listProjects b{
+    font-size: 1.1em;
 }
 
 .listProjects li:nth-child(2n){
     background-color: #e2e2e2;
-}
-.listProjects div {
-    width: 23%;
-    display: inline-block;
 }

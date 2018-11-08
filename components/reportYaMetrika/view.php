@@ -1,13 +1,13 @@
-<body>
-
-<form class="formReport" method="post" action="/">
+<?if(!isset($data['linkReport'])):?>
+<?if(!empty($data['listProjects'])):?>
+    <form class="formReport" method="post" action="/">
     <div class="fieldReports">
         <div>
             <label>Отчет по проекту</label>
-            <select name="ids">
+            <select name="id">
                 <?
                 foreach ($data['listProjects'] as $elm): ?>
-                    <option value="<?=$elm['counter'] . '_' . $elm['projectName'];?>"><?=$elm['projectName'];?></option>
+                    <option value="<?=$elm['id'];?>"><?=$elm['projectName'];?></option>
                 <? endforeach; ?>
             </select>
         </div>
@@ -16,101 +16,23 @@
             <span>С</span><input name="dateStart" type="date" value="<?= $_POST['dateStart'] ?>">
             <span>По</span><input name="dateFin" type="date" value="<?= $_POST['dateFin'] ?>">
         </div>
-        <div>
-            <label>Руководитель проекта:</label>
-            <input name="headProject" value="" type="text" />
-        </div>
-        <div>
-            <label>Руководитель отдела:</label>
-            <input name="headDepartment" value="" type="text" />
-        </div>
-        <div>
-            <label>Ведущий специалист проекта:</label>
-            <input name="specialist" value="" type="text" />
-        </div>
-        <div>
-            <label>Обращение к клиенту</label>
-            <input name="client" value="" type="text" />
-        </div>
 
 
     </div>
     <input name="submit" type="submit"/>
 </form>
-<?php
+    <?else:?>
+    Добавьте проекты в разделе "управление проектами"
+<?endif;?>
+<?// var_dump($data['statusField']);?>
+<?else:?>
+<div>
+    <?=$data['statusField']?>
+</div>
+<?endif;?>
 
-//Данные выгрузки
-$url = 'https://api-metrika.yandex.ru/stat/v1/data';
-
-$idsProject = explode('_', $_POST['ids']);
-$ids = $idsProject[0];
-$project = $idsProject[1];
-$idsProject = null;
-$dateStart = $_POST['dateStart'];
-$dateFin = $_POST['dateFin'];
-
-$headProject = $_POST['headProject'];
-$headDepartment = $_POST['headDepartment'];
-$specialist = $_POST['specialist'];
-$client = $_POST['client'];
-
-//$path = "C:/OSpanel/domains/yaMetrik/template.php/xl/worksheets/";
-$path = "template.php/xl/worksheets/";
-$pathToDiagram = 'template.php/xl/charts/';
-$status = null;
-//var_dump($_POST);
-
-function sortMonth($array, $month)
-{
-    $tmpArray = array();
-    $newArray = array();
-    foreach ($array as $k => $v) {
-        if (($k != $month) && (int)$k < (int)$month) {
-            $tmpArray[$k] = $v;
-        } elseif ((int)$k >= (int)$month) {
-            $newArray[$k] = $v;
-        }
-        //var_dump($key);
-    }
-
-    $array = null;
-    $array = $newArray;
-    $array = $array + $tmpArray;
-    //var_dump($array);
-    return $array;
-}
-
-if (!isset($_POST['submit'])) {
-    echo '<div>Введите данные</div>';
-} else {
-    if ($_POST['ids'] != null && $_POST['dateStart'] != null && $_POST['dateFin'] != null) {
-
-        include '/reports/_3_commonForTheMonth.php'; //Общие по месяцу
-        //include 'reports/_4.1_monthlyAttendance2017.php'; //Посещаемость по месяцам 2017
-        //include 'reports/_4.2_monthlyAttendance2018.php'; //Посещаемость по месяцам 2018
-        //include 'reports/_5.1_sourcesSummary.php'; //Источники сводка
-        //include 'reports/_5.2_sourcesDetaly.php'; //Источники сводка
-        //include 'reports/_6.1_searchSystemSummary.php';//Поисковой трафик сумарный
-        //include 'reports/_6.2_searchSystemDetalyWeek.php';//Поисковой трафик детально по неделям
-        //include 'reports/_6.3_searchSystemDetalyMonth.php';//Поисковой трафик детально по месяцам
-        //include 'reports/_7.1_targetSummaryMonth.php';//Цели в динамике суммарный за месяц
-        //include 'reports/_8_geography.php'; //География
-        //include 'reports/_9.1_browsers.php'; //Технологии Браузеры
-        //include 'reports/_9.2_resolution.php'; //Технологии Разрешение
-        //include 'reports/_10_devices.php'; //Устройства
-        //include 'reports/_11_searchPhrases.php'; //Поисковые фразы
-        //include 'reports/_12_phrasesInContext.php';//Фразы по контексту
-        //include 'reports/_13_popularPages.php'; //Популярные страницы
-
-//include 'reports/_5.2_sourcesDetaly_V2.0.php'; //Источники сводка
-        include 'writerXl/createExcell.php';
-
-    } else {
-        echo '<div class="errorReports">' . 'Введены не все данные' . '</div>';
-    }
-    //var_dump($_POST);
-
-}
-?>
-
-</body>
+<?if(isset($data['linkReport'])):?>
+<div>
+    <span><a href="<?=$data['linkReport'];?>">Скачать отчет</a> по <?=$data['project'];?> за <?=$data['dateStart'];?> - <?=$data['dateFin'];?></span>
+</div>
+<?endif;?>

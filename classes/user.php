@@ -42,6 +42,7 @@ class user implements iUser
         {
             $user = new sqlClass();
             $status = $user->addUser($login, $pass, $email);
+            sqlClass::createTableProjects($login);
             return $status;
         }
     }
@@ -69,9 +70,9 @@ class user implements iUser
         return $list;
     }
 
-    public static function addProject($login, $project, $counter)
+    public static function addProject($login, $project, $counter, $headProject, $headDepartment, $specialist, $client)
     {
-        if(sqlClass::addProject($login, $project, $counter))
+        if(sqlClass::addProject($login, $project, $counter, $headProject, $headDepartment, $specialist, $client))
             return true;
         else
             return false;

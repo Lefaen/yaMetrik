@@ -9,9 +9,9 @@
         <label>e-mail:</label>
     </div>
     <div>
-        <input name="login">
-        <input name="pass">
-        <input name="email">
+        <input type="text" name="login">
+        <input type="password" name="pass">
+        <input type="text" name="email">
     </div>
     <!--<button name="signUp" value="success" type="submit">Зарегистрироваться</button>-->
     <input name="signUp" type="submit">

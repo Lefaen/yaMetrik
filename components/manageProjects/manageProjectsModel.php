@@ -9,7 +9,14 @@ class manageProjectsModel extends modelBase
         if(isset($_POST['project']) && isset($_POST['counter']))
         {
 
-            if(!user::addProject($_SESSION['login'], $_POST['project'], $_POST['counter']))
+            if(!user::addProject(
+                $_SESSION['login'],
+                $_POST['project'],
+                $_POST['counter'],
+                $_POST['headProject'],
+                $_POST['headDepartment'],
+                $_POST['specialist'],
+                $_POST['client']))
             {
                 $this->data['statusAddProject'] = 'Проект с таким счетчиком уже есть';
             }else

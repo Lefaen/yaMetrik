@@ -27,7 +27,7 @@ foreach ($xml->sheetData->row as $item) {
     $str = (int)$item->attributes()->r;
 
     if($str == 3) {
-        checkChildXml('E3', $project, $item->c[0]);
+        checkChildXml('E3', $data['project'], $item->c[0]);
     }
 
     if ($str == $startString && $str < 40) {

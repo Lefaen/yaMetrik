@@ -16,13 +16,13 @@ foreach ($xml->sheetData->row as $item) {
     $str = (int)$item->attributes()->r;
 
     if($str == 3) {
-        checkChildXml('E3', $project, $item->c[0]);
+        checkChildXml('E3', $data['project'], $item->c[0]);
 
     }
 
     if ($str == 10) {
-        checkChildXml('C10', $dateStart, $item->c[1]);
-        checkChildXml('E10', $dateFin, $item->c[3]);
+        checkChildXml('C10', $data['dateStart'], $item->c[1]);
+        checkChildXml('E10', $data['dateFin'], $item->c[3]);
         //var_dump($item);
     }
 

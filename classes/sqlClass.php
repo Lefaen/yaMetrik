@@ -48,40 +48,45 @@ class sqlClass implements iSql
         return $res;
     }
 
-    public function addUser($login, $pass, $email)
+    public static function getTable($table, array $fields = null)
     {
-        $hash = password_hash($pass, PASSWORD_DEFAULT);
-        $check = self::checkString(array('login' => $login), 'users');
-        if ($check == true) {
-            return false;
-        } else {
-            //echo 'add user Success';//register
-            $dataConnections = self::dataConnections();
-            $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
-            $allowed = array("login", "pass", "email"); // allowed fields
-            $query = "INSERT INTO `users` SET `login`=:login, `pass`=:pass, `email`=:email";
-            $res = $pdo->prepare($query);
-            $res->execute(
-                array(
-                    'login' => $login,
-                    'pass' => $hash,
-                    'email' => $email
-                ));
-            $pdo = null;
-            return true;
+        $strFields = null;
+        if($fields == null)
+        {
+            $strFields = '*';
+        }else
+        {
+            $i = 0;
+            $count = count($fields);
+            foreach ($fields as $value)
+            {
+                $i++;
+                if($i != $count)
+                    $strFields .= "$value,";
+                else
+                    $strFields .= "$value";
+            }
         }
+        $dataConnections = self::dataConnections();
+        $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
+        $query = "SELECT $strFields FROM `$table`";
+        $res = $pdo->query($query);
+        //$pdo = null;
+        $res = $res->fetchAll();
+        $pdo = null;
+        return $res;
     }
-
-    private static function checkString(array $fields, $table)
+//string functions
+    public static function getString(array $searchFields, $table)
     {
         $dataConnections = self::dataConnections();
         $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
         $query = "SELECT * FROM `$table` WHERE ";
         $where = null;
-        $count = count($fields);
+        $count = count($searchFields);
         $i = 0;
         $executePdo = array();
-        foreach ($fields as $key => $value) {
+        foreach ($searchFields as $key => $value) {
             $i++;
             if ($i != $count)
                 $where .= $key . ' = :' . $key . ' AND ';
@@ -97,15 +102,89 @@ class sqlClass implements iSql
         $pdo = null;
         return $res;
     }
-
-    private function insertString($string, $table)
+    public static function setString(array $setFields, $table)
     {
-        //update
+        $dataConnections = self::dataConnections();
+        $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
+        $count = count($setFields);
+        $i = 0;
+        $setStr = null;
+        foreach ($setFields as $key => $value) {
+            $i++;
+            if($i != $count)
+                $setStr .= "`$key`=:$key,";
+            else
+                $setStr .= "`$key`=:$key";
+        }
+
+        $query = "INSERT INTO `$table` SET $setStr";
+        $res = $pdo->prepare($query);
+        $res->execute($setFields);
+        $pdo = null;
+        return $res;
+    }
+    public static function deleteString(array $searchFields, $table)
+    {
+        $dataConnections = self::dataConnections();
+        $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
+        $count = count($searchFields);
+        $i = 0;
+        $setStr = null;
+        foreach ($searchFields as $key => $value) {
+            $i++;
+            if($i != $count)
+                $setStr .= "`$key`=:$key,";
+            else
+                $setStr .= "`$key`=:$key";
+        }
+
+        $query = "DELETE FROM `$table` WHERE $setStr";
+        $res = $pdo->prepare($query);
+        $res->execute($searchFields);
+        $pdo = null;
+    }
+    public static function updateString(array $setFields, $table, $id)
+    {
+        $dataConnections = self::dataConnections();
+        $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
+        $count = count($setFields);
+        $i = 0;
+        $setStr = null;
+        foreach ($setFields as $key => $value) {
+            $i++;
+            if($i != $count)
+                $setStr .= "`$key`=:$key,";
+            else
+                $setStr .= "`$key`=:$key";
+        }
+        $setFields['id'] = $id;
+        $query = "UPDATE `$table` SET $setStr WHERE id=:id";
+        $res= $pdo->prepare($query);
+        $res->execute($setFields);
+        return $res;
     }
 
-    public function checkUser($login, $pass)
+//user functions
+    public static function addUser($login, $pass, $email)
     {
-        $dataUser = self::checkString(array('login' => $login), 'users');
+        $hash = password_hash($pass, PASSWORD_DEFAULT);
+        $check = self::getString(array('login' => $login), 'users');
+        if ($check == true) {
+            return false;
+        } else {
+            $setFields = array(
+                'login' => $login,
+                'pass' => $hash,
+                'email' => $email
+            );
+            self::setString($setFields, 'users');
+
+            return true;
+        }
+    }
+    public static function checkUser($login, $pass)
+    {
+        $dataUser = self::getString(array('login' => $login), 'users');
         if(password_verify($pass, $dataUser['pass']))
         {
             return $dataUser;
@@ -115,6 +194,7 @@ class sqlClass implements iSql
         }
     }
 
+//project functions
     public static function createTableProjects($login)
     {
         $dataConnections = self::dataConnections();
@@ -135,30 +215,18 @@ class sqlClass implements iSql
     public static function addProject($login, $project, $counter, $headProject, $headDepartment, $specialist, $client)
     {
         self::createTableProjects($login);
-        $dataProject = self::checkString(array('counter' => (string)$counter), $login);
+        $dataProject = self::getString(array('counter' => (string)$counter), $login);
         if($dataProject == false)
         {
-            $dataConnections = self::dataConnections();
-            $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
-            $allowed = array("login", "pass", "email"); // allowed fields
-            $query = "INSERT INTO `$login` SET 
-                      `projectName`=:projectName,
-                      `counter`=:counter,
-                      `headProject`=:headProject,
-                      `headDepartment`=:headDepartment,
-                      `specialist`=:specialist,
-                      `client`=:client";
-            $res = $pdo->prepare($query);
-            $res->execute(
-                array(
-                    'projectName' => $project,
-                    'counter' => $counter,
-                    'headProject' => $headProject,
-                    'headDepartment' => $headDepartment,
-                    'specialist' => $specialist,
-                    'client' => $client
-                ));
-            $pdo = null;
+            $setFields = array(
+                'projectName' => $project,
+                'counter' => $counter,
+                'headProject' => $headProject,
+                'headDepartment' => $headDepartment,
+                'specialist' => $specialist,
+                'client' => $client
+            );
+            self::setString($setFields, $login);
 
             return true;
         }
@@ -167,30 +235,35 @@ class sqlClass implements iSql
             return false;
         }
     }
-    public static function getListProject($login)
-    {
-        $dataConnections = self::dataConnections();
-        $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
-        $query = "SELECT * FROM `$login`";
-        $res = $pdo->query($query);
-        //$pdo = null;
-        $res = $res->fetchAll();
-        $pdo = null;
-        return $res;
-        //var_dump($res);
-
-
-    }
-
     public static function deleteProject($login, $counter)
     {
-        $dataConnections = self::dataConnections();
-        $pdo = new PDO($dataConnections['dsn'], self::$login, self::$pass, $dataConnections['opt']);
-        $query = "DELETE FROM `$login` WHERE counter = :counter ";
-        $res = $pdo->prepare($query);
-        $res->execute(array(':counter' => $counter));
-        $pdo = null;
+        $searchFields = array(
+            'counter' => $counter
+        );
+        self::deleteString($searchFields, $login);
     }
+
+    public static function getListProject($login, $group = null)
+    {
+        $listProjects = null;
+        if($group == null)
+        {
+            $listProjects[] = self::getTable($login);
+        }
+        elseif ($group == 1)
+        {
+            $users = self::getTable('users', array('login'));
+            $listProjects = array();
+            foreach ($users as $user)
+            {
+                $listProjects[] = self::getTable($user['login']);
+            }
+        }
+        return $listProjects;
+
+    }
+
+
 
 }
 

@@ -27,8 +27,8 @@
 
 <? if (isset($data['listProjects'])): ?>
     <ul class="listProjects">
-
-        <? foreach ($data['listProjects'] as $item): ?>
+<?foreach ($data['listProjects'] as $userList):?>
+        <? foreach ($userList as $item): ?>
             <li>
                 <div><span>Название проекта:</span><b><?=$item['projectName'];?></b></div>
                 <div><span>Номер счетчика:</span><b><?=$item['counter'];?></b></div>
@@ -39,6 +39,6 @@
                 <div><a href="?deleteProject=<?=$item['counter'];?>">Удалить</a></b></div>
             </li>
         <? endforeach; ?>
-
+<?endforeach;?>
     </ul>
 <? endif; ?>

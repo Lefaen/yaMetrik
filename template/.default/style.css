@@ -22,16 +22,19 @@ ul {
 }
 
 .signUp div:first-child,
-.manageProject div:first-child{
+.manageProject div:first-child,
+.changePass div:first-child{
 float: left;
 }
 .signUp label,
-.manageProject label{
+.manageProject label,
+.changePass label{
     display: block;
     margin: 5px;
 }
 .signUp input,
-.manageProject input{
+.manageProject input,
+.changePass input{
     display: block;
     margin: 5px;
 }

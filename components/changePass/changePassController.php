@@ -5,10 +5,10 @@ class changePassController extends controllerBase
 {
     function actionIndex($path)
     {
-        $data = $this->model->getData();
+        //$data = $this->model->getData();
 
-        $data['statusPassRepeat'] = true;
-        $data['statusCheckUser'] = true;
+        //$data['statusPassRepeat'] = true;
+        //$data['statusCheckUser'] = true;
 
         $dataUser = sqlClass::checkUser($_SESSION['login'], $_POST['oldPass']);
         //var_dump($dataUser);
@@ -34,7 +34,6 @@ class changePassController extends controllerBase
 
     function __construct()
     {
-        $this->model = new changePassModel();
         $this->view = new viewBase();
     }
 }

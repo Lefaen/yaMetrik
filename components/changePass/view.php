@@ -16,10 +16,11 @@
     </div>
 <? elseif (!empty($_POST) && ($data['statusPassRepeat'] == true) && ($data['statusCheckUser'] == true)): ?>
     <div>Пароль успешно изменен</div>
-<? endif; ?>
-<? if (isset($data) && $data['statusPassRepeat'] == false): ?>
-    <div>Пароли не совпадают</div>
-<? endif; ?>
-<? if (isset($data) && $data['statusCheckUser'] == false): ?>
-    <div>Неверный старый пароль</div>
+<?else:?>
+    <? if (isset($data) && $data['statusPassRepeat'] == false): ?>
+        <div>Пароли не совпадают</div>
+    <? endif; ?>
+    <? if (isset($data) && $data['statusCheckUser'] == false): ?>
+        <div>Неверный старый пароль</div>
+    <? endif; ?>
 <? endif; ?>

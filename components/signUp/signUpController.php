@@ -6,12 +6,13 @@ class signUpController extends controllerBase
     function actionIndex($path)
     {
         $data = $this->model->getData();
-
+        $user = project::$userHref;
 
         //Если есть заявка, созадем пользователя
         $status = false;
         if (isset($data)) {
-            $user = new user();
+
+
             $status = $user->register($data['login'], $data['pass'], $data['email']);
             $data['statusRegister'] = $status;
         }

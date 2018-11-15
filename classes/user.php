@@ -7,6 +7,7 @@ class user implements iUser
     private $login;
     private $pass;
     private $email;
+    private $id;
 
 
     public function setLogin($login)
@@ -53,12 +54,14 @@ class user implements iUser
     {
         $dataUser = sqlClass::checkUser($login, $pass);
         if ($dataUser['id'] == false) {
-            echo 'неверный логин/пароль';
+            return false;
         } else {
             $_SESSION['id'] = $dataUser['id'];
             $_SESSION['login'] = $dataUser['login'];
+            $this->login = $dataUser['login'];
+            $this->id = $dataUser['id'];
 
-
+            return true;
         }
     }
 

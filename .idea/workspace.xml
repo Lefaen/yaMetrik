@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43783311-7d29-49b0-87bb-fae8a962f951" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/changePass/changePassController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/changePass/changePassModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/changePass/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/forgotPass/forgotPassController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/forgotPass/forgotPassModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/forgotPass/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/changePass/controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/changePass/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/forgotPass/controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/forgotPass/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/manageUsers/manageUsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/manageUsers/manageUsersModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/manageUsers/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/users/controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/users/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/sqlClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/sqlClass.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/manageProjects/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/manageProjects/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/reportYaMetrika/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/reportYaMetrika/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/signIn/viewIsLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/signIn/viewIsLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/changePass/changePassController.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/changePass/changePassController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/changePass/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/changePass/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/signIn/signInController.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/signIn/signInController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/signUp/signUpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/signUp/signUpController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/iSql.php" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/iSql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/help/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/help/controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main/controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/.default/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/.default/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,30 +89,31 @@
     <session id="-1956326601">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="34" />
+          <entry key="project.closed" value="37" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="11" />
-          <entry key="project.open.time.12" value="7" />
+          <entry key="project.open.time.12" value="9" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="1_achivmentOfTargets" value="1" />
           <entry key="connectSqlClass" value="3" />
-          <entry key="css" value="10" />
+          <entry key="css" value="14" />
           <entry key="htaccess" value="5" />
           <entry key="iConnectSql" value="1" />
           <entry key="js" value="10" />
-          <entry key="php" value="916" />
+          <entry key="php" value="995" />
           <entry key="rels" value="1" />
           <entry key="template" value="1" />
           <entry key="xml" value="29" />
@@ -129,9 +121,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="10" />
+          <entry key="CSS" value="14" />
           <entry key="JavaScript" value="10" />
-          <entry key="PHP" value="922" />
+          <entry key="PHP" value="1001" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="29" />
           <entry key="htaccess" value="5" />
@@ -140,22 +132,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="connectSqlClass" value="474" />
-          <entry key="css" value="554" />
-          <entry key="dummy" value="158" />
+          <entry key="css" value="1402" />
+          <entry key="dummy" value="180" />
           <entry key="htaccess" value="4" />
           <entry key="iConnectSql" value="25" />
           <entry key="js" value="317" />
-          <entry key="php" value="39074" />
+          <entry key="php" value="41454" />
           <entry key="rels" value="3" />
           <entry key="xml" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="554" />
+          <entry key="CSS" value="1402" />
+          <entry key="HTML" value="2" />
           <entry key="JavaScript" value="317" />
-          <entry key="PHP" value="39512" />
-          <entry key="PLAIN_TEXT" value="161" />
+          <entry key="PHP" value="41890" />
+          <entry key="PLAIN_TEXT" value="183" />
           <entry key="SQL" value="61" />
           <entry key="XML" value="116" />
           <entry key="htaccess" value="4" />
@@ -165,91 +158,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="68" column="57" lean-forward="true" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
-              <folding>
-                <element signature="n#setLogin#0;n#user#0;n#!!top" />
-                <element signature="n#setPass#0;n#user#0;n#!!top" />
-                <element signature="n#setEmail#0;n#user#0;n#!!top" />
-                <element signature="n#getLogin#0;n#user#0;n#!!top" />
-                <element signature="n#getPass#0;n#user#0;n#!!top" />
-                <element signature="n#getEmail#0;n#user#0;n#!!top" />
-                <element signature="n#register#0;n#user#0;n#!!top" />
-                <element signature="n#signIn#0;n#user#0;n#!!top" />
-                <element signature="n#sendEmailPass#0;n#user#0;n#!!top" />
-                <element signature="n#getListProjects#0;n#user#0;n#!!top" />
-                <element signature="n#addProject#0;n#user#0;n#!!top" />
-                <element signature="n#deleteProject#0;n#user#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/changePass/changePassModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/changePass/changePassController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/changePass/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/signIn/signInController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="73" lean-forward="true" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/.default/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/sqlClass.php">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
-              <caret line="160" column="60" selection-start-line="160" selection-start-column="60" selection-end-line="160" selection-end-column="60" />
-              <folding>
-                <element signature="n#dataConnections#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#start#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#getTable#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#getString#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#deleteString#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#checkUser#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#createTableProjects#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#addProject#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#deleteProject#0;n#sqlClass#0;n#!!top" />
-                <element signature="n#getListProject#0;n#sqlClass#0;n#!!top" />
-              </folding>
+              <caret line="37" column="25" lean-forward="true" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -265,12 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>news</find>
-      <find>B</find>
-      <find>B$52</find>
-      <find>A$</find>
-      <find>28</find>
-      <find>26</find>
       <find>25</find>
       <find>визи</find>
       <find>contact_form</find>
@@ -295,6 +202,12 @@
       <find>order</find>
       <find>commonForTheMonth</find>
       <find>$data['searchSystemSummary']</find>
+      <find>15px</find>
+      <find>media</find>
+      <find>display: none</find>
+      <find>565</find>
+      <find>mid</find>
+      <find>slide</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -303,29 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_2_writeContent.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_4.2_writeMonthlyAttendance2018.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_8_writeGeography.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_9.2_writeResolution.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_12_writePhrasesInContext.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_5.2_writeSourcesDetaly.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_6.3_WrightSearchSystemDetalyMonth.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_6.2_writeSearchSystemDetalyWeek.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_7.1_wrightTargetSummaryMonth.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_7.2_wrightTargetDetalyYear.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/reports/_7.1_targetSummaryMonth.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/createExcell.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/reportYaMetrikaController.php" />
-        <option value="$PROJECT_DIR$/components/signUp/view.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/reportYaMetrikaModel.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/template/xl/worksheets/sheet3.xml" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_3_writeCommonForTheMonth.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_4.1_writeMonthlyAttendance2017.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_5.1_writeSourcesSummary.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_6.1_writeSearchSystemSummary.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_9.1_writeBrowsers.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_10_writeDevices.php" />
-        <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_11_writeSearchPhrases.php" />
         <option value="$PROJECT_DIR$/components/reportYaMetrika/writerXl/_13_writePopularPages.php" />
         <option value="$PROJECT_DIR$/components/manageProjects/manageProjectsModel.php" />
         <option value="$PROJECT_DIR$/components/manageProjects/view.php" />
@@ -341,19 +231,42 @@
         <option value="$PROJECT_DIR$/pages/main/controller.php" />
         <option value="$PROJECT_DIR$/pages/help/controller.php" />
         <option value="$PROJECT_DIR$/pages/forgotPass/controller.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/classes/mvc/component.php" />
-        <option value="$PROJECT_DIR$/components/signUp/signUpController.php" />
-        <option value="$PROJECT_DIR$/components/signIn/viewIsLogin.php" />
         <option value="$PROJECT_DIR$/pages/changePass/view.php" />
         <option value="$PROJECT_DIR$/components/changePass/forgotPassController.php" />
         <option value="$PROJECT_DIR$/components/changePass/forgotPassModel.php" />
         <option value="$PROJECT_DIR$/template/.default/style.css" />
-        <option value="$PROJECT_DIR$/classes/user.php" />
-        <option value="$PROJECT_DIR$/components/changePass/changePassModel.php" />
         <option value="$PROJECT_DIR$/classes/sqlClass.php" />
-        <option value="$PROJECT_DIR$/components/changePass/changePassController.php" />
         <option value="$PROJECT_DIR$/components/changePass/view.php" />
+        <option value="$PROJECT_DIR$/components/changePass/changePassModel.php" />
+        <option value="$PROJECT_DIR$/components/reportYaMetrika/reportYaMetrikaController.php" />
+        <option value="$PROJECT_DIR$/components/manageUsers/signUpController.php" />
+        <option value="$PROJECT_DIR$/components/manageUsers/signUpModel.php" />
+        <option value="$PROJECT_DIR$/components/manageUsers/view.php" />
+        <option value="$PROJECT_DIR$/components/changePass/changePassController.php" />
+        <option value="$PROJECT_DIR$/components/manageUsers/manageUsersController.php" />
+        <option value="$PROJECT_DIR$/components/manageUsers/manageUsersModel.php" />
+        <option value="$PROJECT_DIR$/pages/manage/view.php" />
+        <option value="$PROJECT_DIR$/pages/users/view.php" />
+        <option value="$PROJECT_DIR$/pages/users/controller.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/.left.menu 2.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/.topSecond.menu.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/.left.menu 4.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/template.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/.left.menu 3.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/header.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/theme.css" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/head.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/index.php" />
+        <option value="$PROJECT_DIR$/components/signIn/viewIsLogin.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/components/signIn/signInController.php" />
+        <option value="$PROJECT_DIR$/components/signUp/signUpController.php" />
+        <option value="$PROJECT_DIR$/classes/user.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/mod_sliderReview.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/default.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/blog_item.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/default 3.php" />
       </list>
     </option>
   </component>
@@ -375,6 +288,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -390,47 +304,17 @@
             <path>
               <item name="yaMetrik" type="b2602c69:ProjectViewProjectNode" />
               <item name="yaMetrik" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="mvc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaMetrik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaMetrik" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yaMetrik" type="b2602c69:ProjectViewProjectNode" />
               <item name="yaMetrik" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="changePass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaMetrik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaMetrik" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaMetrik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaMetrik" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="changePass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaMetrik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaMetrik" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yaMetrik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yaMetrik" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name=".default" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -441,11 +325,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\yaMetrik\pages\users" />
+      <recent name="C:\OSPanel\domains\yaMetrik\components\manageUsers" />
       <recent name="C:\OSPanel\domains\yaMetrik\components\changePass" />
       <recent name="C:\OSPanel\domains\yaMetrik\pages\changePass" />
       <recent name="C:\OSPanel\domains\yaMetrik\components\forgotPass" />
-      <recent name="C:\OSPanel\domains\yaMetrik\pages\forgotPass" />
-      <recent name="C:\OSPanel\domains\yaMetrik\components\reportYaMetrika\template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\yaMetrik\components\reportYaMetrika" />
@@ -542,12 +426,15 @@
       <workItem from="1541657351932" duration="1192000" />
       <workItem from="1541659371883" duration="23947000" />
       <workItem from="1541743827752" duration="21012000" />
-      <workItem from="1542003229311" duration="14067000" />
+      <workItem from="1542003229311" duration="24103000" />
+      <workItem from="1542089951055" duration="25045000" />
+      <workItem from="1542176332966" duration="15980000" />
+      <workItem from="1542262191153" duration="8246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="833363000" />
+    <option name="totallyTimeSpent" value="892670000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -562,7 +449,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22761194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23560767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -611,188 +498,117 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_4.2_writeMonthlyAttendance2018.php">
+    <entry file="file://$PROJECT_DIR$/components/changePass/changePassController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        <state relative-caret-position="612">
+          <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_4.3_writeMonthlyAttendance2018.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_5.1_writeSourcesSummary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_5.2_writeSourcesDetaly.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2292">
-          <caret line="138" column="29" selection-start-line="138" selection-start-column="29" selection-end-line="138" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_6.1_writeSearchSystemSummary.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_6.2_writeSearchSystemDetalyWeek.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="136" column="34" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_7.1_wrightTargetSummaryMonth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_9.1_writeBrowsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_8_writeGeography.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_10_writeDevices.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_11_writeSearchPhrases.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_13_writePopularPages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/writerXl/_12_writePhrasesInContext.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/template/xl/worksheets/sheet3.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/counters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/manageProjects/manageProjectsModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="76" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/reportYaMetrikaModel.php">
+    <entry file="file://$PROJECT_DIR$/components/changePass/changePassModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="33" />
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/manageProjects/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/manageProjects/manageProjectsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main/view.php">
+    <entry file="file://$PROJECT_DIR$/pages/manage/controller.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/main/controller.php">
+    <entry file="file://$PROJECT_DIR$/classes/sqlClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="178">
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/help/view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/help/controller.php">
+    <entry file="file://$PROJECT_DIR$/pages/manage/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="17">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/users/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/manageUsers/manageUsersModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/manageUsers/manageUsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/users/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/manageUsers/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.settings.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.section.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.description.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.top.menu.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.left.menu.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.left.menu 2.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.topSecond.menu.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.left.menu 3.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/.left.menu 4.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/template.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/header.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/index 2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="4403" column="15" selection-start-line="4403" selection-start-column="15" selection-end-line="4403" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/signUp/viewSignUp.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/signUp/view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/signUp/controller.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/manage/view.php">
+    <entry file="file://$PROJECT_DIR$/pages/signUp/view.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/manage/controller.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/forgotPass/view.php">
+    <entry file="file://$PROJECT_DIR$/components/signUp/signUpModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/forgotPass/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -803,117 +619,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaces/iSql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/components/signIn/view.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/signUp/signUpModel.php">
+    <entry file="file://$PROJECT_DIR$/components/signIn/signInModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/signUp/signUpController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/forgotPass/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="44" selection-start-column="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/forgotPass/forgotPassModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/forgotPass/forgotPassController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="323">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/signIn/viewIsLogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/mvc/component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/signIn/signInModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="68">
+          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/signIn/signInController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="73" lean-forward="true" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
+        <state relative-caret-position="255">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/.default/style.css">
+    <entry file="file://$PROJECT_DIR$/components/signUp/signUpController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        <state relative-caret-position="170">
+          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/changePass/controller.php">
+    <entry file="file://$PROJECT_DIR$/interfaces/iUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/changePass/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        <state relative-caret-position="85">
+          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="68" column="57" lean-forward="true" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
+        <state relative-caret-position="595">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
           <folding>
-            <element signature="n#setLogin#0;n#user#0;n#!!top" />
-            <element signature="n#setPass#0;n#user#0;n#!!top" />
-            <element signature="n#setEmail#0;n#user#0;n#!!top" />
             <element signature="n#getLogin#0;n#user#0;n#!!top" />
             <element signature="n#getPass#0;n#user#0;n#!!top" />
             <element signature="n#getEmail#0;n#user#0;n#!!top" />
-            <element signature="n#register#0;n#user#0;n#!!top" />
-            <element signature="n#signIn#0;n#user#0;n#!!top" />
+            <element signature="n#changePass#0;n#user#0;n#!!top" />
             <element signature="n#sendEmailPass#0;n#user#0;n#!!top" />
             <element signature="n#getListProjects#0;n#user#0;n#!!top" />
             <element signature="n#addProject#0;n#user#0;n#!!top" />
@@ -922,43 +674,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/sqlClass.php">
+    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/reportYaMetrikaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="160" column="60" selection-start-line="160" selection-start-column="60" selection-end-line="160" selection-end-column="60" />
+        <state relative-caret-position="612">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/reportYaMetrikaModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/reportYaMetrika/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/helper.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/slider.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/default_items.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/default 2.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/blog_item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/mod_breadcrumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="57" lean-forward="true" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/default 3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="20" />
           <folding>
-            <element signature="n#dataConnections#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#start#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#getTable#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#getString#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#deleteString#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#checkUser#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#createTableProjects#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#addProject#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#deleteProject#0;n#sqlClass#0;n#!!top" />
-            <element signature="n#getListProject#0;n#sqlClass#0;n#!!top" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/changePass/changePassModel.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/mod_sliderReview.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="272">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/changePass/changePassController.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        <state relative-caret-position="434">
+          <caret line="62" column="99" lean-forward="true" selection-start-line="62" selection-start-column="99" selection-end-line="62" selection-end-column="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/changePass/view.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        <state relative-caret-position="629">
+          <caret line="37" column="25" lean-forward="true" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
         </state>
       </provider>
     </entry>

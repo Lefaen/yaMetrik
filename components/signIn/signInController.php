@@ -7,14 +7,17 @@ class signInController extends controllerBase
     {
         $this->model = new signInModel();
         $this->view = new viewBase();
+
     }
 
     function actionIndex($path)
     {
+        $user = project::$userHref;
+        
         $data = $this->model->getData();
         if(!empty($data['login'] && !empty($data['pass'])))
         {
-            $user = new user();
+
             $user->signIn($data['login'], $data['pass']);
         }
         if(isset($_SESSION['id']))

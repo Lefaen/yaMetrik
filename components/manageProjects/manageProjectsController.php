@@ -4,7 +4,7 @@ class manageProjectsController extends controllerBase
 {
     function actionIndex($path)
     {
-
+        $user = project::$userHref;
         if(isset($_SESSION['id']))
         {
             $data = $this->model->getData();
@@ -12,7 +12,7 @@ class manageProjectsController extends controllerBase
         }
         if(isset($_GET['deleteProject']))
         {
-            sqlClass::deleteProject($_SESSION['login'], $_GET['deleteProject']);
+            $user->deleteProject($_SESSION['login'], $_GET['deleteProject']);
             exit("<meta http-equiv='refresh' content='0; url= /manage'>");
 
         }

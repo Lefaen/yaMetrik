@@ -8,6 +8,9 @@ interface iSql
     public static function setString(array $setFields, $table);
     public static function deleteString(array $searchFields, $table);
     public static function updateString(array $setFields, $table,$id);
+}
+interface iSqlUser
+{
     public static function addUser($login, $pass, $email);
     public static function checkUser($login, $pass);
 }

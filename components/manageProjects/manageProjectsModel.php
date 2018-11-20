@@ -5,11 +5,11 @@ class manageProjectsModel extends modelBase
     private $data;
     public function getData()
     {
-
+        $user = project::$userHref;
         if(isset($_POST['project']) && isset($_POST['counter']))
         {
 
-            if(!user::addProject(
+            if(!$user->addProject(
                 $_SESSION['login'],
                 $_POST['project'],
                 $_POST['counter'],
@@ -25,7 +25,7 @@ class manageProjectsModel extends modelBase
             }
         }
 
-        $this->data['listProjects'] = user::getListProjects($_SESSION['login']);
+        $this->data['listProjects'] = $user->getListProjects($_SESSION['login']);
         return $this->data;
     }
 

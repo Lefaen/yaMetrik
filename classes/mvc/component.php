@@ -6,8 +6,8 @@ class component
     {
         $pathComponent = 'components/' . $nameComponent . '/';
 
-        $controllerFile = $pathComponent . $nameComponent . 'Controller.php';
-        $modelFile = $pathComponent . '/' . $nameComponent . 'Model.php';
+        $controllerFile =$_SERVER['DOCUMENT_ROOT'].'/'. $pathComponent . $nameComponent . 'Controller.php';
+        $modelFile = $_SERVER['DOCUMENT_ROOT'].'/'. $pathComponent . $nameComponent . 'Model.php';
 
 
         if (file_exists($modelFile)) {
@@ -19,7 +19,7 @@ class component
             $component = $nameComponent.'controller';
             $controller = new $component;
             if (method_exists($controller, 'actionIndex')) {
-                $controller->actionIndex($pathComponent . '/');
+                $controller->actionIndex($_SERVER['DOCUMENT_ROOT'].'/'.$pathComponent . '/');
             } else {
                 echo 'нет метода';
             }

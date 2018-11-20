@@ -3,7 +3,7 @@
 
 class forgotPassController extends controllerBase
 {
-    function actionIndex($path)
+    function actionIndex($path = null)
     {
         $data = $this->model->getData();
 

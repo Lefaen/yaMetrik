@@ -6,7 +6,8 @@ class forgotPassModel extends modelBase
     public function getData()
     {
         if(isset($_POST['login'])) {
-            if(user::sendEmailPass($_POST['login']) != false)
+            $user = project::$userHref;
+            if($user->sendEmailPass($_POST['login']) != false)
             {
                 $this->data['statusSendEmail'] = true;
             }

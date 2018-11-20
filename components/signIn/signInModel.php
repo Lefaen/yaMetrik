@@ -9,10 +9,14 @@ class signInModel extends modelBase
         {
             $this->data = $_POST;
         }
-        if ($_GET['action'] == 'logout')
+        if(isset($_GET['action']))
         {
-            $this->data['logout'] = true;
+            if ($_GET['action'] == 'logout')
+            {
+                $this->data['logout'] = true;
+            }
         }
+
         return $this->data;
     }
 }

@@ -1,45 +1,10 @@
 <?php
 
-require_once '/interfaces/iUser.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/interfaces/iUser.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/interfaces/iProjects.php';
 
-class user implements iUser
+class user implements iUser, iProjects
 {
-    private $login;
-    private $pass;
-    private $email;
-    private $id;
-
-
-    public function setLogin($login)
-    {
-        $this->login = $login;
-    }
-
-    public function setPass($pass)
-    {
-        $this->pass = $pass;
-    }
-
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
-
-    public function getLogin()
-    {
-        return $this->login;
-    }
-
-    public function getPass()
-    {
-        return $this->pass;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
 
     public function register($login, $pass, $email)
     {
@@ -49,7 +14,6 @@ class user implements iUser
             return $status;
         }
     }
-
     public function signIn($login, $pass)
     {
         $dataUser = sqlClass::checkUser($login, $pass);
@@ -64,15 +28,13 @@ class user implements iUser
             return true;
         }
     }
-
-    public static function changePass($id, $pass)
+    public function changePass($id, $pass)
     {
         $hash = password_hash($pass, PASSWORD_DEFAULT);
         $setFields = array('pass' => $hash);
         sqlClass::updateString($setFields, 'users', $id);
     }
-
-    public static function sendEmailPass($login)
+    public function sendEmailPass($login)
     {
         $dataUser = sqlClass::getString(array('login' => $login), 'users');
 
@@ -92,23 +54,21 @@ class user implements iUser
         }
     }
 
-    public static function getListProjects($login)
+
+    public function getListProjects($login)
     {
         $dataUser = sqlClass::getString(array('login' => $login), 'users');
         $list = sqlClass::getListProject($login, $dataUser['group']);
         return $list;
     }
-
-    public static function addProject($login, $project, $counter, $headProject, $headDepartment, $specialist, $client)
+    public function addProject($login, $project, $counter, $headProject, $headDepartment, $specialist, $client)
     {
         if (sqlClass::addProject($login, $project, $counter, $headProject, $headDepartment, $specialist, $client))
             return true;
         else
             return false;
     }
-
-    public
-    static function deleteProject($login, $counter)
+    public function deleteProject($login, $counter)
     {
         if (sqlClass::deleteProject($login, $counter))
             return true;

@@ -88,9 +88,9 @@ if (file_exists($pathTemplateFile)) {
         }
         return $zip->close();
     }
-    $path = 'components/reportYaMetrika/'.'project/'.$data['project'].'/'.$data['dateFin'].'_'.$data['project'].'_Статистический отчет по продвижению_v1'.'.xlsx';
+    $path = '/components/reportYaMetrika/'.'project/'.$data['project'].'/'.$data['dateFin'].'_'.$data['project'].'_Статистический_отчет_по_продвижению_v1.xlsx';
     //$path2 = iconv('utf-8','windows-1251',$path);
-    Zip('components/reportYaMetrika/template/', $path);
+    Zip($_SERVER['DOCUMENT_ROOT'].'/components/reportYaMetrika/template/', $path);
     $data["linkReport"] = $path;
 }
 

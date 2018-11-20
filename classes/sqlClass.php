@@ -1,16 +1,15 @@
 <?php
 
-require_once '/interfaces/iSql.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/interfaces/iSql.php';
 
 
-class sqlClass implements iSql
+class sqlClass implements iSql, iSqlUser
 {
     private static $login = 'root';
     private static $pass = '';
     private static $host = '127.0.0.1:3306';
     private static $db = 'seoreport';
     private static $charset = 'utf8';
-
 
     private static function dataConnections()
     {
@@ -212,6 +211,7 @@ class sqlClass implements iSql
         $pdo->query($query);
         $pdo = null;
     }
+
     public static function addProject($login, $project, $counter, $headProject, $headDepartment, $specialist, $client)
     {
         self::createTableProjects($login);
@@ -242,7 +242,6 @@ class sqlClass implements iSql
         );
         self::deleteString($searchFields, $login);
     }
-
     public static function getListProject($login, $group = null)
     {
         $listProjects = null;

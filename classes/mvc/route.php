@@ -5,7 +5,7 @@ class Route
     static function start()
     {
         //default index.php
-        $pathPages = 'pages/';
+        $pathPages = $_SERVER['DOCUMENT_ROOT'].'/pages/';
         $controllerPath = 'main';
         //$action_name = 'index';
 
@@ -37,6 +37,11 @@ class Route
             {
                 echo 'нет метода';
             }
+        }
+        elseif(strpos($_SERVER['REQUEST_URI'], 'components/reportYaMetrika/project') != false)
+        {
+            //Route::ErrorPage404();
+            //var_dump('test');
         }
         else
         {

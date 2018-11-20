@@ -1,4 +1,5 @@
 <?
+session_start();
 
 class project {
     public $user;
@@ -6,23 +7,23 @@ class project {
 
     static function startInclude(){
 
-        require_once '/classes/mvc/modelBase.php';
-        require_once '/classes/mvc/viewBase.php';
-        require_once '/classes/mvc/controllerBase.php';
-        require_once '/classes/mvc/route.php';
-        require_once '/classes/mvc/component.php';
-        require_once '/classes/user.php';
-        require_once '/classes/sqlClass.php';
+        require_once $_SERVER['DOCUMENT_ROOT'].'/classes/mvc/modelBase.php';
+        require_once $_SERVER['DOCUMENT_ROOT'].'/classes/mvc/viewBase.php';
+        require_once $_SERVER['DOCUMENT_ROOT'].'/classes/mvc/controllerBase.php';
+        require_once $_SERVER['DOCUMENT_ROOT'].'/classes/mvc/route.php';
+        require_once $_SERVER['DOCUMENT_ROOT'].'/classes/mvc/component.php';
+        require_once $_SERVER['DOCUMENT_ROOT'].'/classes/user.php';
+        require_once $_SERVER['DOCUMENT_ROOT'].'/classes/sqlClass.php';
     }
 
     function __construct()
     {
-        session_start();
+
         if($_GET['action'] == 'logout')
         {
             session_destroy();
         }
-        ini_set('display_errors', 1);
+       // ini_set('display_errors', 1);
 
         self::startInclude();
 

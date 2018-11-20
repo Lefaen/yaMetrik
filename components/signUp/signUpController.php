@@ -3,7 +3,7 @@
 
 class signUpController extends controllerBase
 {
-    function actionIndex($path)
+    function actionIndex($path = null)
     {
         $data = $this->model->getData();
         $user = project::$userHref;

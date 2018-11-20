@@ -10,7 +10,7 @@ class signInController extends controllerBase
 
     }
 
-    function actionIndex($path)
+    function actionIndex($path = null)
     {
         $user = project::$userHref;
         

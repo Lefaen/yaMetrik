@@ -34,7 +34,7 @@
 
 <? if (isset($data['linkReport'])): ?>
     <div>
-        <span><a href="<?= $data['linkReport']; ?>">Скачать отчет</a> по <?= $data['project']; ?>
+        <span><a download href="<?= $data['linkReport']; ?>">Скачать отчет</a> по <?= $data['project']; ?>
             за <?= $data['dateStart']; ?> - <?= $data['dateFin']; ?></span>
     </div>
 <? endif; ?>

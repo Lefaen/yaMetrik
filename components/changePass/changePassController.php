@@ -16,7 +16,8 @@ class changePassController extends controllerBase
         {
             if(!empty($dataUser))
             {
-                user::changePass($dataUser['id'], $_POST['newPassRepeat']);
+                $user = project::$userHref;
+                $user->changePass($dataUser['id'], $_POST['newPassRepeat']);
                 $data['statusCheckUser'] = true;
                 $data['statusPassRepeat'] = true;
             }

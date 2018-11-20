@@ -6,11 +6,10 @@ class viewBase
     {
         if($templateView != '')
         {
-            include 'template/.default/' . $templateView;
+            include $_SERVER['DOCUMENT_ROOT'] . '/template/.default/' . $templateView;
         }
         else
         {
-
             include $contentView;
         }
     }

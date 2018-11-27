@@ -3,20 +3,21 @@
 class reportYaMetrikaModel extends modelBase
 {
     private $data;
+
     public function getData()
     {
         $user = project::$userHref;
         $this->data['listProjects'] = $user->getListProjects($_SESSION['login']);
-
+        if ($_SESSION['login'] == 'test') {
+            //var_dump($this->data['listProjects']);
+        }
 
         $this->data['url'] = 'https://api-metrika.yandex.ru/stat/v1/data';
         $this->data['token'] = 'AQAAAAANfujIAAUHWDSXYI7X30Wpshlh3sksM7c';
 
         $projectReport = null;
-        foreach ($this->data['listProjects'][0] as $project)
-        {
-            if($project['id'] == $_POST['id'])
-            {
+        foreach ($this->data['listProjects'][0] as $project) {
+            if ($project['id'] == $_POST['id']) {
                 $projectReport = $project;
                 break;
             }

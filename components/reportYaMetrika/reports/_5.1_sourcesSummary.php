@@ -3,8 +3,7 @@
 //ИСТОЧНИКИ, СВОДКА------------------
 //-----------------------------------
 
-//echo $dateFinSources;
-$dateFinSources = explode('-', $data['dateFin']);
+/*$dateFinSources = explode('-', $data['dateFin']);
 $dateStartSources = null;
 $dateStartSources[0] = '';
 $dateStartSources[1] = $dateFinSources[1] - $period;
@@ -25,10 +24,7 @@ if ($dateStartSources[1] > 0) {
     $dateStartSources[1] = 1;
 }
 $dateFinSources = $dateFinSources[0] . '-' . $dateFinSources[1] . '-' . $dateFinSources[2];
-$dateStartSources = $dateStartSources[0] . '-' . $dateStartSources[1] . '-' . $dateStartSources[2];
-//echo $dateStartSources . '<br>';
-//echo $dateFinSources;
-
+$dateStartSources = $dateStartSources[0] . '-' . $dateStartSources[1] . '-' . $dateStartSources[2];*/
 
 $params = null;
 $params = array(
@@ -36,8 +32,11 @@ $params = array(
     'oauth_token' => $data['token'],    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:percentBounce,ym:s:pageDepth,ym:s:avgVisitDuration,ym:s:sumGoalReachesAny',         //метрики
     'dimensions' => 'ym:s:<attribution>TrafficSource',                                  //группировка
-    'date1' => $dateStartSources,//$_POST['dateStart'];              //дата начала выгрузки
-    'date2' => $dateFinSources,//$_POST['dateFin'];                 //дата окончания выгрузки
+    //'date1' => $dateStartSources,//$_POST['dateStart'];              //дата начала выгрузки
+    //'date2' => $dateFinSources,//$_POST['dateFin'];                 //дата окончания выгрузки
+    'date1' => $data['dateStart'],//$_POST['dateFin'];                 //дата окончания выгрузки
+    'date2' => $data['dateFin'],//$_POST['dateFin'];                 //дата окончания выгрузки
+
     //'sort' => 'ym:s:visits',                                         //сортировка
     'limit'=>1000
 );

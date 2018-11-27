@@ -11,6 +11,13 @@ class sqlClass implements iSql, iSqlUser
     private static $db = 'seoreport';
     private static $charset = 'utf8';
 
+    /*private static $login = 'seoreport';
+    private static $pass = 'TKjQSxdA';
+    private static $host = 'localhost';
+    private static $db = 'seoreport';
+    private static $charset = 'utf8';*/
+
+
     private static function dataConnections()
     {
         $dsn = 'mysql:host=' . self::$host . ';dbname=' . self::$db . ';charset=' . self::$charset;

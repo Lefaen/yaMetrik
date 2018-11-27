@@ -24,7 +24,7 @@ if (file_exists($pathTemplateFile)) {
     $zip = new ZipArchive;
     $res = $zip->open($pathTemplateFile);
     if ($res === true) {
-        $zip->extractTo('components/reportYaMetrika/template');
+        $zip->extractTo($_SERVER['DOCUMENT_ROOT'] . '/components/reportYaMetrika/template');
         $zip->close();
     }
     $zip = null;
@@ -88,9 +88,10 @@ if (file_exists($pathTemplateFile)) {
         }
         return $zip->close();
     }
-    $path = '/components/reportYaMetrika/'.'project/'.$data['project'].'/'.$data['dateFin'].'_'.$data['project'].'_Статистический_отчет_по_продвижению_v1.xlsx';
+
+    $path = '/components/reportYaMetrika/' . 'project/' . $data['project'] . '/' . $data['dateFin'] . '_' . $data['project'] . '_Статистический_отчет_по_продвижению_v1.xlsx';
     //$path2 = iconv('utf-8','windows-1251',$path);
-    Zip($_SERVER['DOCUMENT_ROOT'].'/components/reportYaMetrika/template/', $path);
+    Zip($_SERVER['DOCUMENT_ROOT'] . '/components/reportYaMetrika/template/', $_SERVER['DOCUMENT_ROOT'] . $path);
     $data["linkReport"] = $path;
 }
 

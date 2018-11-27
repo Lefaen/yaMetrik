@@ -38,10 +38,9 @@ class Route
                 echo 'нет метода';
             }
         }
-        elseif(strpos($_SERVER['REQUEST_URI'], 'components/reportYaMetrika/project') != false)
+        elseif(strpos($_SERVER['REQUEST_URI'], '.xlsx') != false)
         {
             //Route::ErrorPage404();
-            //var_dump('test');
         }
         else
         {

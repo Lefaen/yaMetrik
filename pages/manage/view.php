@@ -1,0 +1,5 @@
+<?
+    component::includeComponent('manageProjects');
+?>
+
+

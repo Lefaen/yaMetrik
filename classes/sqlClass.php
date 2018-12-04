@@ -5,21 +5,27 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/interfaces/iSql.php';
 
 class sqlClass implements iSql, iSqlUser
 {
-    private static $login = 'root';
+    /*private static $login = 'root';
     private static $pass = '';
     private static $host = '127.0.0.1:3306';
     private static $db = 'seoreport';
-    private static $charset = 'utf8';
+    private static $charset = 'utf8';*/
 
-    /*private static $login = 'seoreport';
+    private static $login = 'seoreport';
     private static $pass = 'TKjQSxdA';
     private static $host = 'localhost';
     private static $db = 'seoreport';
-    private static $charset = 'utf8';*/
+    private static $charset = 'utf8';
 
 
     private static function dataConnections()
     {
+        if($_SERVER['REMOTE_ADDR'] == '127.0.0.1')
+        {
+            sqlClass::$login = 'root';
+            sqlClass::$pass = '';
+            sqlClass::$host = $_SERVER['REMOTE_ADDR' . ':3306'];
+        }
         $dsn = 'mysql:host=' . self::$host . ';dbname=' . self::$db . ';charset=' . self::$charset;
         $opt = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

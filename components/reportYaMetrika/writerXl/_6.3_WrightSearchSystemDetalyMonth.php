@@ -5,8 +5,6 @@ $xml = simplexml_load_file($pathListExcel);
 $startString = 2;
 $i = 0;
 
-//var_dump($searchYear);
-
 $yearArrayMonth = null;
 $yearArrayMonth = array(
     '01' => '',
@@ -28,12 +26,7 @@ $dateStartSearch = explode('-', $data['dateStart']);
 
 
 
-$yearArrayMonth = sortMonth($yearArrayMonth, $dateStartSearch[1]+2);
-//var_dump($yearArrayMonth);
-
-//var_dump($yearArrayMonth);
-
-
+$yearArrayMonth = sortMonth($yearArrayMonth, $dateStartSearch[1]+1);
 
 foreach ($yearArrayMonth as $key => $month) {
     $dateElm = '';
@@ -51,7 +44,6 @@ foreach ($yearArrayMonth as $key => $month) {
     foreach ($xml->sheetData->row as $item) {
         $str = (int)$item->attributes()->r;
         if ($str == $startString && $str <= 13) {
-            //if ($date != null) {
             if($dateElm == '')
             {
                 continue;
@@ -61,30 +53,9 @@ foreach ($yearArrayMonth as $key => $month) {
                 $startString++;
                 break;
             }
-            //}
         }
     }
 }
-
-
-/*
-foreach ($targetsYearSummary as $date => $reaches) {
-    foreach ($xml->sheetData->row as $item) {
-        $str = (int)$item->attributes()->r;
-        if ($str == $startString && $str <= 50) {
-            //if ($date != null) {
-
-
-            if((checkChildXml('A' . $startString, $date, $item->c[0]) == true) && (checkChildXml('B' . $startString, $reaches, $item->c[1]) == true) )
-            {
-                $startString++;
-                break;
-            }
-            //}
-        }
-    }
-}
-*/
 
 if ($xml->saveXML($pathListExcel)) {
     $status = true;

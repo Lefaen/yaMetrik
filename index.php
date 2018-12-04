@@ -1,6 +1,11 @@
 <?
 session_start();
 
+ini_set('max_execution_time', 200);
+ignore_user_abort(true);
+set_time_limit(0);
+//echo ini_get('max_execution_time');
+
 class project {
     public $user;
     public static $userHref;

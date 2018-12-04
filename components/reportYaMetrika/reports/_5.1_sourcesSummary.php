@@ -3,7 +3,8 @@
 //ИСТОЧНИКИ, СВОДКА------------------
 //-----------------------------------
 
-/*$dateFinSources = explode('-', $data['dateFin']);
+//echo $dateFinSources;
+$dateFinSources = explode('-', $data['dateFin']);
 $dateStartSources = null;
 $dateStartSources[0] = '';
 $dateStartSources[1] = $dateFinSources[1] - $period;
@@ -24,7 +25,10 @@ if ($dateStartSources[1] > 0) {
     $dateStartSources[1] = 1;
 }
 $dateFinSources = $dateFinSources[0] . '-' . $dateFinSources[1] . '-' . $dateFinSources[2];
-$dateStartSources = $dateStartSources[0] . '-' . $dateStartSources[1] . '-' . $dateStartSources[2];*/
+$dateStartSources = $dateStartSources[0] . '-' . $dateStartSources[1] . '-' . $dateStartSources[2];
+//echo $dateStartSources . '<br>';
+//echo $dateFinSources;
+
 
 $params = null;
 $params = array(

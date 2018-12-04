@@ -40,6 +40,8 @@ foreach ($dataMetrika['data'] as $item) {
 }
 //var_dump($tmpdata);
 $data['popularPage'] = $tmpdata;
+
+
 ?>
 
 <?/*

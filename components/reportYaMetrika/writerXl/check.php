@@ -7,7 +7,10 @@ function checkChildXml($cell, $text, $elm)
     if ($elm->attributes()->r == $cell ) {
         //$elm->addAttribute('t', 's');
         $elm->addChild('v', $text);
-        //echo '<br>SUCCESS '.$cell.': '. $text;
+        if($cell == 'A14')
+        {
+            //echo '<br>SUCCESS '.$cell.': '. $text;
+        }
         return true;
     } else {
         //echo '<br>ERROR ' . $cell .':'.$text.':'.$elm->attributes()->r;

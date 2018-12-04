@@ -4,11 +4,9 @@
 //-----------------------------------
 
 $dateFinSearch = explode('-', $data['dateFin']);
-$dateFinSearch[1] = $dateFinSearch[1];
 $dateStartSearch = explode('-', $data['dateStart']);
 $dateStartSearch[0] = $dateStartSearch[0]-1;
 $dateStartSearch[1] = $dateStartSearch[1]+1;
-$dateStartSearch[2] = $dateStartSearch[2];
 
 $dateFinSearch = $dateFinSearch[0] . '-' . $dateFinSearch[1] . '-' . $dateFinSearch[2];
 $dateStartSearch = $dateStartSearch[0] . '-' . $dateStartSearch[1] . '-' . $dateStartSearch[2];

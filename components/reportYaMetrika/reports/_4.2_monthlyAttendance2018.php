@@ -9,7 +9,7 @@ $params = array(
     'oauth_token' => $data['token'],    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:sumPageViews,ym:s:percentNewVisitors,ym:s:percentBounce,ym:s:avgVisitDuration,ym:s:sumGoalReachesAny',         //метрики
     'dimensions' => 'ym:s:visitMonth',                                  //группировка
-    'date1' => '2018-01-01',//$_POST['dateStart'];              //дата начала выгрузки
+    'date1' => '2019-01-01',//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $data['dateFin'],//$_POST['dateFin'];                 //дата окончания выгрузки
     'sort' => 'ym:s:visitMonth',                                         //сортировка
 );

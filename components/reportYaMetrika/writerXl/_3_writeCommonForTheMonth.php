@@ -38,7 +38,7 @@ foreach ($xml->sheetData->row as $item) {
     if ($str == $startString) {
         if(isset($data['commonForTheMonth'][$i]))
         {
-            $time = $data['commonForTheMonth']['time']/86400;
+            $time = $data['commonForTheMonth'][$i]['time']/86400;
 
             checkChildXml('A' . $startString, $data['commonForTheMonth'][$i]['date'], $item->c[0]);
             checkChildXml('B' . $startString, $data['commonForTheMonth'][$i]['visit'], $item->c[1]);

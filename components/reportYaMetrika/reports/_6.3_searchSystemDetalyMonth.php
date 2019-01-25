@@ -6,7 +6,7 @@
 $dateFinSearch = explode('-', $data['dateFin']);
 $dateStartSearch = explode('-', $data['dateStart']);
 $dateStartSearch[0] = $dateStartSearch[0]-1;
-$dateStartSearch[1] = $dateStartSearch[1]+1;
+//$dateStartSearch[1] = $dateStartSearch[1]+1;
 
 $dateFinSearch = $dateFinSearch[0] . '-' . $dateFinSearch[1] . '-' . $dateFinSearch[2];
 $dateStartSearch = $dateStartSearch[0] . '-' . $dateStartSearch[1] . '-' . $dateStartSearch[2];

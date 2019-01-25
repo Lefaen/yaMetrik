@@ -15,6 +15,8 @@ $params = array(
 );
 
 //var_dump($_POST);
+$coef = 1;
+while ($coef >= 1) {
 $opts = [
     "http" => [
         "method" => "GET",
@@ -43,7 +45,30 @@ foreach ($dataMetrika['data'] as $item) {
         'achivments' => $item['metrics'][6],
     );
 }
-$data['monthlyAttendance2018'] = $tmpdata;
+
+    $coef = 0;
+    foreach ($tmpdata as $item) {
+        if (strpos((string)$item['visit'], '000') != false) {
+            $coef++;
+            if (strpos((string)$item['users'], '000') != false) {
+                $coef++;
+                if (strpos((string)$item['shows'], '000') != false) {
+                    $coef++;
+                }
+            }
+        }
+    }
+
+    $coef = $coef / count($tmpdata);
+
+}
+if ($coef < 1) {
+    $data['monthlyAttendance2018'] = $tmpdata;
+}else{
+    $data['monthlyAttendance2018'] = null;
+}
+
+//$data['monthlyAttendance2018'] = $tmpdata;
 ?>
 
 <?/*

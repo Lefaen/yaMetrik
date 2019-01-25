@@ -32,7 +32,7 @@ $dateStartSearch = $dateStartSearch[0] . '-' . $dateStartSearch[1] . '-' . $date
 
 $params = array(
     'ids' => $data['ids'],                          //счетчик
-    'oauth_token' => $data['token'],    //токен
+    //'oauth_token' => $data['token'],    //токен
     'metrics' => 'ym:s:visits',         //метрики
     'dimensions' => 'ym:s:startOfWeek,ym:s:<attribution>SearchEngineRoot',                                  //группировка
     'date1' => $dateStartSearch,//$_POST['dateStart'];              //дата начала выгрузки
@@ -42,7 +42,15 @@ $params = array(
     'limit' => 5000
 );
 
-$contentJson = file_get_contents(self::build_query($data['url'], $params));
+$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => 'Authorization: OAuth ' . $data['token'] . "\r\n"
+    ]
+];
+$context = stream_context_create($opts);
+$contentJson = file_get_contents(self::build_query($data['url'], $params), false, $context);
+//var_dump(self::build_query($data['url'], $params));
 
 $dataMetrika = json_decode($contentJson, true);
 $tmpdata = array();

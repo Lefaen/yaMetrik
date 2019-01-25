@@ -11,7 +11,7 @@ $listTarget = json_decode($contentJson, true);
 
 $params = array(
     'ids' => $data['ids'],                          //счетчик
-    'oauth_token' => $data['token'],    //токен
+    //'oauth_token' => $data['token'],    //токен
     'metrics' => '',         //метрики
     //'dimensions' => 'ym:s:date',                             //группировка
     'date1' => $data['dateStart'],//$_POST['dateStart'];              //дата начала выгрузки
@@ -39,7 +39,7 @@ $dateStartTarget = $dateStartTarget[0] . '-' . $dateStartTarget[1] . '-' . $date
 
 $paramsTarget = array(
     'ids' => $data['ids'],                          //счетчик
-    'oauth_token' => $data['token'],    //токен
+    //'oauth_token' => $data['token'],    //токен
     //'metrics' => 'ym:s:goal'.$item['id'].'reaches',         //метрики
     'dimensions' => 'ym:s:startOfMonth',                                  //группировка
     'date1' => $dateStartTarget,//$_POST['dateStart'];              //дата начала выгрузки
@@ -57,7 +57,14 @@ foreach ($listTarget['goals'] as $item)
     //var_dump($_POST);
     //echo $url . '?' . http_build_query($params);
 
-    $contentJson = file_get_contents(self::build_query($data['url'], $params));
+    $opts = [
+        "http" => [
+            "method" => "GET",
+            "header" => 'Authorization: OAuth ' . $data['token'] . "\r\n"
+        ]
+    ];
+    $context = stream_context_create($opts);
+    $contentJson = file_get_contents(self::build_query($data['url'], $params), false, $context);
 
     //var_dump($contentJson);
     $dataMetrika = json_decode($contentJson, true);
@@ -84,6 +91,11 @@ foreach ($listTarget['goals'] as $item)
 
     $paramsTarget['metrics'] = 'ym:s:goal'.$item['id'].'reaches';
     $contentJsonTarget = file_get_contents(self::build_query($data['url'], $paramsTarget));
+
+
+    $context = stream_context_create($opts);
+    $contentJsonTarget = file_get_contents(self::build_query($data['url'], $paramsTarget), false, $context);
+
     $dataTarget = json_decode($contentJsonTarget, true);
     $tmpdata2 = array();
     foreach ($dataTarget['data'] as $target){

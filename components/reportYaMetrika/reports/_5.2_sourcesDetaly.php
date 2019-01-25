@@ -32,7 +32,7 @@ $dateStartSource = $dateStartSource[0] . '-' . $dateStartSource[1] . '-' . $date
 
 $params = array(
     'ids' => $data['ids'],                          //счетчик
-    'oauth_token' => $data['token'],    //токен
+    //'oauth_token' => $data['token'],    //токен
     'metrics' => 'ym:s:visits',         //метрики
     //'accuracy' => 'full',
     'date1' => $dateStartSource,//$_POST['dateStart'];              //дата начала выгрузки
@@ -44,7 +44,14 @@ $params = array(
     'limit' => 15000
 );
 
-$contentJson = file_get_contents(self::build_query($data['url'], $params));
+$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => 'Authorization: OAuth ' . $data['token'] . "\r\n"
+    ]
+];
+$context = stream_context_create($opts);
+$contentJson = file_get_contents(self::build_query($data['url'], $params), false, $context);
 $dataMetrika = null;
 $dataMetrika = json_decode($contentJson, true);
 //var_dump($data);

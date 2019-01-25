@@ -33,7 +33,7 @@ $dateStartSources = $dateStartSources[0] . '-' . $dateStartSources[1] . '-' . $d
 $params = null;
 $params = array(
     'ids' => $data['ids'],//$_POST['ids'],                          //счетчик
-    'oauth_token' => $data['token'],    //токен
+    //'oauth_token' => $data['token'],    //токен
     'metrics' => 'ym:s:visits,ym:s:uniqUserID,ym:s:percentBounce,ym:s:pageDepth,ym:s:avgVisitDuration,ym:s:sumGoalReachesAny',         //метрики
     'dimensions' => 'ym:s:<attribution>TrafficSource',                                  //группировка
     //'date1' => $dateStartSources,//$_POST['dateStart'];              //дата начала выгрузки
@@ -46,7 +46,14 @@ $params = array(
 );
 
 //var_dump($_POST);
-$contentJson = file_get_contents(self::build_query($data['url'], $params));
+$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => 'Authorization: OAuth ' . $data['token'] . "\r\n"
+    ]
+];
+$context = stream_context_create($opts);
+$contentJson = file_get_contents(self::build_query($data['url'], $params), false, $context);
 
 
 //var_dump($contentJson);

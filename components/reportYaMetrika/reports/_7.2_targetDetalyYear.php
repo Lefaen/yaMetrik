@@ -16,7 +16,7 @@ $dateStartTarget = $dateStartTarget[0] . '-' . $dateStartTarget[1] . '-' . $date
 
 $paramsTarget = array(
     'ids' => $data['ids'],                          //счетчик
-    'oauth_token' => $data['token'],    //токен
+    //'oauth_token' => $data['token'],    //токен
     'metrics' => 'ym:s:goal'.$item['id'].'reaches',         //метрики
     'dimensions' => 'ym:s:startOfMonth',                                  //группировка
     'date1' => $dateStartTarget,//$_POST['dateStart'];              //дата начала выгрузки
@@ -27,7 +27,14 @@ $paramsTarget = array(
     //                                         //сортировка
 );
 
-$contentJsonTarget = file_get_contents(self::build_query($data['url'], $paramsTarget));
+$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => 'Authorization: OAuth ' . $data['token'] . "\r\n"
+    ]
+];
+$context = stream_context_create($opts);
+$contentJsonTarget = file_get_contents(self::build_query($data['url'], $paramsTarget), false, $context);
 $dataTarget = json_decode($contentJsonTarget, true);
 //var_dump($dataTarget);
 $tmpdata2 = array();

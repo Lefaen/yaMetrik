@@ -5,7 +5,7 @@
 
 $params = array(
     'ids' => $data['ids'],                          //счетчик
-    'oauth_token' => $data['token'],    //токен
+    //'oauth_token' => $data['token'],    //токен
     'metrics' => 'ym:s:visits,ym:s:users,ym:s:pageviews,ym:s:percentNewVisitors,ym:s:bounceRate,ym:s:avgVisitDurationSeconds',         //метрики
     'dimensions' => 'ym:s:date',                                  //группировка
     'date1' => $data['dateStart'],//$_POST['dateStart'];              //дата начала выгрузки
@@ -17,7 +17,15 @@ $params = array(
 
 
 //$contentJson = file_get_contents($data['url'] . '?' . http_build_query($params));
-$contentJson = file_get_contents(self::build_query($data['url'], $params));
+
+$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => 'Authorization: OAuth ' . $data['token'] . "\r\n"
+    ]
+];
+$context = stream_context_create($opts);
+$contentJson = file_get_contents(self::build_query($data['url'], $params), false, $context);
 
 //var_dump($contentJson);
 $dataMetrika = json_decode($contentJson, true);

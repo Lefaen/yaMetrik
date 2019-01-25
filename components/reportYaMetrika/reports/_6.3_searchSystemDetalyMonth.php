@@ -19,16 +19,26 @@ $params = array(
     'dimensions' => 'ym:s:startOfMonth,ym:s:<attribution>SearchEngineRoot',                                  //группировка
     'date1' => $dateStartSearch,//$_POST['dateStart'];              //дата начала выгрузки
     'date2' => $dateFinSearch,//$_POST['dateFin'];                 //дата окончания выгрузки
-    'sort' => 'ym:s:startOfMonth,ym:s:<attribution>SearchEngineRoot',                                         //сортировка
+    'sort' => 'ym:s:<attribution>SearchEngineRoot,ym:s:startOfMonth',                                         //сортировка
     'group' => 'month',
     'limit' => 5000
 );
 
-$contentJsonTarget = file_get_contents(self::build_query($data['url'], $params));
+$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => 'Authorization: OAuth ' . $data['token'] . "\r\n"
+    ]
+];
+$context = stream_context_create($opts);
+$contentJsonTarget = file_get_contents(self::build_query($data['url'], $params), false, $context);
+//var_dump(self::build_query($data['url'], $params));
+
 $dataMetrika = null;
 $dataMetrika = json_decode($contentJsonTarget, true);
 //var_dump($data);
 //var_dump($dataTarget);
+//var_dump($dataMetrika);
 $tmpdata = array();
 
 //var_dump($data);
